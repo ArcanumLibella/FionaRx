@@ -1,0 +1,50 @@
+/* STYLE GLOBAL */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat";
+  color: $papyrus;
+  margin: 0px;
+}
+
+.container {
+  background-color: $dark;
+}
+
+.background {
+  width: 100vw;
+  height: 100vh;
+}
+
+.hero__title {
+  position: absolute;
+  left: 10rem;
+  top: 22rem;
+  font-family: "Abril Fatface";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 6rem;
+  @include sunsetDreams;
+}
+
+hr {
+  position: absolute;
+  width: 55rem;
+  left: 11rem;
+  top: 28rem;
+  border: 0.5px solid $gold;
+}
+
+.hero__subtitle {
+  position: absolute;
+  left: 35rem;
+  top: 30rem;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
+  color: $gold;
+}

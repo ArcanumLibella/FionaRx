@@ -1,0 +1,22 @@
+/*
+* MIXINS DE COULEURS
+*/
+
+//PRIMARY :
+$dark: #222222;
+$black: #1B1B1B;
+$gold: #EFC864;
+$darkGold: #DFBD64;
+
+//SECONDARY :
+$papyrus: #FFF9F2;
+$orange: #FF8C00;
+$pinkLady: #FF0080;
+
+//GRADIENTS :
+@mixin sunsetDreams {
+  background-image: linear-gradient(25deg, #ff8c00 15%,#ff0080 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+

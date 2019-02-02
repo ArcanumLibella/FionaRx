@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: "Montserrat";
+  font-family: "Montserrat", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: $papyrus;
   margin: 0px;
 }
@@ -17,6 +17,18 @@ body {
 .background {
   width: 100vw;
   height: 100vh;
+}
+///////////////////////////////////////////////////////////
+
+/*
+* HERO
+*/
+html { 
+  background: url(../assets/Ferns.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .hero__title {
@@ -46,5 +58,46 @@ hr {
   font-weight: 500;
   font-size: 1rem;
   letter-spacing: 0.2rem;
-  color: $gold;
+  @include golden2;
 }
+///////////////////////////////////////////////////////////
+
+/*
+* PROJETS
+*/
+.project__title {
+  @include h2;
+}
+
+.project__subtitle {
+  @include h4;
+}
+
+.project__date {
+  @include h5;
+}
+
+.project__description {
+  @include Paragraph;
+}
+///////////////////////////////////////////////////////////
+
+/*
+* PROJET 1
+*/
+
+
+
+
+
+
+///////////////////////////////////////////////////////////
+
+/*
+* PROJET 2
+*/
+
+
+
+
+///////////////////////////////////////////////////////////

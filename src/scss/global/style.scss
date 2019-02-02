@@ -23,42 +23,117 @@ body {
 /*
 * HERO
 */
-html { 
-  background: url(../assets/Ferns.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+.background--hero {
+  position: relative;
+  &::before {
+    z-index: 1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    content: "";
+    background: url(../assets/Ferns.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -webkit-filter: brightness(.5);
+      filter: brightness(.5);
+  }
+}
+
+.hero__wrapper {
+  z-index: 2;
+  position: relative;
 }
 
 .hero__title {
   position: absolute;
-  left: 10rem;
-  top: 22rem;
+  left: 27px;
+  top: 195px;
   font-family: "NarzissProSwirls", Impact, 'Arial Narrow Bold', sans-serif;
   font-style: normal;
   font-weight: 800;
-  font-size: 6rem;
+  font-size: 4.5rem;
   @include sunsetDreams;
+
+  @include tablet {
+
+  }
+
+  @include desktop {
+    position: absolute;
+    left: 10rem;
+    top: 22rem;
+    font-size: 6rem;
+  }
 }
 
 hr {
   position: absolute;
-  width: 55rem;
-  left: 11rem;
-  top: 28rem;
+  width: 274px;
+  height: 0px;
+  left: 19px;
+  top: 365px;
+  width: 274px;
   border: 0.5px solid $gold;
+
+  @include desktop {
+    position: absolute;
+    width: 55rem;
+    left: 11rem;
+    top: 28rem;
+  }
 }
 
 .hero__subtitle {
   position: absolute;
-  left: 35rem;
-  top: 30rem;
+  left: 27px;
+  top: 381px;
+  padding: 0px 15px;
+  text-align: right;
   font-style: normal;
-  font-weight: 500;
-  font-size: 1rem;
+  font-weight: 600;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
   letter-spacing: 0.2rem;
   @include golden2;
+
+  @include desktop {
+    position: absolute;
+    left: 562px;
+    top: 483px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+}
+
+.hero__description__title {
+  display: none;
+  padding: 0px 15px;
+  @include paragraph;
+  font-weight: bold;
+
+  @include desktop {
+    display: inline-block;
+    position: absolute;
+    left: 562px;
+    top: 536px;
+  }
+}
+
+.hero__description {
+  display: none;
+  padding: 0px 15px;
+  @include paragraph;
+
+  @include desktop {
+    display: inline-block;
+    position: absolute;
+    left: 562px;
+    top: 561px;
+    width: 426px;
+  }
 }
 ///////////////////////////////////////////////////////////
 
@@ -67,6 +142,10 @@ hr {
 */
 .project__title {
   @include h2;
+  font-size: 2.75rem;
+  @include desktop {
+    @include h2;
+  }
 }
 
 .project__subtitle {
@@ -78,7 +157,7 @@ hr {
 }
 
 .project__description {
-  @include Paragraph;
+  @include paragraph;
 }
 ///////////////////////////////////////////////////////////
 

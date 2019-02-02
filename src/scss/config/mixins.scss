@@ -24,12 +24,26 @@
   letter-spacing: 0.1rem;
   }
 
-@mixin Paragraph {
+@mixin paragraph {
   font-family: Montserrat;
   font-weight: 300;
   line-height: 24px;
   font-size: 16px;
   }
+////////////////////////////////////////////////
 
+/*
+* MIXINS DE MEDIA QUERIES
+*/
 
-//
+@mixin tablet {
+  @media (min-width: 768px) { // TESTER LES BREAKPOINTS !
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1120px) { // TESTER LES BREAKPOINTS !
+    @content;
+  }
+}

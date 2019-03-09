@@ -5,25 +5,23 @@
 }
 
 body {
-  font-family: "Montserrat", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Montserrat", "Segoe UI", Tahoma, Verdana, sans-serif;
   color: $papyrus;
   margin: 0px;
 }
 
 .container {
-  background-color: $dark;
+  background-color: $papyrus;
+  width: 100vw;
 }
 
-.background {
-  width: 100vw;
-  height: 100vh;
-}
 ///////////////////////////////////////////////////////////
 
 /*
 * HERO
 */
 .background--hero {
+  height: 100vh;
   position: relative;
   &::before {
     z-index: 1;
@@ -31,7 +29,7 @@ body {
     height: 100%;
     width: 100%;
     content: "";
-    background: url(../assets/adrian-infernus-1052357-unsplash.jpg) no-repeat center center fixed;
+    background: url(../assets/Ferns.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -154,45 +152,329 @@ hr {
     width: 33rem;
   }
 }
+
+// MENU BURGER /////////////////
+#menu--toggle {
+  position: relative;
+  top: 50%;
+  right: 50%;
+  width: 62px;
+  height: 62px;
+  cursor: pointer;
+  -webkit-border-radius: 62px;
+  -moz-border-radius: 62px;
+  border-radius: 50px;
+  border: 0.5px solid $gold;
+  background-color: transparent;
+}
+
+#menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  border-left: 0.75px solid $gold;
+
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  width: 333px;
+  height: 100vh;
+  padding: 50px 20px;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  text-align: center;
+
+  background-color: transparent;
+}
+
+#menu:before {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+}
+
+#menu ul li a {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  @include h3;
+}
+
+#menu ul li a:hover {
+  letter-spacing: 3px;
+}
+
+// SCROLL /////////////////
+.icon__scroll {
+  position: absolute;
+  left: 50%;
+  bottom: -50%;
+}
+
 ///////////////////////////////////////////////////////////
 
 /*
 * PROJETS
 */
-.project__title {
-  @include h2;
-  font-size: 2.75rem;
 
-  @include tablet {
-    // A FAIRE !!!
-  }
-
+// PROJET 1 ///////////////////////////
+.project__wrapper--1 {
+  padding: 12px;
+  height: 100vh;
+  background-color: $papyrus;
+  color: $dark;
+  outline: 1px solid $gold;
+  outline-offset: -10px;
   @include desktop {
+    background-color: $gold;
+    outline: none;
+  }
+
+  .project__nb {
+    color: $papyrus;
     @include h2;
+    font-size: 3rem;
+    @include desktop {
+      font-size: 4rem;
+    }
+  }
+
+  .project__title {
+    color: $dark;
+    @include h2;
+    font-size: 2.75rem;
+    @include desktop {
+      font-size: 4rem;
+    }
+  }
+
+  .background__project {
+    position: absolute;
+    // z-index: -1;
+    width: 281px;
+    height: 312px;
+    background-color: $gold;
+    // padding: 10px;
+    @include desktop {
+      display: none;
+    }
+  }
+
+  .project__subtitle {
+    color: $dark;
+    @include h4;
+  }
+
+  .project__description {
+    display: none;
+    @include paragraph;
+    @include desktop {
+      display: block;
+    }
+  }
+
+  .project__date {
+    display: none;
+    @include h5;
+    @include desktop {
+      display: block;
+    }
+  }
+
+  .button__about {
+    display: inline-block;
+    color: $dark;
+    @include paragraph;
+    background-color: $gold;
+    padding: 8px 35px;
+    @include desktop {
+      margin-top: 24px;
+      border: 0.5px solid $dark;
+    }
   }
 }
 
-.project__subtitle {
-  @include h4;
+// PROJET 2 ///////////////////////////
+.project__wrapper--2 {
+  padding: 12px;
+  height: 100vh;
+  background-color: $dark;
+  color: $dark;
+  outline: 1px solid $gold;
+  outline-offset: -10px;
+  @include desktop {
+    background-color: $dark;
+    outline: none;
+  }
+
+  .project__nb {
+    @include h2;
+    font-size: 3rem;
+    color: $dark;
+    @include desktop {
+      font-size: 4rem;
+      color: $papyrus;
+    }
+  }
+
+  .project__title {
+    color: $gold;
+    @include h2;
+    font-size: 2.75rem;
+    @include desktop {
+      color: $gold;
+      font-size: 4rem;
+    }
+  }
+
+  .background__project {
+    position: absolute;
+    // z-index: -1;
+    width: 281px;
+    height: 312px;
+    background-color: $papyrus;
+    // padding: 10px;
+    @include desktop {
+      display: none;
+    }
+  }
+
+  .project__subtitle {
+    color: $dark;
+    @include h4;
+    @include desktop {
+      color: $papyrus;
+    }
+  }
+
+  .project__description {
+    display: none;
+    @include paragraph;
+    @include desktop {
+      display: block;
+      color: $papyrus;
+    }
+  }
+
+  .project__date {
+    display: none;
+    @include h5;
+    @include desktop {
+      display: block;
+      color: $papyrus;
+    }
+  }
+
+  .button__about {
+    display: inline-block;
+    color: $dark;
+    @include paragraph;
+    background-color: $gold;
+    padding: 8px 35px;
+    @include desktop {
+      margin-top: 24px;
+      border: 0.5px solid $papyrus;
+      color: $papyrus;
+      background-color: $dark;
+    }
+  }
 }
 
-.project__date {
-  @include h5;
+////////////////////////////////////
+@include desktop {
+  .project__wrapper {
+    width: 562px;
+    height: 100vh;
+    left: 0px;
+    // border: 1px solid red;
+  }
 }
 
-.project__description {
-  @include paragraph;
+// BACKGROUND PROJECT //////////
+.background__project1 {
+  left: 39px;
+  top: 646px;
 }
-///////////////////////////////////////////////////////////
 
-/*
-* PROJET 1
-*/
+.background__project2 {
+  left: 39px;
+  top: 1214px;
+}
 
-///////////////////////////////////////////////////////////
+.background__project3 {
+  left: 39px;
+  top: 1782px;
+}
 
-/*
-* PROJET 2
-*/
+// TITLES //////////
+.project__title1 {
+  position: absolute;
+  left: 22px;
+  top: 570px;
+  @include desktop {
+    position: initial;
+  }
+}
 
-///////////////////////////////////////////////////////////
+.project__title2 {
+  position: absolute;
+  left: 22px;
+  top: 1138px;
+  @include desktop {
+    position: initial;
+  }
+}
+
+.project__title3 {
+  position: absolute;
+  left: 22px;
+  top: 1706px;
+  @include desktop {
+    position: initial;
+  }
+}
+
+// BUTTON ABOUT //////////
+.button__about1 {
+  position: absolute;
+  left: 131px;
+  top: 1084px;
+  @include desktop {
+    position: initial;
+  }
+}
+
+.button__about2 {
+  position: absolute;
+  left: 131px;
+  top: 1652px;
+  @include desktop {
+    position: initial;
+  }
+}
+
+.button__about3 {
+  position: absolute;
+  left: 131px;
+  top: 2220px;
+  @include desktop {
+    position: initial;
+  }
+}

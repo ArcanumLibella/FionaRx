@@ -1,114 +1,112 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="./scss/styles.scss">
-  <title>Fiona Roux</title>
-</head>
-<body>
-  <div class="container">
-    <!-- <div class="background background--hero"> -->
-    <section class="background background--hero">
-      <!-- NAVIGATION -->
-      <header>
-        <nav id="nav" role="navigation">
-          <div class="menus">
-            <ul class="menu">
-              <li><a href="#">HOME</a></li>
-              <li><a href="#">WORKS</a></li>
-              <li><a href="#">SKILLS</a></li>
-              <li><a href="#">ABOUT</a></li>
-              <li><a href="#">CONTACT</a></li>
-            </ul>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./scss/styles.scss">
+    <title>Fiona Roux</title>
+  </head>
+  <body>
+    <section class="container">
+      <section class="background background--hero">
+        <!-- NAVIGATION -->
+        <header>
+          <div class="menu__button">
+            <span>MENU</span>
           </div>
-          <div class="socials">
-            <ul class="social">
-              <li class="social__icon"><a 
-                href="https://www.linkedin.com/in/fionaroux" title="Venez voir mon profil Linkedin !" target="_blank">
-                  <img 
-                  src="assets/icon__linkedin.svg"></a></li>
-              <li class="social__icon"><a 
-                href="https://github.com/ArcanumLibella" title="Venez voir mon GitHub !" 
-                target="_blank">
-                  <img 
-                  src="assets/icon__github.svg"></li>
-              <li class="social__icon"><a 
-                href="https://twitter.com/FionaROUX1" 
-                title="Venez voir mon profil twitter !" target="_blank">
-                  <img 
-                  src="assets/icon__twitter.svg"></li>
-              <li class="social__icon"><a 
-                href="mailto:fiona.roux@hetic.net" 
-                title="Envoyez-moi un email !" 
-                target="_blank">
-                  <img 
-                  src="assets/icon__mail.svg"></li>
-              <li class="social__icon"><a 
-                href="06 28 26 52 02" 
-                title="Appelez-moi !" 
-                target="_blank">
-                  <img 
-                  src="assets/icon__phone.svg"></li>
-            </ul>
-          </div>
-        </nav>
-      </header>
-      <!-- HERO -->
-      <div class="hero__wrapper">
-        <p class="hero__title">Fiona Roux</p>
-        <hr>
-        <p class="hero__subtitle">DEVELOPPEUR FRONT-END & UX|UI DESIGNER</p>
-        <p class="hero__description__title">ÉTUDIANTE EN BACHELOR WEB</p>
-        <p class="hero__description">Je suis actuellement à la recherche d'un stage en Développement Front-end pour 3 mois à partir de Juillet 2019.</p>
-        <svg class="icon__scroll" width="40" height="32" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M11.1973 11.875L20 24.3496L28.8027 11.875H11.1973Z" stroke="#EFC864" stroke-width="0.75"/>
-          <path d="M3.41258 8.375L20 31.3592L36.5874 8.375H3.41258Z" stroke="#EFC864" stroke-width="0.75"/>
-        </svg>
-        <!-- <svg class="icon__menu" width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="31" cy="31" r="30.625" stroke="#D1B160" stroke-width="0.75"/>
-        </svg> -->
-        <button id="menu--toggle"></button>
-      </div>
+          <nav class="menu__nav" role="navigation">
+            <div class="menu__wrapper">
+              <ul class="menu">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">WORKS</a></li>
+                <li><a href="#">SKILLS</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">CONTACT</a></li>
+              </ul>
+            </div>
+            <div class="socials">
+              <ul class="social">
+                <li class="social__icon"><a 
+                  href="https://www.linkedin.com/in/fionaroux" title="Venez voir mon profil Linkedin !" target="_blank">
+                    <img 
+                    src="assets/icon__linkedin.svg"></a></li>
+                <li class="social__icon"><a 
+                  href="https://github.com/ArcanumLibella" title="Venez voir mon GitHub !" 
+                  target="_blank">
+                    <img 
+                    src="assets/icon__github.svg"></li>
+                <li class="social__icon"><a 
+                  href="https://twitter.com/FionaROUX1" 
+                  title="Venez voir mon profil twitter !" target="_blank">
+                    <img 
+                    src="assets/icon__twitter.svg"></li>
+                <li class="social__icon"><a 
+                  href="mailto:fiona.roux@hetic.net" 
+                  title="Envoyez-moi un email !" 
+                  target="_blank">
+                    <img 
+                    src="assets/icon__mail.svg"></li>
+                <li class="social__icon"><a 
+                  href="06 28 26 52 02" 
+                  title="Appelez-moi !" 
+                  target="_blank">
+                    <img 
+                    src="assets/icon__phone.svg"></li>
+              </ul>
+            </div>
+          </nav>
+        </header>
+        <!-- HERO -->
+        <article class="hero__wrapper">
+          <h1 class="hero__title">Fiona Roux</h1>
+          <hr>
+          <h3 class="hero__subtitle">DEVELOPPEUR FRONT-END & UX|UI DESIGNER</h3>
+          <p class="hero__description__title">ÉTUDIANTE EN BACHELOR WEB</p>
+          <p class="hero__description">Je suis actuellement à la recherche d'un stage en Développement Front-end pour 3 mois à partir de Juillet 2019.</p>
+          <svg class="icon__scroll" width="40" height="32" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.1973 11.875L20 24.3496L28.8027 11.875H11.1973Z" stroke="#EFC864" stroke-width="0.75"/>
+            <path d="M3.41258 8.375L20 31.3592L36.5874 8.375H3.41258Z" stroke="#EFC864" stroke-width="0.75"/>
+          </svg>
+        </article>
+      </section>
+      <!-- PROJET 1 -->
+      <section class="background">
+        <article class="project__wrapper project__wrapper--1">
+          <h2 class="project__nb">01</h2>        
+          <h2 class="project__title project__title1">Booking</h2>
+          <div class="background__project background__project1"></div>
+          <h3 class="project__subtitle">REDESIGN D’UNE PAGE PRODUIT</h3>
+          <p class="project__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p class="project__date">DÉCEMBRE 2018</p>
+          <a href="" class="button__about button__about1">En savoir +</a>
+        </article>
+      </section>
+      <!-- PROJET 2 -->
+      <section class="background">
+        <article class="project__wrapper project__wrapper--2">
+          <h2 class="project__nb">02</h2>
+          <h2 class="project__title project__title2">Moschino</h2>
+          <div class="background__project background__project2"></div>
+          <h3 class="project__subtitle">DESIGN & INTÉGRATION</h3>
+          <p class="project__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p class="project__date">NOVEMBRE 2018</p>
+          <a href="" class="button__about button__about2">En savoir +</a>
+        </article>
+      </section>
+      <!-- PROJET 3 -->
+      <section class="background">
+        <article class="project__wrapper project__wrapper--1">
+          <h2 class="project__nb">03</h2>
+          <h2 class="project__title project__title3">Str'it</h2>
+          <div class="background__project background__project3"></div>
+          <h3 class="project__subtitle">DESIGN & GESTION DE PROJET</h3>
+          <p class="project__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p class="project__date">FÉVRIER 2019</p>
+          <a href="" class="button__about button__about3">En savoir +</a>
+        </article>
+      </section>
     </section>
-    <!-- PROJET 1 -->
-    <section class="background">
-      <div class="project__wrapper project__wrapper--1">
-        <p class="project__nb">01</p>        
-        <p class="project__title project__title1">Booking</p>
-        <div class="background__project background__project1"></div>
-        <p class="project__subtitle">REDESIGN D’UNE PAGE PRODUIT</p>
-        <p class="project__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <p class="project__date">DÉCEMBRE 2018</p>
-        <a href="" class="button__about button__about1">En savoir +</a>
-      </div>
-    </section>
-    <!-- PROJET 2 -->
-    <section class="background">
-      <div class="project__wrapper project__wrapper--2">
-        <p class="project__nb">02</p>
-        <p class="project__title project__title2">Moschino</p>
-        <div class="background__project background__project2"></div>
-        <p class="project__subtitle">DESIGN & INTÉGRATION</p>
-        <p class="project__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <p class="project__date">NOVEMBRE 2018</p>
-        <a href="" class="button__about button__about2">En savoir +</a>
-      </div>
-    </section>
-    <!-- PROJET 3 -->
-    <section class="background">
-      <div class="project__wrapper project__wrapper--1">
-        <p class="project__nb">03</p>
-        <p class="project__title project__title3">Str'it</p>
-        <div class="background__project background__project3"></div>
-        <p class="project__subtitle">DESIGN & GESTION DE PROJET</p>
-        <p class="project__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <p class="project__date">FÉVRIER 2019</p>
-        <a href="" class="button__about button__about3">En savoir +</a>
-      </div>
-    </section>
-  </div>
-  <script src="js/script.js"></script>
-</body>
+    <script src="js/script.js"></script>
+  </body>
 </html>

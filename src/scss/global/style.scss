@@ -17,6 +17,109 @@ body {
 
 ///////////////////////////////////////////////////////////
 
+// MENU BURGER /////////////////
+$menu-width: 333px;
+.menu__nav {
+  position: absolute;
+  width: $menu-width;
+  height: 100vh;
+  top: 0px;
+  right: -$menu-width;
+  padding: 50px 20px;
+  z-index: 3;
+  border-left: 2px solid $gold;
+  background-color: $papyrus;
+
+  transition: all 1s ease-in-out;
+  text-align: center;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  &.menu--show {
+    right: 0;
+  }
+}
+
+.menu__nav::before {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+
+  // -webkit-filter: blur(5px);
+  // -moz-filter: blur(5px);
+  // -o-filter: blur(5px);
+  // -ms-filter: blur(5px);
+}
+
+.menu__nav ul li a {
+  transition: all 0.5s ease;
+  text-decoration: none;
+  @include h3;
+  color: $darkGold;
+}
+
+.menu__nav ul li a:hover {
+  letter-spacing: 3px;
+}
+
+.menu__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 90%;
+  left: 94%;
+  width: 62px;
+  height: 62px;
+  cursor: pointer;
+  -webkit-border-radius: 62px;
+  -moz-border-radius: 62px;
+  border-radius: 50px;
+  border: 0.5px solid $gold;
+  background-color: transparent;
+  z-index: 10;
+  @include h5;
+
+  transition: all 1s ease;
+
+  &.menu__button--show {
+    color: $gold;
+  }
+}
+
+.menu__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50%;
+}
+
+// SOCIAL /////////////////
+.social {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 100px;
+}
+
+.social__icon img {
+  width: 40px;
+}
+
+.social__icon:hover {
+  fill: red;
+}
+
+// SCROLL /////////////////
+.icon__scroll {
+  position: absolute;
+  left: 50%;
+  top: 92vh;
+}
+
 /*
 * HERO
 */
@@ -151,100 +254,6 @@ hr {
     top: 561px;
     width: 33rem;
   }
-}
-
-// MENU BURGER /////////////////
-#nav {
-  z-index: 3;
-  border-left: 0.75px solid $gold;
-
-  position: fixed;
-  top: 0px;
-  right: 0px;
-  width: 333px;
-  height: 100vh;
-  padding: 50px 20px;
-
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-
-  -webkit-transition: all 0.3s ease-in;
-  -moz-transition: all 0.3s ease-in;
-  -o-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
-  text-align: center;
-
-  background-color: transparent;
-}
-
-#nav:before {
-  content: "";
-  position: fixed;
-  left: 0;
-  right: 0;
-  z-index: -1;
-
-  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-}
-
-#nav ul li a {
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  text-decoration: none;
-  @include h3;
-}
-
-#nav ul li a:hover {
-  letter-spacing: 3px;
-}
-
-#menu--toggle {
-  position: relative;
-  top: 50%;
-  right: 50%;
-  width: 62px;
-  height: 62px;
-  cursor: pointer;
-  -webkit-border-radius: 62px;
-  -moz-border-radius: 62px;
-  border-radius: 50px;
-  border: 0.5px solid $gold;
-  background-color: transparent;
-}
-
-.menus {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50%;
-}
-
-// SOCIAL /////////////////
-.social {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 100px;
-}
-
-.social__icon img {
-  width: 40px;
-}
-
-.social__icon:hover {
-  fill: red;
-}
-
-// SCROLL /////////////////
-.icon__scroll {
-  position: absolute;
-  left: 50%;
-  bottom: -680px;
 }
 
 ///////////////////////////////////////////////////////////

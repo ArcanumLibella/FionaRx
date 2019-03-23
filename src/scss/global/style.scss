@@ -38,6 +38,7 @@ body {
   border-radius: 50px;
   border: 0.5px solid $gold;
   @include h5;
+  color: $gold;
   transition: all 0.3s ease-in-out;
 
   @include desktop {
@@ -46,7 +47,7 @@ body {
   }
 
   &.is-clicked {
-    color: $gold;
+    color: $darkGold;
   }
 
   // &::before {
@@ -76,7 +77,7 @@ body {
 
 $menu-width: 333px;
 .menu__nav {
-  position: absolute;
+  position: fixed;
   overflow: hidden;
   width: 100%;
   height: 100%;
@@ -107,13 +108,17 @@ $menu-width: 333px;
 .menu__wrapper {
   display: flex;
   align-items: center;
-  justify-content: center;
+  flex-direction: column;
   overflow: hidden;
+  height: 100vh;
 }
 
 .menu {
   display: flex;
   flex-direction: column;
+  align-content: center;
+  align-items: center;
+  margin-top: 35%;
 
   @include desktop {
     margin-top: 60%;
@@ -123,23 +128,37 @@ $menu-width: 333px;
 .menu__nav ul li a {
   text-decoration: none;
   @include h3;
+  font-size: 24px;
   color: $darkGold;
   transition: all 0.5s ease-in-out;
+  line-height: 60px;
 
-  
   &:hover {
     letter-spacing: 8px;
+  }
+
+  @include desktop {
+    @include h3;
+    color: $darkGold;
   }
 }
 
 // SOCIAL /////////////////
+
+.socials {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
 .social {
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  flex-direction: row;
+  margin-top: 35%;
 
   @include desktop {
-    margin-top: 40%;
+    margin-top: 100px;
   }
 }
 
@@ -308,7 +327,16 @@ hr {
 */
 
 // PROJET 1 ///////////////////////////
+$margin-left: 120px;
+.project__wrapper {
+  
+}
+
 .project__wrapper--1 {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
   padding: 12px;
   height: 100vh;
   background-color: $papyrus;
@@ -326,6 +354,7 @@ hr {
     font-size: 3rem;
     @include desktop {
       font-size: 4rem;
+      margin-left: $margin-left;
     }
   }
 
@@ -334,13 +363,14 @@ hr {
     @include h2;
     font-size: 2.75rem;
     @include desktop {
+      margin-left: $margin-left;
       font-size: 4rem;
     }
   }
 
   .background__project {
     position: absolute;
-    // z-index: -1;
+    z-index: 0;
     width: 281px;
     height: 312px;
     background-color: $gold;
@@ -351,8 +381,22 @@ hr {
   }
 
   .project__subtitle {
+    position: absolute;
+    width: 275px;
+    left: 45px;
     color: $dark;
     @include h4;
+    font-size: 1rem;
+    line-height: 25px;
+    @include desktop {
+      display: block;
+      margin-left: $margin-left;
+      width: initial;
+      margin-top: 30px;
+      left: initial;
+      line-height: initial;
+      @include h4;
+    }
   }
 
   .project__description {
@@ -360,6 +404,8 @@ hr {
     @include paragraph;
     @include desktop {
       display: block;
+      margin-left: $margin-left;
+      width: 350px;
     }
   }
 
@@ -368,6 +414,7 @@ hr {
     @include h5;
     @include desktop {
       display: block;
+      margin-left: $margin-left;
     }
   }
 
@@ -378,6 +425,7 @@ hr {
     background-color: $gold;
     padding: 8px 35px;
     @include desktop {
+      margin-left: $margin-left;
       margin-top: 24px;
       border: 0.5px solid $dark;
     }
@@ -386,6 +434,10 @@ hr {
 
 // PROJET 2 ///////////////////////////
 .project__wrapper--2 {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
   padding: 12px;
   height: 100vh;
   background-color: $dark;
@@ -404,6 +456,7 @@ hr {
     @include desktop {
       font-size: 4rem;
       color: $papyrus;
+      margin-left: $margin-left;
     }
   }
 
@@ -414,12 +467,13 @@ hr {
     @include desktop {
       color: $gold;
       font-size: 4rem;
+      margin-left: $margin-left;
     }
   }
 
   .background__project {
     position: absolute;
-    // z-index: -1;
+    z-index: 0;
     width: 281px;
     height: 312px;
     background-color: $papyrus;
@@ -431,9 +485,20 @@ hr {
 
   .project__subtitle {
     color: $dark;
+    position: absolute;
+    width: 275px;
+    left: 45px;
     @include h4;
+    font-size: 16px;
+    line-height: 25px;
     @include desktop {
       color: $papyrus;
+      margin-left: $margin-left;
+      width: initial;
+      margin-top: 30px;
+      left: initial;
+      line-height: initial;
+      @include h4;
     }
   }
 
@@ -443,6 +508,8 @@ hr {
     @include desktop {
       display: block;
       color: $papyrus;
+      margin-left: $margin-left;
+      width: 350px;
     }
   }
 
@@ -452,6 +519,7 @@ hr {
     @include desktop {
       display: block;
       color: $papyrus;
+      margin-left: $margin-left;
     }
   }
 
@@ -463,6 +531,7 @@ hr {
     padding: 8px 35px;
     @include desktop {
       margin-top: 24px;
+      margin-left: $margin-left;
       border: 0.5px solid $papyrus;
       color: $papyrus;
       background-color: $dark;

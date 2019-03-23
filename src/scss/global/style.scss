@@ -20,61 +20,16 @@ body {
 ///////////////////////////////////////////////////////////
 
 // MENU BURGER /////////////////
-$menu-width: 333px;
-.menu__nav {
-  position: absolute;
-  width: $menu-width;
-  height: 100vh;
-  top: 0px;
-  right: -$menu-width;
-  padding: 50px 20px;
-  z-index: 3;
-  border-left: 2px solid $gold;
-  background-color: $papyrus;
 
-  transition: all 0.75s ease-in-out;
-  text-align: center;
-
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-
-  &.menu__nav--show {
-    right: 0;
-  }
-}
-
-.menu__nav::before {
-  content: "";
-  position: fixed;
-  left: 0;
-  right: 0;
-  z-index: -1;
-
-  // -webkit-filter: blur(5px);
-  // -moz-filter: blur(5px);
-  // -o-filter: blur(5px);
-  // -ms-filter: blur(5px);
-}
-
-.menu__nav ul li a {
-  transition: all 0.5s ease;
-  text-decoration: none;
-  @include h3;
-  color: $darkGold;
-}
-
-.menu__nav ul li a:hover {
-  letter-spacing: 3px;
-}
-
-.menu__button {
+#menu__button {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  bottom: 90%;
-  left: 94%;
+  overflow: hidden;
+  position: fixed;
+  top: 8px;
+  right: 8px;
+  z-index: 4;
   width: 62px;
   height: 62px;
   cursor: pointer;
@@ -82,45 +37,125 @@ $menu-width: 333px;
   -moz-border-radius: 62px;
   border-radius: 50px;
   border: 0.5px solid $gold;
-  background-color: transparent;
-  z-index: 10;
   @include h5;
+  transition: all 0.3s ease-in-out;
 
-  transition: all 1s ease;
+  @include desktop {
+    top: 15px;
+    right: 15px;
+  }
 
-  &.menu__button--show {
+  &.is-clicked {
     color: $gold;
+  }
+
+  // &::before {
+  //   content: '';
+  //   z-index: -1;
+  //   position: absolute;
+  //   width: 100%;
+  //   height: 100%;
+  //   top: 0;
+  //   right: -100%;
+  //   -webkit-transition: all 0.3s ease-in-out;
+  //   -o-transition: all 0.3s ease-in-out;
+  //   transition: all 0.3s ease-in-out;
+  //   background-image: linear-gradient(5deg, #ff8c00 15%,#ff0080 70%);
+  // }
+
+  // &:hover {
+  //   background-image: linear-gradient(5deg, #ff8c00 15%,#ff0080 70%);
+  //   background-clip: content-box;
+  //   -webkit-background-clip: content-box;
+
+  //   &::before {
+  //     right: 0;
+  //   }
+  // }
+}
+
+$menu-width: 333px;
+.menu__nav {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  right: -100%;
+  padding: 10px 20px;
+  z-index: 3;
+  background-color: $papyrus;
+  text-align: center;
+
+  transition: all 0.75s ease-in-out;
+
+  // -webkit-box-sizing: border-box;
+  // -moz-box-sizing: border-box;
+  // box-sizing: border-box;
+
+  @include desktop {
+    width: $menu-width;
+    right: -$menu-width;
+    border-left: 2px solid $gold;
+  }
+
+  &.is-open {
+    right: 0%;
   }
 }
 
 .menu__wrapper {
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-top: 50%;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+
+  @include desktop {
+    margin-top: 60%;
+  }
+}
+
+.menu__nav ul li a {
+  text-decoration: none;
+  @include h3;
+  color: $darkGold;
+  transition: all 0.5s ease-in-out;
+
+  
+  &:hover {
+    letter-spacing: 8px;
+  }
 }
 
 // SOCIAL /////////////////
 .social {
   display: flex;
   justify-content: space-around;
-  margin-top: 100px;
-}
+  align-items: center;
 
-.social__icons img {
-  width: 40px;
-  z-index: 100;
-}
-
-.social__icons:hover {
-  fill: red;
+  @include desktop {
+    margin-top: 40%;
+  }
 }
 
 .social__icon {
-  fill: red;
+  fill: $gold;
   z-index: 200;
-  width: 100%;
-  height: 100%;
+  width: 50px;
+  height: 40px;
+
+  &:hover {
+    fill: $darkGold;
+    background-image: linear-gradient(5deg, #ff8c00 15%,#ff0080 70%);
+    -webkit-text-fill-color: transparent;
+    background-clip: padding-box;
+    -webkit-background-clip: padding-box;
+  }
 }
 
 // SCROLL /////////////////

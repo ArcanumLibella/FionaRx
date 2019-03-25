@@ -146,9 +146,10 @@ $menu-width: 333px;
 // SOCIAL /////////////////
 
 .socials {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
+  // display: flex;
+  // justify-content: space-between;
+  // flex-direction: row;
+  width: 280px;
 }
 
 .social {
@@ -165,8 +166,9 @@ $menu-width: 333px;
 .social__icon {
   fill: $gold;
   z-index: 200;
-  width: 50px;
+  width: 40px;
   height: 40px;
+  border-radius: 50%;
 
   &:hover {
     fill: $darkGold;
@@ -215,6 +217,7 @@ $menu-width: 333px;
   position: absolute;
   left: 27px;
   top: 195px;
+  text-align: center;
   font-family: "NarzissProSwirls", Impact, "Arial Narrow Bold", sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -235,11 +238,9 @@ $menu-width: 333px;
 
 hr {
   position: absolute;
-  width: 274px;
+  width: 80%;
   height: 0px;
-  left: 19px;
   top: 365px;
-  width: 274px;
   border: 0.5px solid $gold;
 
   @include tablet {
@@ -381,7 +382,7 @@ $margin-left: 120px;
   }
 
   .project__subtitle {
-    position: absolute;
+    position: relative;
     width: 275px;
     left: 45px;
     color: $dark;
@@ -392,7 +393,7 @@ $margin-left: 120px;
       display: block;
       margin-left: $margin-left;
       width: initial;
-      margin-top: 30px;
+      margin-top: 10px;
       left: initial;
       line-height: initial;
       @include h4;
@@ -429,6 +430,13 @@ $margin-left: 120px;
       margin-top: 24px;
       border: 0.5px solid $dark;
     }
+  }
+
+  .project__image {
+    display: block;
+    position: absolute;
+    right: -10%;
+    width: 65%;
   }
 }
 
@@ -492,10 +500,11 @@ $margin-left: 120px;
     font-size: 16px;
     line-height: 25px;
     @include desktop {
+      position: relative;
       color: $papyrus;
       margin-left: $margin-left;
       width: initial;
-      margin-top: 30px;
+      margin-top: 10px;
       left: initial;
       line-height: initial;
       @include h4;

@@ -1,9 +1,4 @@
 /* STYLE GLOBAL */
-
-* {
-  box-sizing: border-box;
-}
-
 body {
   font-family: "Montserrat", "Segoe UI", Tahoma, Verdana, sans-serif;
   color: $papyrus;
@@ -17,10 +12,13 @@ body {
   width: 100vw;
 }
 
-///////////////////////////////////////////////////////////
+.wrapper {
+  height: 100vh;
+}
+
+//////////////////////////////////////////////////
 
 // MENU BURGER /////////////////
-
 #menu__button {
   display: flex;
   justify-content: center;
@@ -90,9 +88,7 @@ $menu-width: 333px;
 
   transition: all 0.75s ease-in-out;
 
-  // -webkit-box-sizing: border-box;
-  // -moz-box-sizing: border-box;
-  // box-sizing: border-box;
+
 
   @include desktop {
     width: $menu-width;
@@ -128,7 +124,7 @@ $menu-width: 333px;
 .menu__nav ul li a {
   text-decoration: none;
   @include h3;
-  font-size: 24px;
+  font-size: 1.5rem;
   color: $darkGold;
   transition: all 0.5s ease-in-out;
   line-height: 60px;
@@ -165,17 +161,17 @@ $menu-width: 333px;
 
 .social__icon {
   fill: $gold;
-  z-index: 200;
+  z-index: 5;
   width: 40px;
   height: 40px;
   border-radius: 50%;
 
   &:hover {
     fill: $darkGold;
-    background-image: linear-gradient(5deg, #ff8c00 15%,#ff0080 70%);
-    -webkit-text-fill-color: transparent;
-    background-clip: padding-box;
-    -webkit-background-clip: padding-box;
+    // background-image: linear-gradient(5deg, #ff8c00 15%,#ff0080 70%);
+    // -webkit-text-fill-color: transparent;
+    // background-clip: padding-box;
+    // -webkit-background-clip: padding-box;
   }
 }
 
@@ -205,6 +201,7 @@ $menu-width: 333px;
     background-size: cover;
     -webkit-filter: brightness(0.5);
     filter: brightness(0.5);
+    // filter: grayscale(100%);
   }
 }
 
@@ -219,10 +216,10 @@ $menu-width: 333px;
   top: 195px;
   text-align: center;
   font-family: "NarzissProSwirls", Impact, "Arial Narrow Bold", sans-serif;
+  font-size: 4.5rem;
   font-style: normal;
   font-weight: 800;
-  font-size: 4.5rem;
-  @include sunsetDreams;
+  color: $gold;
 
   @include tablet {
     // A FAIRE !!!
@@ -230,15 +227,17 @@ $menu-width: 333px;
 
   @include desktop {
     position: absolute;
-    left: 10rem;
-    top: 22rem;
+    left: 160px;
+    top: 350px;
     font-size: 6rem;
+    // color: $darkGold;
+    @include golden2;
   }
 }
 
 hr {
   position: absolute;
-  width: 80%;
+  max-width: 80%;
   height: 0px;
   top: 365px;
   border: 0.5px solid $gold;
@@ -249,9 +248,9 @@ hr {
 
   @include desktop {
     position: absolute;
-    width: 55rem;
-    left: 11rem;
-    top: 28rem;
+    width: 880px;
+    left: 176px;
+    top: 448px;
   }
 }
 
@@ -260,12 +259,12 @@ hr {
   left: 27px;
   top: 381px;
   padding: 0px 15px;
-  text-align: right;
+  font-size: 0.8rem;
   font-style: normal;
   font-weight: 600;
-  font-size: 0.8rem;
   line-height: 1.5rem;
   letter-spacing: 0.2rem;
+  text-align: right;
   @include golden2;
 
   @include tablet {
@@ -276,9 +275,9 @@ hr {
     position: absolute;
     left: 562px;
     top: 483px;
-    text-align: left;
-    font-weight: 600;
     font-size: 1rem;
+    font-weight: 600;
+    text-align: left;
   }
 }
 
@@ -316,7 +315,7 @@ hr {
     position: absolute;
     left: 562px;
     top: 561px;
-    width: 33rem;
+    width: 528px;
     color: $papyrus;
   }
 }
@@ -327,10 +326,17 @@ hr {
 * PROJETS
 */
 
-// PROJET 1 ///////////////////////////
 $margin-left: 120px;
-.project__wrapper {
-  
+
+// PROJET 1 ///////////////////////////
+
+@include desktop {
+  .project__wrapper {
+    width: 562px;
+    height: 100vh;
+    left: 0px;
+    // border: 1px solid red;
+  }
 }
 
 .project__wrapper--1 {
@@ -344,25 +350,28 @@ $margin-left: 120px;
   color: $dark;
   outline: 1px solid $gold;
   outline-offset: -10px;
+
   @include desktop {
     background-color: $gold;
     outline: none;
   }
 
   .project__nb {
-    color: $papyrus;
     @include h2;
     font-size: 3rem;
+    color: $papyrus;
+
     @include desktop {
-      font-size: 4rem;
       margin-left: $margin-left;
+      font-size: 4rem;
     }
   }
 
   .project__title {
-    color: $dark;
     @include h2;
+    color: $dark;
     font-size: 2.75rem;
+
     @include desktop {
       margin-left: $margin-left;
       font-size: 4rem;
@@ -376,6 +385,7 @@ $margin-left: 120px;
     height: 312px;
     background-color: $gold;
     // padding: 10px;
+
     @include desktop {
       display: none;
     }
@@ -384,11 +394,12 @@ $margin-left: 120px;
   .project__subtitle {
     position: relative;
     width: 275px;
-    left: 45px;
+    // left: 45px;
     color: $dark;
     @include h4;
     font-size: 1rem;
-    line-height: 25px;
+    line-height: 1.6rem;
+
     @include desktop {
       display: block;
       margin-left: $margin-left;
@@ -403,6 +414,7 @@ $margin-left: 120px;
   .project__description {
     display: none;
     @include paragraph;
+
     @include desktop {
       display: block;
       margin-left: $margin-left;
@@ -413,6 +425,7 @@ $margin-left: 120px;
   .project__date {
     display: none;
     @include h5;
+
     @include desktop {
       display: block;
       margin-left: $margin-left;
@@ -421,10 +434,12 @@ $margin-left: 120px;
 
   .button__about {
     display: inline-block;
-    color: $dark;
     @include paragraph;
+
+    color: $dark;
     background-color: $gold;
     padding: 8px 35px;
+
     @include desktop {
       margin-left: $margin-left;
       margin-top: 24px;
@@ -452,6 +467,7 @@ $margin-left: 120px;
   color: $dark;
   outline: 1px solid $gold;
   outline-offset: -10px;
+
   @include desktop {
     background-color: $dark;
     outline: none;
@@ -461,21 +477,23 @@ $margin-left: 120px;
     @include h2;
     font-size: 3rem;
     color: $dark;
+
     @include desktop {
+      margin-left: $margin-left;
       font-size: 4rem;
       color: $papyrus;
-      margin-left: $margin-left;
     }
   }
 
   .project__title {
-    color: $gold;
     @include h2;
     font-size: 2.75rem;
+    color: $gold;
+
     @include desktop {
-      color: $gold;
-      font-size: 4rem;
       margin-left: $margin-left;
+      font-size: 4rem;
+      color: $gold;
     }
   }
 
@@ -486,6 +504,7 @@ $margin-left: 120px;
     height: 312px;
     background-color: $papyrus;
     // padding: 10px;
+
     @include desktop {
       display: none;
     }
@@ -495,49 +514,53 @@ $margin-left: 120px;
     color: $dark;
     position: absolute;
     width: 275px;
-    left: 45px;
+    // left: 45px;
     @include h4;
-    font-size: 16px;
-    line-height: 25px;
+    font-size: 1rem;
+    line-height: 1.6rem;
+
     @include desktop {
       position: relative;
-      color: $papyrus;
-      margin-left: $margin-left;
       width: initial;
-      margin-top: 10px;
       left: initial;
-      line-height: initial;
+      margin-top: 10px;
+      margin-left: $margin-left;
       @include h4;
+      line-height: initial;
+      color: $papyrus;
     }
   }
 
   .project__description {
     display: none;
     @include paragraph;
+
     @include desktop {
       display: block;
-      color: $papyrus;
-      margin-left: $margin-left;
       width: 350px;
+      margin-left: $margin-left;
+      color: $papyrus;
     }
   }
 
   .project__date {
     display: none;
     @include h5;
+
     @include desktop {
       display: block;
-      color: $papyrus;
       margin-left: $margin-left;
+      color: $papyrus;
     }
   }
 
   .button__about {
     display: inline-block;
-    color: $dark;
-    @include paragraph;
-    background-color: $gold;
     padding: 8px 35px;
+    @include paragraph;
+    color: $dark;
+    background-color: $gold;
+
     @include desktop {
       margin-top: 24px;
       margin-left: $margin-left;
@@ -548,17 +571,7 @@ $margin-left: 120px;
   }
 }
 
-////////////////////////////////////
-@include desktop {
-  .project__wrapper {
-    width: 562px;
-    height: 100vh;
-    left: 0px;
-    // border: 1px solid red;
-  }
-}
-
-// BACKGROUND PROJECT //////////
+////// BACKGROUND PROJECT (only on mobile version)
 .background__project1 {
   left: 39px;
   top: 646px;
@@ -574,58 +587,154 @@ $margin-left: 120px;
   top: 1782px;
 }
 
+
+
+/////////////////// BACKGROUND SKILLS & ABOUT
+
+.background__about {
+  background: linear-gradient(180deg, #222222 0%, #010101 50%);
+}
+
+/// SKILLS
+.skills__title {
+  @include h2;
+  color: $gold;
+}
+
+.skills {
+  display: flex;
+  justify-content: space-around;
+}
+
+.skill {
+
+}
+
+.skills__subtitle {
+  font-family: NarzissProCy;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 900;
+  color: $gold;
+}
+
+.skills__description {
+  max-width: 300px;
+  margin-top: -4px;
+  padding: 20px;
+  @include paragraph;
+  font-weight: 100;
+  border: 0.75px solid $gold;
+}
+
+
+/// ABOUT
+
+.wrapper--about {
+  // max-height: 100vh;
+  background: url(../assets/Photo_portfolio.jpg) no-repeat left center fixed padding-box ;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: contain;
+  background-clip: content-box;
+}
+
+.about__title {
+  @include h2;
+  color: $gold;
+}
+
+.about__subtitle {
+  @include paragraph;
+  font-weight: 100;
+  letter-spacing: 0.1rem;
+  color: $gold;
+}
+
+.about__description {
+  max-width: 580px;
+  padding: 20px;
+  @include paragraph;
+  font-weight: 100;
+  border: 0.75px solid $gold;
+}
+
+.about__data {
+  @include paragraph;
+  font-weight: 100;
+  color: $gold;
+}
+
+.backtotop {
+  text-align: center;
+  font-family: Montserrat, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.75rem; 
+  font-weight: 300;
+  line-height: 1.5rem;
+  color: $gold;
+}
+
+.copyright {
+  text-align: center;
+  font-family: Montserrat, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.625rem; 
+  font-weight: 300;
+  line-height: 1.5rem;
+}
+
 // TITLES //////////
-.project__title1 {
-  position: absolute;
-  left: 22px;
-  top: 570px;
-  @include desktop {
-    position: initial;
-  }
-}
+// .project__title1 {
+//   position: absolute;
+//   left: 22px;
+//   top: 570px;
+//   @include desktop {
+//     position: initial;
+//   }
+// }
 
-.project__title2 {
-  position: absolute;
-  left: 22px;
-  top: 1138px;
-  @include desktop {
-    position: initial;
-  }
-}
+// .project__title2 {
+//   position: absolute;
+//   left: 22px;
+//   top: 1138px;
+//   @include desktop {
+//     position: initial;
+//   }
+// }
 
-.project__title3 {
-  position: absolute;
-  left: 22px;
-  top: 1706px;
-  @include desktop {
-    position: initial;
-  }
-}
+// .project__title3 {
+//   position: absolute;
+//   left: 22px;
+//   top: 1706px;
+//   @include desktop {
+//     position: initial;
+//   }
+// }
 
 // BUTTON ABOUT //////////
-.button__about1 {
-  position: absolute;
-  left: 131px;
-  top: 1084px;
-  @include desktop {
-    position: initial;
-  }
-}
+// .button__about1 {
+//   position: absolute;
+//   left: 131px;
+//   top: 1084px;
+//   @include desktop {
+//     position: initial;
+//   }
+// }
 
-.button__about2 {
-  position: absolute;
-  left: 131px;
-  top: 1652px;
-  @include desktop {
-    position: initial;
-  }
-}
+// .button__about2 {
+//   position: absolute;
+//   left: 131px;
+//   top: 1652px;
+//   @include desktop {
+//     position: initial;
+//   }
+// }
 
-.button__about3 {
-  position: absolute;
-  left: 131px;
-  top: 2220px;
-  @include desktop {
-    position: initial;
-  }
-}
+// .button__about3 {
+//   position: absolute;
+//   left: 131px;
+//   top: 2220px;
+//   @include desktop {
+//     position: initial;
+//   }
+// }

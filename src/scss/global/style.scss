@@ -83,7 +83,7 @@ $menu-width: 333px;
   right: -100%;
   padding: 10px 20px;
   z-index: 3;
-  background-color: $papyrus;
+  background-color: $dark;
   text-align: center;
 
   transition: all 0.75s ease-in-out;
@@ -177,9 +177,11 @@ $menu-width: 333px;
 
 // SCROLL /////////////////
 .icon__scroll {
-  position: relative;
+  position: absolute;
   left: 50%;
   top: 92vh;
+  z-index: 2;
+  rotate: 180deg;
 }
 
 /*
@@ -592,7 +594,7 @@ $margin-left: 120px;
 /////////////////// BACKGROUND SKILLS & ABOUT
 
 .background__about {
-  background: linear-gradient(180deg, #222222 0%, #010101 50%);
+  background: linear-gradient(0deg, #222222 0%, #010101 51.6%);
 }
 
 /// SKILLS
@@ -632,12 +634,12 @@ $margin-left: 120px;
 
 .wrapper--about {
   // max-height: 100vh;
-  background: url(../assets/Photo_portfolio.jpg) no-repeat left center fixed padding-box ;
+  background: url(../assets/Photo_portfolio.jpg) no-repeat fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: contain;
-  background-clip: content-box;
+  background-position: 120px center;
 }
 
 .about__title {

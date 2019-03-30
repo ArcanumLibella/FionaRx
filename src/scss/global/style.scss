@@ -77,6 +77,7 @@ $menu-width: 333px;
 .menu__nav {
   position: fixed;
   overflow: hidden;
+  max-width: 100%;
   width: 100%;
   height: 100%;
   top: 0px;
@@ -137,23 +138,23 @@ $menu-width: 333px;
   }
 }
 
-/// SOCIAL /////////////////
+/// ICONS /////////////////
 
 .socials {
   // display: flex;
   // justify-content: space-between;
   // flex-direction: row;
-  width: 280px;
+  // align-content: flex-end;
 }
 
 .social {
   display: flex;
   justify-content: space-around;
-  flex-direction: row;
-  margin-top: 50%;
+  align-items: flex-end;
+  margin-top: 25%;
 
   @include desktop {
-    margin-top: 100px;
+    margin-top: 30%;
   }
 }
 
@@ -171,6 +172,10 @@ $menu-width: 333px;
     // background-clip: padding-box;
     // -webkit-background-clip: padding-box;
   }
+}
+
+#phone {
+  fill: $gold;
 }
 
 /// SCROLL /////////////////
@@ -206,20 +211,24 @@ $menu-width: 333px;
 }
 
 .hero__wrapper {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
   z-index: 2;
   position: relative;
 }
 
 .hero__title {
-  position: absolute;
-  left: 27px;
-  top: 195px;
-  text-align: center;
+  width: 280px;
+  margin-top: 50%;
+
   font-family: "NarzissProSwirls", Impact, "Arial Narrow Bold", sans-serif;
-  font-size: 4.5rem;
+  font-size: 3rem;
   font-style: normal;
   font-weight: 800;
-  color: $gold;
+  @include golden;
 
   @include tablet {
     // A FAIRE !!!
@@ -227,8 +236,12 @@ $menu-width: 333px;
 
   @include desktop {
     position: absolute;
+    width: initial;
     left: 160px;
     top: 350px;
+    margin-top: initial;
+    padding-top: initial;
+    padding-left: initial;
     font-size: 6rem;
     // color: $darkGold;
     @include golden2;
@@ -236,36 +249,33 @@ $menu-width: 333px;
 }
 
 hr {
-  position: absolute;
-  max-width: 80%;
-  height: 0px;
-  top: 365px;
-  border: 0.5px solid $gold;
+  display: none;
 
   @include tablet {
     // A FAIRE !!!
   }
 
   @include desktop {
+    display: block;
     position: absolute;
     width: 880px;
-    left: 176px;
+    height: 0px;
+    left: 13%;
     top: 448px;
+    border: 0.5px solid $gold;
   }
 }
 
 .hero__subtitle {
-  position: absolute;
-  left: 27px;
-  top: 381px;
-  padding: 0px 15px;
+  width: 280px;
+  margin-top: 5px;
+
   font-size: 0.8rem;
   font-style: normal;
-  font-weight: 600;
-  line-height: 1.5rem;
+  font-weight: 500;
+  line-height: 1.2rem;
   letter-spacing: 0.2rem;
-  text-align: right;
-  @include golden2;
+  @include golden;
 
   @include tablet {
     // A FAIRE !!!
@@ -273,8 +283,12 @@ hr {
 
   @include desktop {
     position: absolute;
+    width: initial;
     left: 562px;
     top: 483px;
+    margin-top: initial;
+    padding-left: initial;
+    padding-right: initial;
     font-size: 1rem;
     font-weight: 600;
     text-align: left;
@@ -654,12 +668,13 @@ $margin-left: 120px;
 }
 
 .about__data {
+  display: none;
   @include paragraph;
   font-weight: 100;
   color: $gold;
 
   @include desktop {
-    
+    display: inline;
   }
 }
 

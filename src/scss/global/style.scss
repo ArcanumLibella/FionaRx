@@ -199,15 +199,28 @@ $menu-width: 333px;
     height: 100%;
     width: 100%;
     content: "";
-    background: url(../assets/Ferns.jpg) no-repeat center center fixed;
+    background: url(../assets/ferns_nb.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    -webkit-filter: brightness(0.5);
-    filter: brightness(0.5);
-    // filter: grayscale(100%);
   }
+
+  @media (min-width: 1120px) {
+    background: url(../assets/ferns_nb.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  // @include desktop {
+  //   background: url(../assets/ferns_mobile.jpg) no-repeat center center fixed;
+  //   -webkit-background-size: cover;
+  //   -moz-background-size: cover;
+  //   -o-background-size: cover;
+  //   background-size: cover;
+  // }
 }
 
 .hero__wrapper {
@@ -341,15 +354,66 @@ hr {
 */
 
 $margin-left: 120px;
+$margin-left-m: 35px;
+
+.project__image1 {
+  margin: 20px auto;
+  width: 80%;
+  height: 500px;
+  // z-index: 80;
+  background: url(../assets/background_booking.jpg) no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  border: 5px solid $gold;
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.project__image2 {
+  margin: 20px auto;
+  width: 80%;
+  height: 500px;
+  // z-index: 80;
+  background: url(../assets/background_moschino.jpeg) no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  border: 5px solid $gold;
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.project__image3 {
+  margin: 20px auto;
+  width: 80%;
+  height: 500px;
+  // z-index: 80;
+  background: url(../assets/background_strit.jpg) no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  border: 5px solid $gold;
+
+  @include desktop {
+    display: none;
+  }
+}
 
 /// PROJET V1 ///////////////////////////
 
+
+.project__wrapper {
+
 @include desktop {
-  .project__wrapper {
     width: 562px;
-    height: 100vh;
-    left: 0px;
-    // border: 1px solid red;
   }
 }
 
@@ -358,10 +422,9 @@ $margin-left: 120px;
   align-items: flex-start;
   flex-direction: column;
   justify-content: center;
-  padding: 12px;
+  // padding: 12px;
   height: 100vh;
   background-color: $papyrus;
-  color: $dark;
   outline: 1px solid $gold;
   outline-offset: -10px;
 
@@ -371,6 +434,7 @@ $margin-left: 120px;
   }
 
   .project__nb {
+    margin-left: $margin-left-m;
     @include h2;
     font-size: 3rem;
     color: $papyrus;
@@ -382,9 +446,9 @@ $margin-left: 120px;
   }
 
   .project__title {
+    margin-left: $margin-left-m;
     @include h2-m;
     color: $dark;
-    font-size: 2.75rem;
 
     @include desktop {
       margin-left: $margin-left;
@@ -392,27 +456,14 @@ $margin-left: 120px;
     }
   }
 
-  .background__project {
-    position: absolute;
-    z-index: 0;
-    width: 281px;
-    height: 312px;
-    background-color: $gold;
-    // padding: 10px;
-
-    @include desktop {
-      display: none;
-    }
-  }
-
   .project__subtitle {
     position: relative;
+    margin-left: $margin-left-m;
     width: 275px;
-    // left: 45px;
-    color: $dark;
     @include h4;
     font-size: 1rem;
     line-height: 1.6rem;
+    color: $dark;
 
     @include desktop {
       display: block;
@@ -433,28 +484,36 @@ $margin-left: 120px;
       display: block;
       margin-left: $margin-left;
       width: 350px;
+      color: $dark;
     }
   }
 
   .project__date {
     display: none;
-    @include h5;
 
     @include desktop {
       display: block;
       margin-left: $margin-left;
+      @include h5;
+      font-weight: 500;
+      color: $dark;
     }
   }
 
   .button__about {
-    display: inline-block;
-    @include paragraph;
+    position: relative;
+    left: 45%;
+    bottom: 5%;
+    padding: 8px 35px;
+    margin-right: 20px;
 
+    @include paragraph;
     color: $dark;
     background-color: $gold;
-    padding: 8px 35px;
 
     @include desktop {
+      display: initial;
+      position: initial;
       margin-left: $margin-left;
       margin-top: 24px;
       border: 0.5px solid $dark;
@@ -475,7 +534,7 @@ $margin-left: 120px;
   align-items: flex-start;
   flex-direction: column;
   justify-content: center;
-  padding: 12px;
+  // padding: 12px;
   height: 100vh;
   background-color: $dark;
   color: $dark;
@@ -488,9 +547,10 @@ $margin-left: 120px;
   }
 
   .project__nb {
+    margin-left: $margin-left-m;
     @include h2;
     font-size: 3rem;
-    color: $dark;
+    color: $papyrus;
 
     @include desktop {
       margin-left: $margin-left;
@@ -500,6 +560,7 @@ $margin-left: 120px;
   }
 
   .project__title {
+    margin-left: $margin-left-m;
     @include h2-m;
     color: $gold;
 
@@ -510,24 +571,12 @@ $margin-left: 120px;
     }
   }
 
-  .background__project {
-    position: absolute;
-    z-index: 0;
-    width: 281px;
-    height: 312px;
-    background-color: $papyrus;
-    // padding: 10px;
-
-    @include desktop {
-      display: none;
-    }
-  }
-
   .project__subtitle {
-    color: $dark;
-    position: absolute;
+    position: relative;
     width: 275px;
-    // left: 45px;
+    margin-left: $margin-left-m;
+    color: $gold;
+    
     @include h4;
     font-size: 1rem;
     line-height: 1.6rem;
@@ -558,23 +607,28 @@ $margin-left: 120px;
 
   .project__date {
     display: none;
-    @include h5;
 
     @include desktop {
       display: block;
       margin-left: $margin-left;
+      @include h5;
+      font-weight: 500;
       color: $papyrus;
     }
   }
 
   .button__about {
-    display: inline-block;
+    position: relative;
+    left: 45%;
+    bottom: 5%;
     padding: 8px 35px;
     @include paragraph;
     color: $dark;
     background-color: $gold;
 
     @include desktop {
+      display: initial;
+      position: initial;
       margin-top: 24px;
       margin-left: $margin-left;
       border: 0.5px solid $papyrus;
@@ -583,24 +637,6 @@ $margin-left: 120px;
     }
   }
 }
-
-/// BACKGROUND PROJECT (only on mobile version)
-// .background__project1 {
-//   left: 39px;
-//   top: 646px;
-// }
-
-// .background__project2 {
-//   left: 39px;
-//   top: 1214px;
-// }
-
-// .background__project3 {
-//   left: 39px;
-//   top: 1782px;
-// }
-
-
 
 /*
 * ABOUT AND SKILLS ////////////////////////////
@@ -628,7 +664,7 @@ $margin-left: 120px;
 }
 
 .about__title {
-  margin-left: 35px;
+  margin-left: $margin-left-m;
   margin-bottom: 300px;
   @include h2-m;
   line-height: 3rem;
@@ -641,7 +677,7 @@ $margin-left: 120px;
 
 .about__subtitle {
   padding-top: 60px;
-  margin-left: 35px;
+  margin-left: $margin-left-m;
   @include paragraph;
   font-size: 0.75rem;
   font-weight: 100;
@@ -655,6 +691,7 @@ $margin-left: 120px;
 
 .about__description {
   margin: 35px;
+  margin-left: $margin-left-m;
   padding: 20px;
   @include paragraph-m;
   border: 0.75px solid $gold;
@@ -680,7 +717,7 @@ $margin-left: 120px;
 
 /// SKILLS
 .skills__title {
-  margin-left: 35px;
+  margin-left: $margin-left-m;
   @include h2-m;
   line-height: 3rem;
   color: $gold;
@@ -693,7 +730,7 @@ $margin-left: 120px;
 
 .skills__subtitle {
   margin-top: 80px;
-  margin-left: 35px;
+  margin-left: $margin-left-m;
   @include paragraph;
   font-size: 0.75rem;
   font-weight: 100;
@@ -726,7 +763,7 @@ $margin-left: 120px;
 }
 
 .skill__subtitle {
-  margin-left: 35px;
+  margin-left: $margin-left-m;
   font-family: NarzissProCy;
   font-size: 1.2rem;
   font-style: normal;

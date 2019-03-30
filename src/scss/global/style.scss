@@ -8,17 +8,17 @@ body {
 }
 
 .container {
-  background-color: $papyrus;
+  background-color: $dark;
   width: 100vw;
 }
 
-.wrapper {
+.background {
   height: 100vh;
 }
 
 //////////////////////////////////////////////////
 
-// MENU BURGER /////////////////
+/// MENU BURGER /////////////////
 #menu__button {
   display: flex;
   justify-content: center;
@@ -88,12 +88,10 @@ $menu-width: 333px;
 
   transition: all 0.75s ease-in-out;
 
-
-
   @include desktop {
     width: $menu-width;
     right: -$menu-width;
-    border-left: 2px solid $gold;
+    border-left: 0.5px solid $gold;
   }
 
   &.is-open {
@@ -106,7 +104,7 @@ $menu-width: 333px;
   align-items: center;
   flex-direction: column;
   overflow: hidden;
-  height: 100vh;
+  // height: 100vh;
 }
 
 .menu {
@@ -114,7 +112,7 @@ $menu-width: 333px;
   flex-direction: column;
   align-content: center;
   align-items: center;
-  margin-top: 35%;
+  margin-top: 50%;
 
   @include desktop {
     margin-top: 60%;
@@ -139,7 +137,7 @@ $menu-width: 333px;
   }
 }
 
-// SOCIAL /////////////////
+/// SOCIAL /////////////////
 
 .socials {
   // display: flex;
@@ -152,7 +150,7 @@ $menu-width: 333px;
   display: flex;
   justify-content: space-around;
   flex-direction: row;
-  margin-top: 35%;
+  margin-top: 50%;
 
   @include desktop {
     margin-top: 100px;
@@ -175,7 +173,7 @@ $menu-width: 333px;
   }
 }
 
-// SCROLL /////////////////
+/// SCROLL /////////////////
 .icon__scroll {
   position: absolute;
   left: 50%;
@@ -185,7 +183,7 @@ $menu-width: 333px;
 }
 
 /*
-* HERO
+* HERO ////////////////////////////
 */
 .background--hero {
   height: 100vh;
@@ -325,12 +323,12 @@ hr {
 ///////////////////////////////////////////////////////////
 
 /*
-* PROJETS
+* PROJETS ////////////////////////////
 */
 
 $margin-left: 120px;
 
-// PROJET 1 ///////////////////////////
+/// PROJET V1 ///////////////////////////
 
 @include desktop {
   .project__wrapper {
@@ -370,7 +368,7 @@ $margin-left: 120px;
   }
 
   .project__title {
-    @include h2;
+    @include h2-m;
     color: $dark;
     font-size: 2.75rem;
 
@@ -457,7 +455,7 @@ $margin-left: 120px;
   }
 }
 
-// PROJET 2 ///////////////////////////
+/// PROJET V2 ///////////////////////////
 .project__wrapper--2 {
   display: flex;
   align-items: flex-start;
@@ -488,8 +486,7 @@ $margin-left: 120px;
   }
 
   .project__title {
-    @include h2;
-    font-size: 2.75rem;
+    @include h2-m;
     color: $gold;
 
     @include desktop {
@@ -573,100 +570,177 @@ $margin-left: 120px;
   }
 }
 
-////// BACKGROUND PROJECT (only on mobile version)
-.background__project1 {
-  left: 39px;
-  top: 646px;
-}
+/// BACKGROUND PROJECT (only on mobile version)
+// .background__project1 {
+//   left: 39px;
+//   top: 646px;
+// }
 
-.background__project2 {
-  left: 39px;
-  top: 1214px;
-}
+// .background__project2 {
+//   left: 39px;
+//   top: 1214px;
+// }
 
-.background__project3 {
-  left: 39px;
-  top: 1782px;
-}
+// .background__project3 {
+//   left: 39px;
+//   top: 1782px;
+// }
 
 
 
-/////////////////// BACKGROUND SKILLS & ABOUT
+/*
+* ABOUT AND SKILLS ////////////////////////////
+*/
 
-.background__about {
+.background--aboutskills {
   background: linear-gradient(0deg, #222222 0%, #010101 51.6%);
 }
 
-/// SKILLS
-.skills__title {
-  @include h2;
-  color: $gold;
-}
-
-.skills {
-  display: flex;
-  justify-content: space-around;
-}
-
-.skill {
-
-}
-
-.skills__subtitle {
-  font-family: NarzissProCy;
-  font-size: 1.5rem;
-  font-style: normal;
-  font-weight: 900;
-  color: $gold;
-}
-
-.skills__description {
-  max-width: 300px;
-  margin-top: -4px;
-  padding: 20px;
-  @include paragraph;
-  font-weight: 100;
-  border: 0.75px solid $gold;
-}
-
-
 /// ABOUT
 
-.wrapper--about {
+.background--about {
   // max-height: 100vh;
-  background: url(../assets/photo_portfolio.jpg) no-repeat fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background: url(../assets/portrait.jpg) no-repeat;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
   background-size: contain;
-  background-position: 120px center;
+  background-position: 100px 120px;
+
+  @include desktop {
+    background-position: 100px center;
+
+  }
 }
 
 .about__title {
-  @include h2;
+  margin-left: 35px;
+  margin-bottom: 300px;
+  @include h2-m;
+  line-height: 3rem;
   color: $gold;
+
+  @include desktop {
+    @include h2;
+  }
 }
 
 .about__subtitle {
+  padding-top: 60px;
+  margin-left: 35px;
   @include paragraph;
+  font-size: 0.75rem;
   font-weight: 100;
   letter-spacing: 0.1rem;
   color: $gold;
+
+  @include desktop {
+    font-size: 1rem;
+  }
 }
 
 .about__description {
-  max-width: 580px;
+  margin: 35px;
   padding: 20px;
-  @include paragraph;
-  font-weight: 100;
+  @include paragraph-m;
   border: 0.75px solid $gold;
+  background-color: $dark;
+
+  @include desktop {
+    max-width: 580px;
+    @include paragraph;
+
+  }
 }
 
 .about__data {
   @include paragraph;
   font-weight: 100;
   color: $gold;
+
+  @include desktop {
+    
+  }
 }
+
+/// SKILLS
+.skills__title {
+  margin-left: 35px;
+  @include h2-m;
+  line-height: 3rem;
+  color: $gold;
+
+  @include desktop {
+    @include h2;
+
+  }
+}
+
+.skills__subtitle {
+  margin-top: 80px;
+  margin-left: 35px;
+  @include paragraph;
+  font-size: 0.75rem;
+  font-weight: 100;
+  letter-spacing: 0.1rem;
+  color: $gold;
+
+  @include desktop {
+    font-size: 1rem;
+  }
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+.skill {
+  // max-width: 80%;
+  margin: 30px auto;
+
+  @include desktop {
+
+  }
+}
+
+.skill__subtitle {
+  margin-left: 35px;
+  font-family: NarzissProCy;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 900;
+  color: $gold;
+
+  @include desktop {
+    font-size: 1.5rem;
+
+  }
+}
+
+.skill__description {
+  margin: 35px;
+  margin-top: -4px;
+  padding: 20px;
+  @include paragraph-m;
+  font-weight: 100;
+  border: 0.75px solid $gold;
+  background-color: $dark;
+
+  @include desktop {
+    max-width: 300px;
+    @include paragraph;
+
+  }
+}
+
+
 
 .backtotop {
   text-align: center;

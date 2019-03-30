@@ -180,9 +180,11 @@
     </symbol>
     </svg>
     <!-- Icon__scroll -->
-    <svg class="icon__scroll" width="40" height="20" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M15 8C9.54 2.54 8.05833 1.05833 8 1L1 8" stroke="#DFBD64" stroke-width="0.75"/>
-    <path d="M11.5 6.0752L8 2.7502L4.675 6.07519" stroke="#DFBD64" stroke-width="0.5"/>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <symbol id="icon__scroll" viewBox="0 0 16 16">
+        <path d="M15 8C9.54 2.54 8.05833 1.05833 8 1L1 8" stroke="#DFBD64" stroke-width="0.75"/>
+        <path d="M11.5 6.0752L8 2.7502L4.675 6.07519" stroke="#DFBD64" stroke-width="0.5"/>
+      </symbol>
     </svg>
     <section class="container">
       <section class="background background--hero">
@@ -256,6 +258,9 @@
             Je suis actuellement à la recherche d'un stage en Développement
             Front-end pour 3 mois à partir de Juillet 2019.
           </p>
+          <svg class="icon__scroll" aria-hidden="true">
+            <use xlink:href="#icon__scroll"></use>
+          </svg>
         </article>
       </section>
       <!-- PROJET 1 -->
@@ -312,6 +317,7 @@
       <!-- ABOUT -->
       <section class="background--aboutskills">
         <article class="background--about">
+          <!-- <div class="background__blur"></div> -->
           <p class="about__subtitle">LEARN MORE</p>
           <h2 class="about__title">ABOUT ME</h2>
           <p class="about__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 

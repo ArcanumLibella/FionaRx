@@ -1,3 +1,8 @@
+/* VARIABLES */
+
+$margin-left: 120px;
+$margin-left-m: 35px;
+
 /* STYLE GLOBAL */
 body {
   font-family: "Montserrat", "Segoe UI", Tahoma, Verdana, sans-serif;
@@ -194,6 +199,7 @@ $menu-width: 333px;
   }
 
   @include desktop {
+    // margin: 0 auto;
     bottom: 5%;
   }
 }
@@ -227,23 +233,31 @@ $menu-width: 333px;
 }
 
 .hero__wrapper {
+  position: relative;
   display: flex;
-  justify-content: flex-start;
   flex-direction: column;
   align-items: center;
   height: 100vh;
   z-index: 2;
-  position: relative;
+
+  @include desktop {
+    display: inline-block;
+    position: relative;
+    // padding: 10px;
+    // text-align: center;
+
+  }
 }
 
 .hero__title {
   width: 280px;
-  margin-top: 120%;
+  margin-top: 45%;
 
   font-family: "NarzissProSwirls", Impact, "Arial Narrow Bold", sans-serif;
   font-size: 3rem;
   font-style: normal;
   font-weight: 800;
+  text-align: center;
   @include golden;
 
   @include tablet {
@@ -251,16 +265,12 @@ $menu-width: 333px;
   }
 
   @include desktop {
-    position: absolute;
+    position: relative;
     width: initial;
-    left: 160px;
-    top: 350px;
-    margin-top: initial;
-    padding-top: initial;
-    padding-left: initial;
+    margin-left: $margin-left;
+    margin-top: 25%;
     font-size: 6rem;
-    // color: $darkGold;
-    @include golden2;
+    text-align: initial;
   }
 }
 
@@ -273,50 +283,48 @@ hr {
 
   @include desktop {
     display: block;
-    position: absolute;
+    position: relative;
+    margin-top: 5px;
     width: 880px;
-    height: 0px;
-    left: 13%;
-    top: 448px;
+    margin-left: $margin-left;
     border: 0.5px solid $gold;
   }
 }
 
 .hero__subtitle {
-  width: 280px;
+  display: inline-block;
+  position: relative;
+  width: 200px;
   margin-top: 5px;
 
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   font-style: normal;
   font-weight: 500;
   line-height: 1.2rem;
   letter-spacing: 0.2rem;
-  @include golden;
+  text-align: center;
+  color: $papyrus;
+  // @include golden;
 
   @include tablet {
     // A FAIRE !!!
   }
 
   @include desktop {
-    position: absolute;
     width: initial;
-    left: 562px;
-    top: 483px;
-    margin-top: initial;
-    padding-left: initial;
-    padding-right: initial;
+    margin-top: 15px;
+    margin-left: 500px;
     font-size: 1rem;
     font-weight: 600;
-    text-align: left;
+    @include golden;
   }
 }
 
 .hero__description__title {
   display: none;
-  padding: 0px 15px;
   @include paragraph;
   font-weight: 500;
-  @include golden;
+  color: $papyrus;
 
   @include tablet {
     // A FAIRE !!!
@@ -324,15 +332,14 @@ hr {
 
   @include desktop {
     display: inline-block;
-    position: absolute;
-    left: 562px;
-    top: 536px;
+    position: relative;
+    margin-top: 25px;
+    margin-left: 500px;
   }
 }
 
 .hero__description {
   display: none;
-  padding: 0px 15px;
   @include paragraph;
   // @include golden;
 
@@ -341,11 +348,11 @@ hr {
   }
 
   @include desktop {
-    display: inline-block;
-    position: absolute;
-    left: 562px;
-    top: 561px;
+    display: block;
+    position: relative;
     width: 528px;
+    margin-top: 0px;
+    margin-left: 500px;
     color: $papyrus;
   }
 }
@@ -355,9 +362,6 @@ hr {
 /*
 * PROJETS ////////////////////////////
 */
-
-$margin-left: 120px;
-$margin-left-m: 35px;
 
 .project__image1 {
   margin: 20px auto;

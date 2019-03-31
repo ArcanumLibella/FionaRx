@@ -36,3 +36,12 @@ $pinkLady: #FF0080;
   -webkit-text-fill-color: transparent;
 }
 
+@mixin golden3 {
+  background: linear-gradient(left, #62502C 0%, #EFC864 50%, #62502C 100%),
+  linear-gradient(left, #62502C 0%, #EFC864 50%, #62502C 100%);
+  background: -o-linear-gradient(transparent, transparent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+// -webkit-linear-gradient(left, #62502C 0%, #EFC864 50%, #62502C 100%);

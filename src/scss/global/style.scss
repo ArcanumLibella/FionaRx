@@ -37,7 +37,9 @@ body {
   border-radius: 50px;
   border: 0.5px solid $gold;
   @include h5;
-  @include golden;
+  color: $darkGold;
+  background-color: transparent;
+  
   transition: all 0.3s ease-in-out;
 
   @include desktop {
@@ -795,8 +797,9 @@ hr {
   padding: initial;
   @include paragraph;
   font-weight: 200;
-  @include golden;
-
+  color: $darkGold;
+  background-color: transparent;
+  
   @include desktop {
     margin-left: 45%;
     font-weight: 300;
@@ -876,7 +879,7 @@ hr {
 .skill__subtitle {
   margin-left: $margin-left-m;
   font-family: NarzissProCy;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-style: normal;
   font-weight: 900;
   @include golden;

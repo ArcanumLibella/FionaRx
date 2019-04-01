@@ -154,11 +154,16 @@ $menu-width: 333px;
 /// ICONS & SVG /////////////////
 
 #goldenLines {
-  position: absolute;
-  z-index: 10;
-  top: 0%;
-  left: 45%;
-  margin: 0 auto;
+  display: none;
+
+  @include desktop {
+    display: block;
+    position: absolute;
+    z-index: 10;
+    top: 0%;
+    left: 45%;
+    margin: 0 auto;
+  }
 }
 
 .social {

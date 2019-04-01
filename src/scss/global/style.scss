@@ -226,26 +226,27 @@ $menu-width: 333px;
 .background--hero {
   height: 100vh;
   position: relative;
+  
   &::before {
     z-index: 1;
     position: absolute;
     height: 100%;
     width: 100%;
     content: "";
-    background: url(../assets/ferns_nb.jpg) no-repeat center center fixed;
+    background: url(../assets/ferns_mobile.jpg) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-  }
 
-  // @include desktop {
-  //   background: url(../assets/ferns_nb.jpg) no-repeat center center fixed;
-  //   -webkit-background-size: cover;
-  //   -moz-background-size: cover;
-  //   -o-background-size: cover;
-  //   background-size: cover;
-  // }
+    @include desktop {
+      background: url(../assets/ferns_nb.jpg) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+  }
 }
 
 .hero__wrapper {

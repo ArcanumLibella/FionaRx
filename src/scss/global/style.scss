@@ -26,29 +26,30 @@ body {
   align-items: center;
   overflow: hidden;
   position: fixed;
-  top: 8px;
-  right: 8px;
+  top: 5px;
+  right: 5px;
   z-index: 4;
   width: 62px;
   height: 62px;
   cursor: pointer;
-  -webkit-border-radius: 62px;
-  -moz-border-radius: 62px;
-  border-radius: 50px;
-  border: 0.5px solid $gold;
+ 
   @include h5;
-  color: $papyrus;
-  background-color: $dark;
+  color: $darkGold;
+  background-color: transparent;
   
   transition: all 0.3s ease-in-out;
 
   @include desktop {
     top: 15px;
     right: 15px;
-  }
+    -webkit-border-radius: 62px;
+    -moz-border-radius: 62px;
+    border-radius: 50px;
+    border: 0.5px solid $gold;
 
-  &.is-clicked {
-
+    &.is-clicked {
+      color: $papyrus;
+    }
   }
 
   // &::before {
@@ -108,7 +109,7 @@ $menu-width: 333px;
   align-items: center;
   flex-direction: column;
   overflow: hidden;
-  height: 85vh;
+  height: 75vh;
 
   @include desktop {
     height: initial;
@@ -132,8 +133,8 @@ $menu-width: 333px;
   font-size: 2rem;
   color: $papyrus;
   // @include golden;
-  transition: all 0.5s ease-in-out;
-  line-height: 80px;
+  transition: all 0.3s ease-in-out;
+  line-height: 70px;
 
   &:hover {
     color: $darkGold;
@@ -155,7 +156,6 @@ $menu-width: 333px;
 .social {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 30px;
 
   @include desktop {
     margin-top: 50%;
@@ -181,14 +181,32 @@ $menu-width: 333px;
   fill: $gold;
 }
 
+.scroll {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100vw;
+  height: 50%;
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 100;
+  color: $papyrus;
+
+  @include desktop {
+    height: initial;
+    margin-top: 7%;;
+
+  }
+}
+
 #icon__scroll {
   z-index: 2;
   fill: none;
 }
 
 .icon__scroll {
-  position: absolute;
-  bottom: 10%;
+  display: block;
   width: 40px;
   height: 40px;
   animation-name: scroll;
@@ -202,8 +220,8 @@ $menu-width: 333px;
   }
 
   @include desktop {
-    // margin: 0 auto;
-    bottom: 5%;
+    margin: 0 auto;
+    // bottom: 5%;
   }
 }
 

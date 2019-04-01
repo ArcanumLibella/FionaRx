@@ -44,3 +44,45 @@ for (let i = 0; i < links.length; i++)
   scroll();
 }, false);
 
+/* 
+* GOLDENLINES
+*/
+
+// Get the id of the <path> element and the length of <path>
+var path1 = document.getElementById("path1");
+var path2 = document.getElementById("path2");
+var path3 = document.getElementById("path3");
+
+// Get the total length of each lines
+var pathLength1 = path1.getTotalLength();
+var pathLength2 = path2.getTotalLength();
+var pathLength3 = path3.getTotalLength();
+
+// Make very long dashes (the length of the path itself)
+path1.style.strokeDasharray = pathLength1 + ' ' + pathLength1;
+path2.style.strokeDasharray = pathLength2 + ' ' + pathLength2;
+path3.style.strokeDasharray = pathLength3 + ' ' + pathLength3;
+
+// Offset the dashes so the it appears hidden entirely
+path1.style.strokeDashoffset = pathLength1;
+path2.style.strokeDashoffset = pathLength2;
+path3.style.strokeDashoffset = pathLength3;
+
+// When the page scrolls...
+window.addEventListener("scroll", function(e) {
+ 
+  // What % down is it? 
+  var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+    
+  // Length to offset the dashes
+  var drawLength1 = (pathLength1 * scrollPercentage);
+  var drawLength2 = (pathLength2 * scrollPercentage);
+  var drawLength3 = (pathLength3 * scrollPercentage);
+
+  
+  // Draw in reverse
+  path1.style.strokeDashoffset = pathLength1 - drawLength1;
+  path2.style.strokeDashoffset = pathLength2 - drawLength2;
+  path3.style.strokeDashoffset = pathLength3 - drawLength3;
+
+});

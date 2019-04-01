@@ -4,6 +4,7 @@ $margin-left: 120px;
 $margin-left-m: 35px;
 
 /* STYLE GLOBAL */
+
 body {
   font-family: "Montserrat", "Segoe UI", Tahoma, Verdana, sans-serif;
   color: $papyrus;
@@ -95,7 +96,6 @@ $menu-width: 333px;
   @include desktop {
     width: $menu-width;
     right: -$menu-width;
-    border-left: 0.5px solid $gold;
   }
 
   &.is-open {
@@ -151,7 +151,15 @@ $menu-width: 333px;
   }
 }
 
-/// ICONS /////////////////
+/// ICONS & SVG /////////////////
+
+#goldenLines {
+  position: absolute;
+  z-index: 10;
+  top: 0%;
+  left: 45%;
+  margin: 0 auto;
+}
 
 .social {
   display: flex;
@@ -217,6 +225,11 @@ $menu-width: 333px;
     0% { opacity: 0; }
     10% { transform: translateY(0); opacity: 1; }
     100% { transform: translateY(15px); opacity: 0;}
+  }
+  @-webkit-keyframes scroll {
+    0% { opacity: 0; }
+    10% { -webkit-transform: translateY(0); opacity: 1; }
+    100% { -webkit-transform: translateY(15px); opacity: 0;}
   }
 
   @include desktop {

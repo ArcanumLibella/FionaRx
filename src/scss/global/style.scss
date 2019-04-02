@@ -33,7 +33,7 @@ body {
   position: fixed;
   top: 5px;
   right: 5px;
-  z-index: 4;
+  z-index: 7;
   width: 62px;
   height: 62px;
   cursor: pointer;
@@ -45,12 +45,13 @@ body {
   transition: all 0.3s ease-in-out;
 
   @include desktop {
-    top: 15px;
-    right: 15px;
-    -webkit-border-radius: 62px;
-    -moz-border-radius: 62px;
-    border-radius: 50px;
+    top: 35px;
+    right: -0.5px;
+    // -webkit-border-radius: 62px;
+    // -moz-border-radius: 62px;
+    // border-radius: 50px;
     border: 0.5px solid $gold;
+    background-color: $dark;
 
     &.is-clicked {
       color: $papyrus;
@@ -91,7 +92,7 @@ $menu-width: 333px;
   top: 0px;
   right: -100%;
   padding: 10px 20px;
-  z-index: 3;
+  z-index: 6;
   background-color: $dark;
   // text-align: center;
 
@@ -155,6 +156,15 @@ $menu-width: 333px;
   }
 }
 
+.menu li:nth-of-type(1) {
+  display: block;
+  margin-top: 20px;
+  @include paragraph;
+  font-size: 0.8rem;
+  letter-spacing: 0.5rem;
+  opacity: 0.3;
+}
+
 /// ICONS & SVG /////////////////
 
 #goldenLines {
@@ -163,27 +173,44 @@ $menu-width: 333px;
   @include desktop {
     display: block;
     position: absolute;
-    z-index: 10;
+    z-index: 3;
     top: 0%;
     left: 45%;
     margin: 0 auto;
   }
 }
 
-.social {
-  display: flex;
-  justify-content: space-around;
+// .socials {
+//   display: flex;
+//   justify-content: center;
+// }
+
+.socials span {
+  display: block;
+  margin-top: 0%;
+  @include paragraph;
+  font-size: 0.8rem;
+  letter-spacing: 0.5rem;
+  text-align: center;
+  opacity: 0.3;
 
   @include desktop {
-    margin-top: 50%;
+    margin-top: 20%;
+
   }
+}
+
+.social {
+  display: flex;
+  justify-content: center;
 }
 
 .social__icon {
   fill: $gold;
   z-index: 5;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
+  margin: 0px 5px;
 
   &:hover {
     fill: $darkGold;
@@ -539,10 +566,13 @@ hr {
   }
 
   .project__nb {
-    margin-left: $margin-left-m;
-    @include h2;
-    font-size: 3rem;
-    color: $papyrus;
+    display: none;
+    // position: absolute;
+    // width: 100vw;
+    // @include h2;
+    // font-size: 3rem;
+    // color: red;
+    // text-align: center;
 
     @include desktop {
       margin-left: $margin-left;
@@ -551,8 +581,11 @@ hr {
   }
 
   .project__title {
+    margin-top: 20px;
     margin-left: $margin-left-m;
     @include h2-m;
+    font-size: 3rem;
+    line-height: 4rem;
     color: $dark;
 
     @include desktop {
@@ -598,6 +631,7 @@ hr {
 
     @include desktop {
       display: block;
+      margin-top: 20px;
       margin-left: $margin-left;
       @include h5;
       font-weight: 500;
@@ -652,6 +686,7 @@ hr {
   }
 
   .project__nb {
+    display: none;
     margin-left: $margin-left-m;
     @include h2;
     font-size: 3rem;
@@ -665,8 +700,11 @@ hr {
   }
 
   .project__title {
+    margin-top: 20px;
     margin-left: $margin-left-m;
     @include h2-m;
+    font-size: 3rem;
+    line-height: 4rem;
     color: $gold;
 
     @include desktop {
@@ -680,7 +718,7 @@ hr {
     position: relative;
     width: 275px;
     margin-left: $margin-left-m;
-    color: $gold;
+    color: $papyrus;
     
     @include h4;
     font-size: 1rem;
@@ -712,6 +750,7 @@ hr {
 
   .project__date {
     display: none;
+    margin-top: 20px;
 
     @include desktop {
       display: block;
@@ -810,6 +849,7 @@ hr {
 
 .about__description {
   position: relative;
+  z-index: 4;
   margin: 35px 35px 0px 35px;
   margin-left: $margin-left-m;
   padding: 20px;
@@ -927,6 +967,8 @@ hr {
 }
 
 .skill__description {
+  position: relative;
+  z-index: 5;
   margin: 35px;
   margin-top: -4px;
   padding: 20px;

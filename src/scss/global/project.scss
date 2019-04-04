@@ -1,0 +1,48 @@
+/* VARIABLES */
+
+$margin-left-project: 180px;
+
+.background--project {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  z-index: -1;
+  background-color: $papyrus;
+  outline: 1px solid $gold;
+  outline-offset: -40px;
+}
+
+.project__wrapper h1 {
+  margin-left: $margin-left-project;
+
+  @include h2;
+  line-height: 1rem;
+  color: $dark;
+}
+
+.project__wrapper h2 {
+  margin-left: $margin-left-project;
+
+  @include h3;
+  margin-top: 10px;
+  // line-height: 2rem;
+}
+
+.project__wrapper .project__description {
+  width: 420px;
+  margin-left: $margin-left-project;
+
+  @include paragraph;
+  color: $dark;
+}
+
+.project__wrapper .button__about {
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: $margin-left-project;
+  padding: 8px 35px;
+
+  @include paragraph;
+  color: $dark;
+  background-color: $gold;
+}

@@ -84,5 +84,4 @@ window.addEventListener("scroll", function(e) {
   path1.style.strokeDashoffset = pathLength1 - drawLength1;
   path2.style.strokeDashoffset = pathLength2 - drawLength2;
   path3.style.strokeDashoffset = pathLength3 - drawLength3;
-
 });

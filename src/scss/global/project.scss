@@ -12,7 +12,7 @@ $margin-left-project: 180px;
   outline-offset: -40px;
 }
 
-.project__wrapper h1 {
+.project__page h1 {
   margin-left: $margin-left-project;
 
   @include h2;
@@ -20,7 +20,7 @@ $margin-left-project: 180px;
   color: $dark;
 }
 
-.project__wrapper h2 {
+.project__page h2 {
   margin-left: $margin-left-project;
 
   @include h3;
@@ -28,7 +28,7 @@ $margin-left-project: 180px;
   // line-height: 2rem;
 }
 
-.project__wrapper .project__description {
+.project__page .project__description {
   width: 420px;
   margin-left: $margin-left-project;
 
@@ -36,7 +36,7 @@ $margin-left-project: 180px;
   color: $dark;
 }
 
-.project__wrapper .button__about {
+.project__page .button__about {
   display: inline-block;
   margin-top: 20px;
   margin-left: $margin-left-project;

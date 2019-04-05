@@ -1,10 +1,8 @@
 /* DECLARATION DE VARIABLES */
 
 // Récupération de toutes les ancres :
-let links = document.querySelectorAll("a[href^='#']");
+let links = document.querySelectorAll(".menu__nav a");
 let menuButton = document.getElementById("menu__button");
-
-
 
 /* 
 *  BURGER MENU

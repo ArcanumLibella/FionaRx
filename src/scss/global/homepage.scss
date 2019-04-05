@@ -307,6 +307,7 @@ hr {
   }
 
   .project__title {
+    margin-top: 20px;
     margin-left: $margin-left-m;
     @include h2-m;
     font-size: 3rem;
@@ -314,6 +315,7 @@ hr {
     color: $dark;
 
     @include desktop {
+      margin-top: 0px;
       margin-left: $margin-left;
       font-size: 4rem;
     }
@@ -373,7 +375,7 @@ hr {
 
     @include paragraph;
     color: $dark;
-    background-color: transparent;
+    background-color: $gold;
 
     @include desktop {
       display: initial;
@@ -381,6 +383,7 @@ hr {
       margin-left: $margin-left;
       margin-top: 24px;
       border: 0.5px solid $gold;
+      background-color: transparent;
     }
   }
 
@@ -423,6 +426,7 @@ hr {
   }
 
   .project__title {
+    margin-top: 20px;
     margin-left: $margin-left-m;
     @include h2-m;
     font-size: 3rem;
@@ -430,6 +434,7 @@ hr {
     color: $gold;
 
     @include desktop {
+      margin-top: 0px;
       margin-left: $margin-left;
       font-size: 4rem;
       color: $gold;
@@ -497,7 +502,7 @@ hr {
       position: initial;
       margin-top: 24px;
       margin-left: $margin-left;
-      border: 0.5px solid $papyrus;
+      border: 0.5px solid $gold;
       color: $papyrus;
       background-color: $dark;
     }

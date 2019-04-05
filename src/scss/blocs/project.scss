@@ -80,6 +80,21 @@ $margin-left-project: 180px;
   transform: rotate(270deg);
 }
 
+.project__previous {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  padding: 0px 50px;
+
+  @include paragraph;
+  font-weight: 300;
+  color: $gold;
+  background-color: $papyrus;
+}
+
 .project__mockup {
   position: relative;
   right: -120px;

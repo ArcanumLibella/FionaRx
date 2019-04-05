@@ -182,6 +182,7 @@ hr {
 * PROJETS ////////////////////////////
 */
 
+// Version desktop
 
 .project__background--1 {
   background: url(../assets/background_booking.jpg) no-repeat;
@@ -211,6 +212,7 @@ hr {
     background-position: 250px center;
   }
   
+// Version mobile
 
 .project__image1 {
   margin: 20px auto;
@@ -288,27 +290,23 @@ hr {
   outline-offset: -10px;
 
   @include desktop {
-    background-color: $gold;
+    background-color: $papyrus;
     outline: none;
   }
 
   .project__nb {
     display: none;
-    // position: absolute;
-    // width: 100vw;
-    // @include h2;
-    // font-size: 3rem;
-    // color: red;
-    // text-align: center;
 
     @include desktop {
+      display: block;
       margin-left: $margin-left;
+      @include h2;
       font-size: 4rem;
+      color: $gold;
     }
   }
 
   .project__title {
-    margin-top: 20px;
     margin-left: $margin-left-m;
     @include h2-m;
     font-size: 3rem;
@@ -375,14 +373,14 @@ hr {
 
     @include paragraph;
     color: $dark;
-    background-color: $gold;
+    background-color: transparent;
 
     @include desktop {
       display: initial;
       position: initial;
       margin-left: $margin-left;
       margin-top: 24px;
-      border: 0.5px solid $dark;
+      border: 0.5px solid $gold;
     }
   }
 
@@ -414,20 +412,17 @@ hr {
 
   .project__nb {
     display: none;
-    margin-left: $margin-left-m;
-    @include h2;
-    font-size: 3rem;
-    color: $papyrus;
 
     @include desktop {
+      display: block;
       margin-left: $margin-left;
+      @include h2;
       font-size: 4rem;
       color: $papyrus;
     }
   }
 
   .project__title {
-    margin-top: 20px;
     margin-left: $margin-left-m;
     @include h2-m;
     font-size: 3rem;

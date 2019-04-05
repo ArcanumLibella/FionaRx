@@ -1,0 +1,89 @@
+/* VARIABLES */
+
+$margin-left-project: 180px;
+
+.background--project #menu__button {
+  color: $papyrus;
+  background-color: $gold;
+  border: 0.75px solid $papyrus;
+}
+
+.background--project {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  z-index: -1;
+  background-color: $papyrus;
+  outline: 1px solid $gold;
+  outline-offset: -40px;
+}
+
+.project__page h1 {
+  margin-left: $margin-left-project;
+
+  @include h2;
+  font-size: 5.5rem;
+  line-height: 1rem;
+  color: $dark;
+}
+
+.project__page h2 {
+  margin-left: $margin-left-project;
+
+  @include h3;
+  font-size: 1.5rem;
+  font-weight: 200;
+  margin-top: 10px;
+  letter-spacing: 0.6rem;
+}
+
+.project__page .project__description {
+  width: 420px;
+  margin-left: $margin-left-project;
+
+  @include paragraph;
+  color: $dark;
+}
+
+.project__page .button__about {
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: $margin-left-project;
+  padding: 8px 35px;
+
+  @include paragraph;
+  color: $dark;
+  background-color: $gold;
+}
+
+.project__page .project__next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  padding: 0px 50px;
+
+  @include paragraph;
+  font-weight: 300;
+  color: $gold;
+  background-color: $papyrus;
+}
+
+.project__page .icon__next {
+  display: inline;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin-left: 30px;
+  transform: rotate(270deg);
+}
+
+.project__mockup {
+  position: relative;
+  right: -150px;
+  z-index: 2;
+  width: 60%;
+  
+}

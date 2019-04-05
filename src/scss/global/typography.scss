@@ -1,0 +1,55 @@
+/*
+* MIXINS DE FONTS
+*/
+
+@mixin h2 {
+  font-family: NarzissProCy, Impact, 'Arial Narrow Bold', sans-serif;
+  font-weight: 800;
+  line-height: 6.5rem;
+  font-size: 4.5rem;
+  }
+
+@mixin h2-m {
+  font-family: NarzissProCy, Impact, 'Arial Narrow Bold', sans-serif;
+  font-weight: 800;
+  line-height: 6.5rem;
+  font-size: 2.75rem;
+  }
+
+@mixin h3 {
+  font-family: "Montserrat", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 300;
+  line-height: 4.6875rem;
+  font-size: 1.875rem;
+  color: $gold;
+  // @include golden2;
+  }
+
+@mixin h4 {
+  font-family: "Montserrat", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 800;
+  line-height: 1.875rem;
+  font-size: 1.25rem;
+  }
+
+@mixin h5 {
+  font-family: Montserrat, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  line-height: 1.875rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.1rem;
+  }
+
+@mixin paragraph {
+  font-family: Montserrat, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 200;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  }
+
+@mixin paragraph-m {
+  font-family: Montserrat, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 100;
+  line-height: 1.5rem;
+  font-size: 0.875rem;
+  }

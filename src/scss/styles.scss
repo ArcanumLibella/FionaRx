@@ -1,11 +1,17 @@
 @import "./vendors/reset.scss";
 
-@import "./global/fonts.scss";
+@import "./config/fonts.scss";
 
 @import "./config/colors.scss";
 
 @import "./config/mixins.scss";
 
-@import "./global/project.scss";
+@import "./global/typography.scss";
 
-@import "./global/style.scss";
+@import "./blocs/project.scss";
+
+@import "./blocs/icons.scss";
+
+@import "./blocs/menu.scss";
+
+@import "./global/homepage.scss";

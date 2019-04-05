@@ -1,0 +1,733 @@
+/* VARIABLES */
+
+$margin-left: 120px;
+$margin-left-m: 35px;
+
+/* STYLE GLOBAL */
+
+body {
+  font-family: "Montserrat", "Segoe UI", Tahoma, Verdana, sans-serif;
+  color: $papyrus;
+  margin: 0px;
+  overflow-x: hidden;
+}
+
+.container {
+  background-color: $dark;
+  width: 100vw;
+
+  @include desktop {
+    // Hauteur des GoldenLines 
+    height: 5069px;
+  } 
+}
+
+/*
+* HERO ////////////////////////////
+*/
+.background--hero {
+  height: 100vh;
+  position: relative;
+
+  &::before {
+    z-index: 1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    content: "";
+    background: url(../assets/ferns_mobile.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    @include desktop {
+      background: url(../assets/ferns_nb.jpg) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+  }
+}
+
+.hero__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  z-index: 2;
+
+  @include desktop {
+    display: inline-block;
+    position: relative;
+    // padding: 10px;
+    // text-align: center;
+
+  }
+}
+
+.hero__title {
+  width: 280px;
+  margin-top: 45%;
+
+  font-family: "NarzissProSwirls", Impact, "Arial Narrow Bold", sans-serif;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 800;
+  text-align: center;
+  @include golden;
+
+  @include tablet {
+    // A FAIRE !!!
+  }
+
+  @include desktop {
+    position: relative;
+    width: initial;
+    margin-left: $margin-left;
+    margin-top: 25%;
+    font-size: 6rem;
+    text-align: initial;
+  }
+}
+
+hr {
+  display: none;
+
+  @include tablet {
+    // A FAIRE !!!
+  }
+
+  @include desktop {
+    display: block;
+    position: relative;
+    margin-top: 5px;
+    width: 880px;
+    margin-left: $margin-left;
+    border: 0.5px solid $gold;
+  }
+}
+
+.hero__subtitle {
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  margin-top: 5px;
+
+  font-size: 0.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.2rem;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  color: $papyrus;
+  // @include golden;
+
+  @include tablet {
+    // A FAIRE !!!
+  }
+
+  @include desktop {
+    width: initial;
+    margin-top: 15px;
+    margin-left: 500px;
+    font-size: 1rem;
+    font-weight: 600;
+    @include golden;
+  }
+}
+
+.hero__description__title {
+  display: none;
+  @include paragraph;
+  font-weight: 500;
+  color: $papyrus;
+
+  @include tablet {
+    // A FAIRE !!!
+  }
+
+  @include desktop {
+    display: inline-block;
+    position: relative;
+    margin-top: 25px;
+    margin-left: 500px;
+  }
+}
+
+.hero__description {
+  display: none;
+  @include paragraph;
+  // @include golden;
+
+  @include tablet {
+    // A FAIRE !!!
+  }
+
+  @include desktop {
+    display: block;
+    position: relative;
+    width: 528px;
+    margin-top: 0px;
+    margin-left: 500px;
+    color: $papyrus;
+  }
+}
+
+///////////////////////////////////////////////////////////
+
+/*
+* PROJETS ////////////////////////////
+*/
+
+
+.project__background--1 {
+  background: url(../assets/background_booking.jpg) no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: 250px center;
+}
+
+.project__background--2 {
+  background: url(../assets/background_moschino.jpeg) no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: 250px center;
+}
+
+
+  .project__background--3 {
+    background: url(../assets/background_strit.jpg) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: 250px center;
+  }
+  
+
+.project__image1 {
+  margin: 20px auto;
+  width: 80%;
+  height: 500px;
+  // z-index: 80;
+  background: url(../assets/background_booking.jpg) no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  border: 5px solid $gold;
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.project__image2 {
+  margin: 20px auto;
+  width: 80%;
+  height: 500px;
+  // z-index: 80;
+  background: url(../assets/background_moschino.jpeg) no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  border: 5px solid $gold;
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.project__image3 {
+  margin: 20px auto;
+  width: 80%;
+  height: 500px;
+  // z-index: 80;
+  background: url(../assets/background_strit.jpg) no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  border: 5px solid $gold;
+
+  @include desktop {
+    display: none;
+  }
+}
+
+/// PROJET V1 ///////////////////////////
+
+
+.project__wrapper {
+
+@include desktop {
+    width: 562px;
+  }
+}
+
+.project__wrapper--1 {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  // padding: 12px;
+  height: 100vh;
+  background-color: $papyrus;
+  outline: 1px solid $gold;
+  outline-offset: -10px;
+
+  @include desktop {
+    background-color: $gold;
+    outline: none;
+  }
+
+  .project__nb {
+    display: none;
+    // position: absolute;
+    // width: 100vw;
+    // @include h2;
+    // font-size: 3rem;
+    // color: red;
+    // text-align: center;
+
+    @include desktop {
+      margin-left: $margin-left;
+      font-size: 4rem;
+    }
+  }
+
+  .project__title {
+    margin-top: 20px;
+    margin-left: $margin-left-m;
+    @include h2-m;
+    font-size: 3rem;
+    line-height: 4rem;
+    color: $dark;
+
+    @include desktop {
+      margin-left: $margin-left;
+      font-size: 4rem;
+    }
+  }
+
+  .project__subtitle {
+    position: relative;
+    margin-left: $margin-left-m;
+    width: 275px;
+    @include h4;
+    font-size: 1rem;
+    line-height: 1.6rem;
+    color: $dark;
+
+    @include desktop {
+      display: block;
+      margin-left: $margin-left;
+      width: initial;
+      margin-top: 10px;
+      left: initial;
+      line-height: initial;
+      @include h4;
+    }
+  }
+
+  .project__description {
+    display: none;
+    @include paragraph;
+
+    @include desktop {
+      display: block;
+      margin-left: $margin-left;
+      width: 350px;
+      color: $dark;
+    }
+  }
+
+  .project__date {
+    display: none;
+
+    @include desktop {
+      display: block;
+      margin-top: 20px;
+      margin-left: $margin-left;
+      @include h5;
+      font-weight: 500;
+      color: $dark;
+    }
+  }
+
+  .button__about {
+    position: relative;
+    left: 45%;
+    bottom: 5%;
+    padding: 8px 35px;
+    margin-right: 20px;
+
+    @include paragraph;
+    color: $dark;
+    background-color: $gold;
+
+    @include desktop {
+      display: initial;
+      position: initial;
+      margin-left: $margin-left;
+      margin-top: 24px;
+      border: 0.5px solid $dark;
+    }
+  }
+
+  .project__image {
+    display: block;
+    position: absolute;
+    right: -10%;
+    width: 65%;
+  }
+}
+
+/// PROJET V2 ///////////////////////////
+.project__wrapper--2 {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  // padding: 12px;
+  height: 100vh;
+  background-color: $dark;
+  color: $dark;
+  outline: 1px solid $gold;
+  outline-offset: -10px;
+
+  @include desktop {
+    background-color: $dark;
+    outline: none;
+  }
+
+  .project__nb {
+    display: none;
+    margin-left: $margin-left-m;
+    @include h2;
+    font-size: 3rem;
+    color: $papyrus;
+
+    @include desktop {
+      margin-left: $margin-left;
+      font-size: 4rem;
+      color: $papyrus;
+    }
+  }
+
+  .project__title {
+    margin-top: 20px;
+    margin-left: $margin-left-m;
+    @include h2-m;
+    font-size: 3rem;
+    line-height: 4rem;
+    color: $gold;
+
+    @include desktop {
+      margin-left: $margin-left;
+      font-size: 4rem;
+      color: $gold;
+    }
+  }
+
+  .project__subtitle {
+    position: relative;
+    width: 275px;
+    margin-left: $margin-left-m;
+    color: $papyrus;
+    
+    @include h4;
+    font-size: 1rem;
+    line-height: 1.6rem;
+
+    @include desktop {
+      position: relative;
+      width: initial;
+      left: initial;
+      margin-top: 10px;
+      margin-left: $margin-left;
+      @include h4;
+      line-height: initial;
+      color: $papyrus;
+    }
+  }
+
+  .project__description {
+    display: none;
+    @include paragraph;
+
+    @include desktop {
+      display: block;
+      width: 350px;
+      margin-left: $margin-left;
+      color: $papyrus;
+    }
+  }
+
+  .project__date {
+    display: none;
+    margin-top: 20px;
+
+    @include desktop {
+      display: block;
+      margin-left: $margin-left;
+      @include h5;
+      font-weight: 500;
+      color: $papyrus;
+    }
+  }
+
+  .button__about {
+    position: relative;
+    left: 45%;
+    bottom: 5%;
+    padding: 8px 35px;
+    @include paragraph;
+    color: $dark;
+    background-color: $gold;
+
+    @include desktop {
+      display: initial;
+      position: initial;
+      margin-top: 24px;
+      margin-left: $margin-left;
+      border: 0.5px solid $papyrus;
+      color: $papyrus;
+      background-color: $dark;
+    }
+  }
+}
+
+/*
+* ABOUT AND SKILLS ////////////////////////////
+*/
+
+.background--aboutskills {
+  background: linear-gradient(0deg, #222222 0%, #010101 51.6%);
+}
+
+/// ABOUT
+
+.background--about {
+  // max-height: 100vh;
+  background: url(../assets/portrait.jpg) no-repeat;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  background-position: 80px 120px;
+
+  @include desktop {
+    height: 100vh;
+    background-position: 100px center;
+
+  }
+}
+
+// .background__blur {
+//   margin: 35px;
+//   margin-left: $margin-left-m;
+//   padding: 20px;
+//   // width: calc(50% - 48px);
+// }
+
+.about__title {
+  margin-left: $margin-left-m;
+  margin-bottom: 300px;
+  @include h2-m;
+  line-height: 3rem;
+  @include golden;
+
+  @include desktop {
+    margin-left: 35%;
+    margin-bottom: 10px;
+    @include h2;
+    font-size: 6rem;
+    line-height: 5rem;
+  }
+}
+
+.about__subtitle {
+  padding-top: 60px;
+  margin-left: $margin-left-m;
+  @include paragraph;
+  font-size: 0.75rem;
+  font-weight: 100;
+  letter-spacing: 0.1rem;
+  @include golden;
+
+  @include desktop {
+    margin-left: 35%;
+    padding-top: 10%;
+    font-size: 1rem;
+  }
+}
+
+.about__description {
+  position: relative;
+  z-index: 4;
+  margin: 35px 35px 0px 35px;
+  margin-left: $margin-left-m;
+  padding: 20px;
+  @include paragraph-m;
+  border: 0.75px solid transparent;
+  background-color: $dark;
+
+  @include desktop {
+    max-width: 580px;
+    margin: initial;
+    margin-left: 45%;
+    @include paragraph;
+  }
+}
+
+.about__data {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 3px 35px;
+  padding: initial;
+  @include paragraph;
+  font-weight: 200;
+  color: $darkGold;
+  background-color: transparent;
+  
+  @include desktop {
+    margin-left: 45%;
+    font-weight: 300;
+    line-height: 2rem;
+  }
+}
+
+/// SKILLS
+.skills__title {
+  margin-left: $margin-left-m;
+  @include h2-m;
+  line-height: 3rem;
+  @include golden;
+
+  @include desktop {
+    margin-left: $margin-left;
+    @include h2;
+    font-size: 6rem;
+    line-height: 5rem;
+  }
+}
+
+.skills__subtitle {
+  margin-top: 80px;
+  margin-left: $margin-left-m;
+  @include paragraph;
+  font-size: 0.75rem;
+  font-weight: 100;
+  letter-spacing: 0.1rem;
+  @include golden;
+
+  @include desktop {
+    margin-left: $margin-left;
+    font-size: 1rem;
+  }
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    height: 100vh;
+    width: 80vw;
+    margin: auto;
+  }
+}
+
+.skill {
+  margin: 30px auto;
+
+  @include desktop {
+    height: 200px;
+  }
+}
+
+.skill:nth-of-type(1) {
+
+  @include desktop {
+    margin-top: 150px;
+  }
+}
+
+.skill:nth-of-type(3) {
+
+  @include desktop {
+    margin-top: -150px;
+  }
+}
+
+
+
+.skill__subtitle {
+  margin-left: $margin-left-m;
+  font-family: NarzissProCy;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 900;
+  @include golden;
+
+  @include desktop {
+    font-size: 1.5rem;
+
+  }
+}
+
+.skill__description {
+  position: relative;
+  z-index: 5;
+  margin: 35px;
+  margin-top: -4px;
+  padding: 20px;
+  @include paragraph-m;
+  font-weight: 100;
+  border: 0.75px solid transparent;
+  background-color: $dark;
+
+  @include desktop {
+    max-width: 300px;
+    @include paragraph;
+
+  }
+}
+
+.backtotop {
+  text-align: center;
+  font-family: Montserrat, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.75rem; 
+  font-weight: 300;
+  line-height: 1.5rem;
+  @include golden;
+
+  @include desktop {
+    margin-top: 210px;
+  }
+}
+
+.copyright {
+  text-align: center;
+  font-family: Montserrat, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.625rem; 
+  font-weight: 300;
+  line-height: 1.5rem;
+}

@@ -18,7 +18,7 @@ body {
 
   @include desktop {
     // Hauteur des GoldenLines
-    height: 5069px;
+    height: 4600px;
   }
 }
 
@@ -42,7 +42,7 @@ body {
     background-size: cover;
 
     @include desktop {
-      background: url(../assets/background4min.png) no-repeat center center fixed;
+      background: url(../assets/background1-min.jpg) no-repeat center center fixed;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
@@ -73,10 +73,8 @@ body {
   width: 280px;
   margin-top: 45%;
 
-  font-family: "NarzissProSwirls", Impact, "Arial Narrow Bold", sans-serif;
+  @include h1;
   font-size: 3rem;
-  font-style: normal;
-  font-weight: 800;
   text-align: center;
   @include golden;
 
@@ -313,8 +311,6 @@ body {
     margin-top: 20px;
     margin-left: $margin-left-m;
     @include h2-m;
-    font-size: 3rem;
-    line-height: 4rem;
     color: $dark;
 
     @include desktop {
@@ -328,6 +324,7 @@ body {
     position: relative;
     margin-left: $margin-left-m;
     width: 275px;
+
     @include h4;
     font-size: 1rem;
     line-height: 1.6rem;
@@ -423,7 +420,6 @@ body {
       display: block;
       margin-left: $margin-left;
       @include h2;
-      font-size: 4rem;
       color: $papyrus;
     }
   }
@@ -439,7 +435,6 @@ body {
     @include desktop {
       margin-top: 0px;
       margin-left: $margin-left;
-      font-size: 4rem;
       color: $gold;
     }
   }
@@ -645,6 +640,7 @@ body {
 .skills {
   display: flex;
   flex-direction: column;
+  justify-content: baseline;
 
   @include desktop {
     display: flex;
@@ -667,17 +663,18 @@ body {
 
 .skill:nth-of-type(1) {
   @include desktop {
-    margin-top: 150px;
+    margin-top: 100px;
   }
 }
 
 .skill:nth-of-type(3) {
   @include desktop {
-    margin-top: -150px;
+    margin-top: 120px;
   }
 }
 
 .skill__subtitle {
+  width: 280px;
   margin-left: $margin-left-m;
   font-family: NarzissProCy;
   font-size: 1.5rem;
@@ -700,11 +697,25 @@ body {
   font-weight: 100;
   border: 0.75px solid transparent;
   background-color: $dark;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
   @include desktop {
     max-width: 300px;
     @include paragraph;
   }
+}
+
+.skill__description h4 {
+  margin-top: 20px;
+  @include h5;
+  line-height: 1rem;
+  text-align: center;
+  @include golden
+}
+
+.skill__description p {
+  @include paragraph-m;
+  text-align: center;
 }
 
 .backtotop {
@@ -714,16 +725,12 @@ body {
   font-weight: 300;
   line-height: 1.5rem;
   @include golden;
-
-  @include desktop {
-    margin-top: 210px;
-  }
 }
 
 .copyright {
-  text-align: center;
   font-family: Montserrat, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 0.625rem;
   font-weight: 300;
   line-height: 1.5rem;
+  text-align: center;
 }

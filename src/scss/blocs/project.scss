@@ -1,65 +1,120 @@
 /* VARIABLES */
 
 $margin-left-project: 180px;
+$margin-left-project-m: 30px;
 
 /* 
 * MENU
 */
 
 .background--project #menu__button {
-  color: $papyrus;
-  background-color: $gold;
-  border: 0.75px solid $papyrus;
+  position: fixed;
+  overflow: hidden;
+  color: $gold;
+
+  // &.is-clicked {
+
+  // }
 }
 
 .background--project {
   display: flex;
   align-items: center;
-  height: 100vh;
   z-index: -1;
+  width: 100vw;
+  overflow: hidden;
   background-color: $papyrus;
   outline: 1px solid $gold;
-  outline-offset: -40px;
+  outline-offset: -20px;
+
+  @include desktop {
+    height: 100vh;
+    outline: 1px solid $gold;
+    outline-offset: -40px;
+  }
+}
+
+.project__page {
+  width: 100vw;
+  // overflow: hidden;
 }
 
 .project__page h1 {
-  margin-left: $margin-left-project;
-
-  @include h2;
-  font-size: 5.5rem;
-  line-height: 1rem;
+  margin-top: 30px;
+  margin-left: $margin-left-project-m;
+  @include h2-m;
   color: $dark;
+
+  animation: fadeInLeft 0.8s both ease-out;
+
+  @include desktop {
+    margin-left: $margin-left-project;
+    @include h2-m;
+    font-size: 5.5rem;
+    line-height: 1rem;
+    }
 }
 
 .project__page h2 {
-  margin-left: $margin-left-project;
+  margin-left: $margin-left-project-m;
 
   @include h3;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 200;
-  margin-top: 10px;
   letter-spacing: 0.6rem;
+  line-height: 1rem;
+
+  animation: fadeIn 0.5s both ease-out;
+  animation-delay: 1s;
+
+  @include desktop {
+    margin-left: $margin-left-project;
+
+    @include h3;
+    font-size: 1.5rem;
+    font-weight: 200;
+    margin-top: 10px;
+    letter-spacing: 0.6rem;
+  }
+  
 }
 
 .project__page .project__description {
-  width: 500px;
-  margin-left: $margin-left-project;
+  display: block;
+  margin: $margin-left-project-m;
 
   @include paragraph;
+  font-size: 0.875rem;
   color: $dark;
+
+  animation: fadeIn 0.8s both ease-out;
+  animation-delay: 1.5s;
+
+  @include desktop {
+    width: 500px;
+    margin-left: $margin-left-project;
+    font-size: 1rem;
+  
+  }
 }
 
 .project__page .button__about {
   display: inline-block;
-  width: 30%;
   margin-top: 20px;
-  margin-left: $margin-left-project;
+  margin-left: $margin-left-project-m;
   padding: 8px 35px;
   text-align: center;
 
   @include paragraph;
   color: $dark;
   background-color: $gold;
+
+  animation: fadeIn 0.8s both ease-out;
+  animation-delay: 1.5s;
+
+  @include desktop {
+    margin-left: $margin-left-project;
+  }
 }
 
 .project__page .project__next {
@@ -69,12 +124,17 @@ $margin-left-project: 180px;
   position: absolute;
   right: 20px;
   bottom: 20px;
+  margin-left: $margin-left-project-m;
   padding: 0px 50px;
 
   @include paragraph;
   font-weight: 300;
   color: $gold;
   background-color: $papyrus;
+
+  @include desktop {
+    margin-left: $margin-left-project;
+  }
 }
 
 .project__next .icon__next {
@@ -93,12 +153,17 @@ $margin-left-project: 180px;
   position: absolute;
   left: 20px;
   bottom: 20px;
+  margin-left: $margin-left-project-m;
   padding: 0px 50px;
 
   @include paragraph;
   font-weight: 300;
   color: $gold;
   background-color: $papyrus;
+
+  @include desktop {
+    margin-left: $margin-left-project;
+  }
 }
 
 .project__previous .icon__next {
@@ -111,9 +176,18 @@ $margin-left-project: 180px;
 }
 
 .project__mockup {
-  position: relative;
-  right: -100px;
+  display: block;
+  // position: absolute;
+  right: -70px;
   z-index: 2;
-  width: 60%;
-  
+  width: 80%;
+  margin-top: 50px;
+
+  animation: fadeInRight 0.8s both ease-out;
+
+  @include desktop {
+    position: relative;
+    right: -60px;
+    width: 65%;
+  }
 }

@@ -13,6 +13,7 @@
   cursor: pointer;
  
   @include h5;
+  font-size: 0.875rem;
   color: $darkGold;
   background-color: transparent;
   
@@ -119,13 +120,13 @@ $menu-width: 333px;
 }
 
 .menu__nav ul li a {
-  text-decoration: none;
-  @include h2;
+  @include h2-m;
   font-size: 2rem;
-  color: $papyrus;
-  // @include golden;
-  transition: all 0.3s ease-in-out;
   line-height: 70px;
+  text-decoration: none;
+  color: $papyrus;
+
+  transition: all 0.3s ease-in-out;
 
   &:hover {
     color: $darkGold;

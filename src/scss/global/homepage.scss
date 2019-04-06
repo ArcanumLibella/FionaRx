@@ -17,9 +17,9 @@ body {
   width: 100vw;
 
   @include desktop {
-    // Hauteur des GoldenLines 
+    // Hauteur des GoldenLines
     height: 5069px;
-  } 
+  }
 }
 
 /*
@@ -35,18 +35,20 @@ body {
     height: 100%;
     width: 100%;
     content: "";
-    background: url(../assets/ferns_mobile.jpg) no-repeat center center;
+    background: url(../assets/background1-min.jpg) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 
     @include desktop {
-      background: url(../assets/ferns_nb.jpg) no-repeat center center fixed;
+      background: url(../assets/background1-min.png) no-repeat center center fixed;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover;
+
+      // filter: grayscale(1);
     }
   }
 }
@@ -60,11 +62,10 @@ body {
   z-index: 2;
 
   @include desktop {
-    display: inline-block;
-    position: relative;
+    // display: inline-block;
+    // position: relative;
     // padding: 10px;
     // text-align: center;
-
   }
 }
 
@@ -79,42 +80,37 @@ body {
   text-align: center;
   @include golden;
 
-  @include tablet {
-    // A FAIRE !!!
-  }
+  animation: fadeInDown 0.8s both ease-out;
 
   @include desktop {
-    position: relative;
+    // position: relative;
     width: initial;
-    margin-left: $margin-left;
-    margin-top: 25%;
+    // margin-left: $margin-left;
+    margin-top: 20%;
     font-size: 6rem;
-    text-align: initial;
+    // text-align: initial;
   }
 }
 
-hr {
-  display: none;
+// hr {
+//   display: none;
 
-  @include tablet {
-    // A FAIRE !!!
-  }
-
-  @include desktop {
-    display: block;
-    position: relative;
-    margin-top: 5px;
-    width: 880px;
-    margin-left: $margin-left;
-    border: 0.5px solid $gold;
-  }
-}
+//   @include desktop {
+//     display: none;
+//     // display: block;
+//     // position: relative;
+//     // margin-top: 5px;
+//     // width: 880px;
+//     // margin-left: $margin-left;
+//     // border: 0.5px solid $gold;
+//   }
+// }
 
 .hero__subtitle {
   display: inline-block;
   position: relative;
   width: 200px;
-  margin-top: 5px;
+  margin-top: -15px;
 
   font-size: 0.6rem;
   font-style: normal;
@@ -125,17 +121,23 @@ hr {
   color: $papyrus;
   // @include golden;
 
-  @include tablet {
-    // A FAIRE !!!
-  }
+  animation: fadeInUp 0.8s both ease-out;
+  animation-delay: 1s;
 
   @include desktop {
     width: initial;
-    margin-top: 15px;
-    margin-left: 500px;
-    font-size: 1rem;
-    font-weight: 600;
-    @include golden;
+    font-weight: 300;
+    font-size: 0.875rem;
+
+    // width: initial;
+    // margin-top: 15px;
+    // margin-left: 500px;
+    // font-size: 1rem;
+    // font-weight: 600;
+    // @include golden;
+
+    // animation: fadeInRight 0.8s both ease-out;
+    animation-delay: 1s;
   }
 }
 
@@ -145,34 +147,38 @@ hr {
   font-weight: 500;
   color: $papyrus;
 
-  @include tablet {
-    // A FAIRE !!!
-  }
-
   @include desktop {
     display: inline-block;
-    position: relative;
-    margin-top: 25px;
-    margin-left: 500px;
+    width: initial;
+    margin-top: 150px;
+    font-weight: 300;
+    font-size: 1rem;
+    color: $gold;
+    @include golden;
+
+    // display: inline-block;
+    // position: relative;
+    // margin-top: 25px;
+    // margin-left: 500px;
+
+    animation: fadeInUp 1s both ease-out;
+    animation-delay: 2s;
   }
 }
 
 .hero__description {
   display: none;
   @include paragraph;
-  // @include golden;
-
-  @include tablet {
-    // A FAIRE !!!
-  }
 
   @include desktop {
     display: block;
-    position: relative;
-    width: 528px;
-    margin-top: 0px;
-    margin-left: 500px;
+    width: 450px;
+    font-size: 0.875rem;
+    text-align: center;
     color: $papyrus;
+
+    animation: fadeInUp 1s both ease-out;
+    animation-delay: 2.5s;
   }
 }
 
@@ -202,16 +208,15 @@ hr {
   background-position: 250px center;
 }
 
+.project__background--3 {
+  background: url(../assets/background_strit.jpg) no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: 250px center;
+}
 
-  .project__background--3 {
-    background: url(../assets/background_strit.jpg) no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-position: 250px center;
-  }
-  
 // Version mobile
 
 .project__image1 {
@@ -270,10 +275,8 @@ hr {
 
 /// PROJET V1 ///////////////////////////
 
-
 .project__wrapper {
-
-@include desktop {
+  @include desktop {
     width: 562px;
   }
 }
@@ -446,7 +449,7 @@ hr {
     width: 275px;
     margin-left: $margin-left-m;
     color: $papyrus;
-    
+
     @include h4;
     font-size: 1rem;
     line-height: 1.6rem;
@@ -531,7 +534,6 @@ hr {
   @include desktop {
     height: 100vh;
     background-position: 100px center;
-
   }
 }
 
@@ -602,7 +604,7 @@ hr {
   font-weight: 200;
   color: $darkGold;
   background-color: transparent;
-  
+
   @include desktop {
     margin-left: 45%;
     font-weight: 300;
@@ -664,20 +666,16 @@ hr {
 }
 
 .skill:nth-of-type(1) {
-
   @include desktop {
     margin-top: 150px;
   }
 }
 
 .skill:nth-of-type(3) {
-
   @include desktop {
     margin-top: -150px;
   }
 }
-
-
 
 .skill__subtitle {
   margin-left: $margin-left-m;
@@ -689,7 +687,6 @@ hr {
 
   @include desktop {
     font-size: 1.5rem;
-
   }
 }
 
@@ -707,14 +704,13 @@ hr {
   @include desktop {
     max-width: 300px;
     @include paragraph;
-
   }
 }
 
 .backtotop {
   text-align: center;
-  font-family: Montserrat, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 0.75rem; 
+  font-family: Montserrat, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.75rem;
   font-weight: 300;
   line-height: 1.5rem;
   @include golden;
@@ -726,8 +722,8 @@ hr {
 
 .copyright {
   text-align: center;
-  font-family: Montserrat, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 0.625rem; 
+  font-family: Montserrat, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.625rem;
   font-weight: 300;
   line-height: 1.5rem;
 }

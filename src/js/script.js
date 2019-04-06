@@ -5,6 +5,14 @@ let links = document.querySelectorAll(".menu__nav a");
 let menuButton = document.getElementById("menu__button");
 
 /* 
+* MENU DESKTOP
+dans les pages projets -> menu couleur papyrus !
+*/
+
+
+
+
+/* 
 *  BURGER MENU
 */
 // Ouverture/Fermeture via le bouton Menu

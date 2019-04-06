@@ -2,6 +2,10 @@
 
 $margin-left-project: 180px;
 
+/* 
+* MENU
+*/
+
 .background--project #menu__button {
   color: $papyrus;
   background-color: $gold;
@@ -38,7 +42,7 @@ $margin-left-project: 180px;
 }
 
 .project__page .project__description {
-  width: 420px;
+  width: 500px;
   margin-left: $margin-left-project;
 
   @include paragraph;
@@ -71,7 +75,7 @@ $margin-left-project: 180px;
   background-color: $papyrus;
 }
 
-.project__page .icon__next {
+.project__next .icon__next {
   display: inline;
   position: relative;
   width: 40px;
@@ -80,12 +84,12 @@ $margin-left-project: 180px;
   transform: rotate(270deg);
 }
 
-.project__previous {
+.project__page .project__previous {
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  right: 20px;
+  left: 20px;
   bottom: 20px;
   padding: 0px 50px;
 
@@ -95,9 +99,18 @@ $margin-left-project: 180px;
   background-color: $papyrus;
 }
 
+.project__previous .icon__next {
+  display: inline;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin-right: 30px;
+  transform: rotate(90deg);
+}
+
 .project__mockup {
   position: relative;
-  right: -120px;
+  right: -100px;
   z-index: 2;
   width: 60%;
   

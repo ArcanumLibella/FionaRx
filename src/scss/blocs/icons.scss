@@ -15,14 +15,14 @@ ICONS & SVG
   }
 }
 
-.burger_socials {
+.burger__socials {
 
   @include desktop {
     display: none;
   }
 }
 
-.burger_socials span {
+.burger__socials span {
   display: block;
   margin-top: 0%;
   @include paragraph;
@@ -32,8 +32,7 @@ ICONS & SVG
   opacity: 0.3;
 
   @include desktop {
-    margin-top: 20%;
-
+    display: none;
   }
 }
 

@@ -51,9 +51,11 @@ $margin-left-project: 180px;
 
 .project__page .button__about {
   display: inline-block;
+  width: 30%;
   margin-top: 20px;
   margin-left: $margin-left-project;
   padding: 8px 35px;
+  text-align: center;
 
   @include paragraph;
   color: $dark;

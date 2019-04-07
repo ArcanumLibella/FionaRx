@@ -3,14 +3,34 @@
 // Récupération de toutes les ancres :
 let links = document.querySelectorAll(".menu__nav a");
 let menuButton = document.getElementById("menu__button");
+// let desktop = window.matchMedia("(min-width: 1120px)");
 
 /* 
 * MENU DESKTOP
-dans les pages projets -> menu couleur papyrus !
+Project pages -> background's element = $papyrus
 */
 
+// if (document.querySelector(".project")) {
+//   let projects =  document.querySelectorAll(".project");
+//   for (let index = 0; index < projects.length; index++) {
+//     let project = projects[index];
+//     project.style.backgroundColor = "#FFF9F2";
+//   }
+// } else {
+//     project.style.backgroundColor = "red";
+// }
 
+// function onDesktop(desktop) {
+//   if (desktop.matches) { // If media query matches
+//     project.style.backgroundColor = "yellow";
+//   } else {
+//     project.style.backgroundColor = "pink";
+//   }
+// }
 
+// let desktop = window.matchMedia("(min-width: 1120px)");
+// onDesktop(desktop) // Call listener function at run time
+// desktop.addListener(onDesktop) // Attach listener function on state changes
 
 /* 
 *  BURGER MENU

@@ -35,14 +35,14 @@ body {
     height: 100%;
     width: 100%;
     content: "";
-    background: url(../assets/background1-min.jpg) no-repeat center center;
+    background: url(../assets/background3.jpg) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 
     @include desktop {
-      background: url(../assets/background1-min.jpg) no-repeat center center fixed;
+      background: url(../assets/background3-min.png) no-repeat center center fixed;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
@@ -76,6 +76,7 @@ body {
   @include h1;
   font-size: 3rem;
   text-align: center;
+  line-height: 3.5rem;
   @include golden;
 
   animation: fadeInDown 0.8s both ease-out;
@@ -86,6 +87,7 @@ body {
     // margin-left: $margin-left;
     margin-top: 20%;
     font-size: 6rem;
+    line-height: 5.5rem;
     // text-align: initial;
   }
 }

@@ -10,15 +10,16 @@ body {
   color: $papyrus;
   margin: 0px;
   overflow-x: hidden;
+  background-color: $dark;
 }
 
 .container {
-  background-color: $dark;
   width: 100vw;
+  background-color: $dark;
 
   @include desktop {
     // Hauteur des GoldenLines
-    height: 4600px;
+    height: 600vh;
   }
 }
 

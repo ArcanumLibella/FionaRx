@@ -577,18 +577,41 @@ body {
 .about__description {
   position: relative;
   z-index: 4;
-  margin: 35px 35px 0px 35px;
-  margin-left: $margin-left-m;
-  padding: 20px;
+  margin: 35px 25px 0px 25px;
+  padding: 15px;
   @include paragraph-m;
-  border: 0.75px solid transparent;
+  font-weight: 100;
   background-color: $dark;
 
   @include desktop {
-    max-width: 580px;
-    margin: initial;
-    margin-left: 45%;
+    max-width: 700px;
+    margin: 15px 25px 0px 25px;
+    margin-left: 40%;
+    padding: 25px;
+    padding-bottom: 10px;
     @include paragraph;
+    font-weight: 100;
+  }
+
+  strong {
+    color: $gold;
+  }
+
+  &.about__description--2 {
+    margin-top: initial;
+    padding-top: 0px;
+  }
+
+  &.about__description--3 {
+    margin-top: initial;
+    padding-top: 0px;
+
+    font-weight: 300;
+    color: $darkGold;
+
+    @include desktop {
+      text-align: center;
+    }
   }
 }
 
@@ -604,7 +627,7 @@ body {
   background-color: transparent;
 
   @include desktop {
-    margin-left: 45%;
+    margin-left: 40%;
     font-weight: 300;
     line-height: 2rem;
   }
@@ -626,7 +649,7 @@ body {
 }
 
 .skills__subtitle {
-  margin-top: 80px;
+  margin-top: 100px;
   margin-left: $margin-left-m;
   @include paragraph;
   font-size: 0.75rem;
@@ -635,6 +658,7 @@ body {
   @include golden;
 
   @include desktop {
+    margin-top: 170px;
     margin-left: $margin-left;
     font-size: 1rem;
   }
@@ -665,12 +689,17 @@ body {
 }
 
 .skill:nth-of-type(1) {
+  order: 2;
+
   @include desktop {
+    order: 1;
     margin-top: 100px;
   }
 }
 
 .skill:nth-of-type(3) {
+  order: 3;
+
   @include desktop {
     margin-top: 120px;
   }
@@ -698,6 +727,7 @@ body {
   padding: 20px;
   @include paragraph-m;
   font-weight: 100;
+  text-align: center;
   border: 0.75px solid transparent;
   background-color: $dark;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -716,9 +746,14 @@ body {
   @include golden
 }
 
-.skill__description p {
-  @include paragraph-m;
-  text-align: center;
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  width: 100vw;
+  height: 40%;  
 }
 
 .backtotop {

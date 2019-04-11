@@ -29,7 +29,7 @@ $margin-left-project-m: 30px;
 
   @include desktop {
     height: 100vh;
-    padding-top: 17%;
+    padding-top: 15%;
 
     outline: 1px solid $gold;
     outline-offset: -40px;
@@ -61,7 +61,7 @@ $margin-left-project-m: 30px;
 
     @include h3;
     font-size: 1rem;
-    font-weight: 200;
+    font-weight: 300;
     letter-spacing: 0.6rem;
     line-height: 1rem;
   
@@ -224,22 +224,6 @@ $margin-left-project-m: 30px;
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .project__mockup {
   display: block;
   position: relative;
@@ -251,11 +235,12 @@ $margin-left-project-m: 30px;
   animation: fadeInRight 0.8s both ease-in-out;
 
   @include desktop {
-    display: none;
-    position: absolute;
-    right: -100px;
-    // margin-bottom: 300px;
+    display: block;
     width: 65%;
+    position: absolute;
+    right: -150px;
+    top: 12%;
+    // margin-bottom: 300px;
   }
 }
 

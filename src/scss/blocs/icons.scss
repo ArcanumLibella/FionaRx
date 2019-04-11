@@ -9,7 +9,7 @@ ICONS & SVG
     display: block;
     position: absolute;
     z-index: 2;
-    height: 4828px;
+    height: 640vh;
     top: 0%;
     left: 45%;
     margin: 0 auto;
@@ -17,23 +17,38 @@ ICONS & SVG
 }
 
 .burger__socials {
-
   @include desktop {
     display: none;
   }
-}
 
-.burger__socials span {
-  display: block;
-  margin-top: 0%;
-  @include paragraph;
-  font-size: 0.8rem;
-  letter-spacing: 0.5rem;
-  text-align: center;
-  opacity: 0.3;
+  .social__icon {
+    fill: $gold;
+    z-index: 5;
+    width: 30px;
+    height: 30px;
+    margin: 0px 8px;
+  
+    &:hover {
+      fill: $darkGold;
+      // background-image: linear-gradient(5deg, #ff8c00 15%,#ff0080 70%);
+      // -webkit-text-fill-color: transparent;
+      // background-clip: padding-box;
+      // -webkit-background-clip: padding-box;
+    }
+  }
 
-  @include desktop {
-    display: none;
+  span {
+    display: block;
+    margin-top: 0%;
+    @include paragraph;
+    font-size: 0.8rem;
+    letter-spacing: 0.5rem;
+    text-align: center;
+    opacity: 0.3;
+  
+    @include desktop {
+      display: none;
+    }
   }
 }
 
@@ -45,7 +60,7 @@ ICONS & SVG
     flex-direction: column;
     z-index: 3;
     position: fixed;
-    left: 21px;
+    left: 24px;
     bottom: 30px;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -53,39 +68,23 @@ ICONS & SVG
     animation: fadeIn 1s both ease-out;
     animation-delay: 1.5s;
   }
+
+  .social__icon {
+    fill: $gold;
+    z-index: 5;
+    width: 20px;
+    height: 20px;
+    margin: 5px 5px;
+  
+    &:hover {
+      fill: $darkGold;
+    }
+  }
 }
 
 .social {
   display: flex;
   justify-content: center;
-}
-
-.burger__socials .social__icon {
-  fill: $gold;
-  z-index: 5;
-  width: 35px;
-  height: 35px;
-  margin: 0px 5px;
-
-  &:hover {
-    fill: $darkGold;
-    // background-image: linear-gradient(5deg, #ff8c00 15%,#ff0080 70%);
-    // -webkit-text-fill-color: transparent;
-    // background-clip: padding-box;
-    // -webkit-background-clip: padding-box;
-  }
-}
-
-.socials .social__icon {
-  fill: $gold;
-  z-index: 5;
-  width: 25px;
-  height: 25px;
-  margin: 2px 5px;
-
-  &:hover {
-    fill: $darkGold;
-  }
 }
 
 #phone {
@@ -144,8 +143,8 @@ ICONS & SVG
   }
 }
 
-.footer .icon__scroll {
-  rotate: 180deg;
+.icon__scroll--up {
+  animation: reverse;
   z-index: 9;
 }
 
@@ -166,6 +165,4 @@ ICONS & SVG
     margin-left: 30px;
     bottom: -3px;
   }
-
-  
 }

@@ -39,8 +39,8 @@ menuButton.addEventListener("click", function() {
   menuButton.classList.toggle("is-clicked");
 
   if (document.querySelector(".project")) {
-    document.querySelector(".menu__nav").style.backgroundColor = "black";
-    document.querySelector(".socials").style.backgroundColor = "black";
+    document.querySelector(".menu__nav").style.backgroundColor = "#222222";
+    document.querySelector(".socials").style.backgroundColor = "#222222";
   }
 });
 

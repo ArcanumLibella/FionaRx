@@ -84,7 +84,7 @@ $margin-left-project-m: 30px;
     position: relative;
     margin: $margin-left-project-m;
 
-    @include paragraph;
+    @include paragraph-m;
     font-size: 0.875rem;
     color: $dark;
 

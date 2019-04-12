@@ -234,6 +234,21 @@ $margin-left-project-m: 30px;
 
   animation: fadeInRight 0.8s both ease-in-out;
 
+  &.project__mockup--mobile {
+    position: absolute;
+    top: 200px;
+    right: 170px;
+    width: 30%;
+
+    animation-delay: 0.5s;
+
+    @include desktop {
+      top: 250px;
+      right: 400px;
+      width: 15%;
+    }
+  }
+
   @include desktop {
     display: block;
     width: 65%;
@@ -243,3 +258,4 @@ $margin-left-project-m: 30px;
     // margin-bottom: 300px;
   }
 }
+

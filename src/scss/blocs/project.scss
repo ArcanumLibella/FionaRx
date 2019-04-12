@@ -29,7 +29,7 @@ $margin-left-project-m: 30px;
 
   @include desktop {
     height: 100vh;
-    padding-top: 15%;
+    padding-top: 12%;
 
     outline: 1px solid $gold;
     outline-offset: -40px;
@@ -57,25 +57,28 @@ $margin-left-project-m: 30px;
   }
 
   h2 {
+    margin-top: 0px;
     margin-left: $margin-left-project-m;
 
     @include h3;
-    font-size: 1rem;
+    font-size: 0.875rem;
     font-weight: 300;
-    letter-spacing: 0.6rem;
+    letter-spacing: 0.1rem;
     line-height: 1rem;
   
     animation: fadeIn 0.5s both ease-out;
     animation-delay: 1s;
   
     @include desktop {
+      width: 500px;
       margin-left: $margin-left-project;
   
       @include h3;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       font-weight: 200;
-      margin-top: 10px;
-      letter-spacing: 0.6rem;
+      margin-top: 30px;
+      letter-spacing: 0.2rem;
+      line-height: 2rem;
     }
   }
 
@@ -83,7 +86,7 @@ $margin-left-project-m: 30px;
     display: block;
     position: relative;
     margin: $margin-left-project-m;
-
+    margin-top: 10px;
     @include paragraph-m;
     font-size: 0.875rem;
     color: $dark;
@@ -94,7 +97,7 @@ $margin-left-project-m: 30px;
     @include desktop {
       width: 500px;
       margin-left: $margin-left-project;
-      font-size: 1rem;
+      // font-size: 1rem;
     }
   }
 
@@ -236,8 +239,8 @@ $margin-left-project-m: 30px;
 
   &.project__mockup--mobile {
     position: absolute;
-    top: 200px;
-    right: 170px;
+    top: 210px;
+    right: 200px;
     width: 30%;
 
     animation-delay: 0.5s;

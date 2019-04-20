@@ -21,7 +21,21 @@
       property="og:description"
       content="Fiona Roux, Front-End Developer & UX|UI Designer en recherche de stage dans le cadre d'un Bachelor Web à Hétic."
     />
-    <meta name="description" content="Fiona Roux, Front-End Developer & UX|UI Designer en recherche de stage dans le cadre d'un Bachelor Web à Hétic." /> 
+    <meta name="description" content="Fiona Roux, Front-End Developer & UX|UI Designer en recherche de stage dans le cadre d'un Bachelor Web à Hétic." />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="favicon-32.png" type="image/png">
+    <link rel="icon" sizes="64x64" href="favicon-64.png" type="image/png">
+    <link rel="icon" sizes="96x96" href="favicon-96.png" type="image/png">
+    <link rel="icon" sizes="196x196" href="favicon-196.png" type="image/png">
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="favicon-144.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
     <title>Portfolio of Fiona Roux, Front-End Developper</title>
   </head>
   <!-- GoldenLines -->
@@ -182,7 +196,7 @@
               <ul class="menu">
                 <li>Explore</li>
                 <li><a href="index.html/#home">Home</a></li>
-                <li><a href="index.html/#works">Works</a></li>
+                <li><a href="index.html/#booking">Works</a></li>
                 <li><a href="index.html/#about">About</a></li>
                 <li><a href="index.html/#skills">Skills</a></li>
               </ul>
@@ -269,7 +283,7 @@
             Front-end pour 3 mois à partir de Juillet 2019.
           </p>
           <span id="scroll" class="scroll">Scroll</span>
-          <a href="#works" title="Découvrir les projets">
+          <a href="#booking" title="Découvrir les projets">
             <svg class="icon__scroll" aria-hidden="true">
               <use xlink:href="#icon__scroll"></use>
             </svg>
@@ -277,7 +291,7 @@
         </article>
       </section>
       <!-- PROJET 1 -->
-      <section id="works" class="project__background--1">
+      <section id="booking" class="project__background--1">
         <article class="project__wrapper project__wrapper--1">
           <h2 class="project__nb">01</h2>
           <h2 class="project__title project__title1">Booking</h2>
@@ -288,11 +302,11 @@
               Plonger l’utilisateur dans une véritable expérience d’accompagnement dans la création de son voyage.
           </p>
           <p class="project__date">DÉCEMBRE 2018</p>
-          <a href="../src/pages/booking.html" title="Redesign de Booking" class="button__about button__about1">En savoir +</a>
+          <a href="../src/pages/booking.html" title="Redesign de Booking" class="project__button">En savoir +</a>
         </article>
       </section>
       <!-- PROJET 2 -->
-      <section class="project__background--2">
+      <section id="moschino" class="project__background--2">
         <article class="project__wrapper project__wrapper--2">
           <h2 class="project__nb">02</h2>
           <h2 class="project__title project__title2">Moschino</h2>
@@ -303,11 +317,11 @@
             Garder un site respectant les codes du luxe tout en apportant le côté excentrique et décalé propre à la marque.
           </p>
           <p class="project__date">NOVEMBRE 2018</p>
-          <a href="../src/pages/moschino.html" title="Redesign et intégration de Moschino" class="button__about button__about2">En savoir +</a>
+          <a href="../src/pages/moschino.html" title="Redesign et intégration de Moschino" class="project__button">En savoir +</a>
         </article>
       </section>
       <!-- PROJET 3 -->
-      <section class="project__background--3">
+      <section id="strit" class="project__background--3">
         <article class="project__wrapper project__wrapper--1">
           <h2 class="project__nb">03</h2>
           <h2 class="project__title project__title3">Str'it</h2>
@@ -318,22 +332,21 @@
               Création d'un concept de vêtement unique en partenariat avec des street artistes.
           </p>
           <p class="project__date">FÉVRIER 2019</p>
-          <a href="../src/pages/strit.html" title="Concept et design d'un site de vêtement unique" class="button__about button__about3">En savoir +</a>
+          <a href="../src/pages/strit.html" title="Concept et design d'un site de vêtement unique" class="project__button">En savoir +</a>
         </article>
       </section>
       <!-- ABOUT -->
-      <section id="about" class="background--aboutskills">
-        <article class="background--about">
-          <!-- <div class="background__blur"></div> -->
+      <section class="background--aboutskills">
+        <article id="about" class="background--about">
           <p class="about__subtitle">LEARN MORE</p>
           <h2 class="about__title">About me</h2>
-          <p class="about__description">Hello ! Je m’appelle Fiona Roux et je suis étudiante en Bachelor Web à <strong>Hétic</strong>. 
+          <p id="description" class="about__description">Hello ! Je m’appelle Fiona Roux et je suis étudiante en Bachelor Web à <strong>Hétic</strong>. 
           La pluricompétence étant importante à mes yeux, j’ai choisi une formation où le <strong>développement web</strong> (front-end et back-end),  l’<strong>UX/UI Design</strong> et le <strong>Web Marketing</strong> sont au coeur de l’enseignement.</br>
           Après 8 années dans le milieu du végétal et de la conception paysagère en bureau d'études, j'ai décidé de reprendre mes études dans un domaine qui m'a toujours passionné : le Web. Ce parcours atypique fait la force de mon profil, en effet j'ai pu acquérir de nombreuses compétences et softskills que je mets à présent au service du monde digital.</br></p>
           <p class="about__description about__description--2">
           Curieuse, ambitieuse et créative, je souhaite désormais développer mes compétences en développement <strong>Front-End</strong> et par la suite dans le <strong>Creative Coding</strong> (au travers de WebGL et Three.js).</br>
           Vivant actuellement à Paris, je recherche un stage ainsi qu’une alternance où je pourrais rapidement monter en compétence, découvrir de nouvelles technos et être challenger au quotidien.</p>
-          <p class="about__description about__description--3">Votre agence Web est dynamique et l’accompagnement des entreprises dans leur transformation digitale est au coeur de vos enjeux ? Vous recherchez une personne fiable et passionnée de  digital ?</br> Alors rencontrons nous !</p>
+          <p class="about__description about__description--3">Votre agence Web est dynamique et l’accompagnement des entreprises dans leur transformation digitale est au coeur de vos préoccupations ? Vous recherchez une personne fiable et passionnée de  digital ?</br> Alors rencontrons nous !</p>
           <a href="https://www.figma.com/file/MMTQegNDNAyHUlx4dglEAE1U/CV?node-id=0%3A1" class="about__description about__data" title="Venez regarder mon CV !" target="_blank">
             <svg class="contact__icon" aria-hidden="true">
               <use xlink:href="#icon__eye"></use>
@@ -424,6 +437,7 @@
         </div>
       </section>
     </section>
+    <script src="js/waypoint.js"></script>
     <script defer src="js/script.js"></script>
   </body>
 </html>

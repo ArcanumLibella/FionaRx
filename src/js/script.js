@@ -1,15 +1,13 @@
 /* DECLARATION DE VARIABLES */
 
-// Récupération de toutes les ancres :
-let links = document.querySelectorAll(".menu__nav a");
+let links = document.querySelectorAll(".menu__nav a"); // Récupération de toutes les ancres
 let menuButton = document.getElementById("menu__button");
-// let desktop = window.matchMedia("(min-width: 1120px)");
 let projects = document.querySelectorAll(".project");
 
-/* 
-* MENU DESKTOP
-Project pages -> background's element = $papyrus
-*/
+/*
+ * MENU DESKTOP
+ * Project pages -> background's element = $papyrus
+ */
 
 if (document.querySelector(".project")) {
   for (let index = 0; index < projects.length; index++) {
@@ -17,15 +15,6 @@ if (document.querySelector(".project")) {
     project.style.backgroundColor = "#FFF9F2";
   }
 }
-
-// To verify if
-// if (document.querySelector(".project")) {
-//   let timer = setInterval(() => {
-//     console.log("Timer");
-//     document.querySelector(".menu__nav").style.backgroundColor = "$papyrus";
-//     document.querySelector(".socials").style.backgroundColor = "$papyrus";
-//   }, 2000);
-// }
 
 /*
  *  BURGER MENU
@@ -51,6 +40,24 @@ for (let index = 0; index < links.length; index++) {
     document.querySelector(".menu__nav").classList.toggle("is-open");
   });
 }
+
+/*
+ * DETECTION AVEC WAYPOINT
+ */
+
+var sections = ["booking", "moschino", "strit", "about", "description", "skills"];
+
+sections.forEach(function(section) {
+  var element = document.getElementById(section);
+
+  var waypoint = new Waypoint({
+    element: element,
+    handler: function(direction) {
+      element.classList.toggle("is-reached");
+    },
+    offset: "60%"
+  });
+});
 
 /*
  * SMOOTH SCROLLING NAVIGATION

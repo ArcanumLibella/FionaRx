@@ -75,9 +75,7 @@ body {
   margin-top: 45%;
 
   @include h1;
-  font-size: 3rem;
   text-align: center;
-  line-height: 3.5rem;
   @include golden;
 
   animation: fadeInDown 0.8s both ease-out;
@@ -92,20 +90,6 @@ body {
     // text-align: initial;
   }
 }
-
-// hr {
-//   display: none;
-
-//   @include desktop {
-//     display: none;
-//     // display: block;
-//     // position: relative;
-//     // margin-top: 5px;
-//     // width: 880px;
-//     // margin-left: $margin-left;
-//     // border: 0.5px solid $gold;
-//   }
-// }
 
 .hero__subtitle {
   display: inline-block;
@@ -274,6 +258,64 @@ body {
   }
 }
 
+/// WAYPOINTS ///////////////////////////
+
+.project__nb,
+.project__title,
+.project__subtitle,
+.project__description,
+.project__date,
+.project__button,
+.project__image1,
+.project__image2,
+.project__image3,
+.about__subtitle,
+.about__title,
+.about__description {
+  opacity: 0;
+  transform: translateY(150px) scale(0.8);
+  transition: opacity 0.3s, transform 0.4s;
+}
+
+.skills__subtitle,
+.skills__title,
+.skill__subtitle,
+.skill {
+  opacity: 0;
+  transform: translateY(250px) scale(0.8);
+  transition: opacity 0.3s, transform 0.4s;
+}
+
+.is-reached {
+  .project__nb,
+  .project__title,
+  .project__subtitle,
+  .project__description,
+  .project__date,
+  .project__button,
+  .project__image1,
+  .project__image2,
+  .project__image3,
+  .about__subtitle,
+  .about__title,
+  .about__description,
+  .skills__subtitle,
+  .skills__title,
+  .skill__subtitle,
+  .skill {
+    opacity: 1;
+    transform: none;
+  }
+
+  .skills__subtitle,
+  .skills__title,
+  .skill__subtitle,
+  .skill {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /// PROJET V1 ///////////////////////////
 
 .project__wrapper {
@@ -369,7 +411,7 @@ body {
     }
   }
 
-  .button__about {
+  .project__button {
     position: relative;
     left: 45%;
     bottom: 5%;
@@ -489,7 +531,7 @@ body {
     }
   }
 
-  .button__about {
+  .project__button {
     position: relative;
     left: 45%;
     bottom: 5%;

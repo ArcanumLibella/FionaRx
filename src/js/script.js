@@ -1,6 +1,8 @@
 /* DECLARATION DE VARIABLES */
 
 let links = document.querySelectorAll(".menu__nav a"); // Récupération de toutes les ancres
+let scroll = document.getElementById("scroll");
+let backToTop = document.getElementById("top");
 let menuButton = document.getElementById("menu__button");
 let projects = document.querySelectorAll(".project");
 
@@ -91,6 +93,24 @@ for (let i = 0; i < links.length; i++)
     },
     false
   );
+
+// backToTop
+backToTop.addEventListener(
+  "click",
+  function(event) {
+    var start = new Date();
+    var from = window.pageYOffset; // position Y départ dans la page
+    var to = document.getElementById(this.hash.substring(1)).offsetTop;
+    event.preventDefault();
+    var scroll = function() {
+      var progress = Math.min(1, (new Date() - start) / duration);
+      window.scrollTo(0, (to - from) * Math.pow(progress, 2) + from);
+      progress < 1 && window.requestAnimationFrame(scroll);
+    };
+    scroll();
+  },
+  false
+);
 
 /*
  * GOLDENLINES

@@ -48,8 +48,6 @@ body {
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover;
-
-      // filter: grayscale(1);
     }
   }
 }
@@ -61,13 +59,6 @@ body {
   align-items: center;
   height: 100vh;
   z-index: 2;
-
-  @include desktop {
-    // display: inline-block;
-    // position: relative;
-    // padding: 10px;
-    // text-align: center;
-  }
 }
 
 .hero__title {
@@ -81,13 +72,10 @@ body {
   animation: fadeInDown 0.8s both ease-out;
 
   @include desktop {
-    // position: relative;
     width: initial;
-    // margin-left: $margin-left;
     margin-top: 20%;
     font-size: 6rem;
     line-height: 5.5rem;
-    // text-align: initial;
   }
 }
 
@@ -104,7 +92,6 @@ body {
   letter-spacing: 0.2rem;
   text-align: center;
   color: $papyrus;
-  // @include golden;
 
   animation: fadeInUp 0.8s both ease-out;
   animation-delay: 1s;
@@ -114,14 +101,6 @@ body {
     font-weight: 300;
     font-size: 0.875rem;
 
-    // width: initial;
-    // margin-top: 15px;
-    // margin-left: 500px;
-    // font-size: 1rem;
-    // font-weight: 600;
-    // @include golden;
-
-    // animation: fadeInRight 0.8s both ease-out;
     animation-delay: 1s;
   }
 }
@@ -208,7 +187,6 @@ body {
   margin: 20px auto;
   width: 80%;
   height: 500px;
-  // z-index: 80;
   background: url(../assets/background_booking-min.jpg) no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -226,7 +204,6 @@ body {
   margin: 20px auto;
   width: 80%;
   height: 500px;
-  // z-index: 80;
   background: url(../assets/background_moschino-min.jpeg) no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -244,7 +221,6 @@ body {
   margin: 20px auto;
   width: 80%;
   height: 500px;
-  // z-index: 80;
   background: url(../assets/background_strit-min.jpg) no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -263,7 +239,7 @@ body {
 .project__nb,
 .project__title,
 .project__subtitle,
-.project__description,
+.project__resume,
 .project__date,
 .project__button,
 .project__image1,
@@ -290,7 +266,7 @@ body {
   .project__nb,
   .project__title,
   .project__subtitle,
-  .project__description,
+  .project__resume,
   .project__date,
   .project__button,
   .project__image1,
@@ -386,7 +362,7 @@ body {
     }
   }
 
-  .project__description {
+  .project__resume {
     display: none;
     @include paragraph;
 
@@ -423,7 +399,7 @@ body {
     background-color: $gold;
 
     @include desktop {
-      display: initial;
+      display: block;
       position: initial;
       margin-left: $margin-left;
       margin-top: 24px;
@@ -431,6 +407,30 @@ body {
       background-color: transparent;
     }
   }
+
+// .button {
+//   &:before {
+//     content: '';
+//     z-index: 0;
+//     position: absolute;
+//     left: 0;
+//     right: 0;
+//     top: 0;
+//     bottom: 0;
+//     background-color: green;
+//     transform: translateX(-100%);
+
+//     transition: 0.5s ease-in-out;
+//   }
+
+//   &:hover {
+//     color: yellow;
+
+//     &:before {
+//       transform: translateX(0);
+//     }
+//   }
+// }
 
   .project__image {
     display: block;
@@ -506,7 +506,7 @@ body {
     }
   }
 
-  .project__description {
+  .project__resume {
     display: none;
     @include paragraph;
 

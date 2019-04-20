@@ -5,8 +5,7 @@ let menuButton = document.getElementById("menu__button");
 let projects = document.querySelectorAll(".project");
 
 /*
- * MENU DESKTOP
- * Project pages -> background's element = $papyrus
+ * MENU DESKTOP -> Project pages -> $papyrus
  */
 
 if (document.querySelector(".project")) {
@@ -17,7 +16,7 @@ if (document.querySelector(".project")) {
 }
 
 /*
- *  BURGER MENU
+ * BURGER MENU
  */
 
 // Ouverture/Fermeture via le bouton Menu
@@ -42,22 +41,31 @@ for (let index = 0; index < links.length; index++) {
 }
 
 /*
- * DETECTION AVEC WAYPOINT
+ * DETECTION DE WAYPOINT
  */
 
-var sections = ["booking", "moschino", "strit", "about", "description", "skills"];
+var sections = [
+  "booking",
+  "moschino",
+  "strit",
+  "about",
+  "description",
+  "skills"
+];
 
-sections.forEach(function(section) {
-  var element = document.getElementById(section);
+if (document.querySelector(".index")) {
+  sections.forEach(function(section) {
+    var element = document.getElementById(section);
 
-  var waypoint = new Waypoint({
-    element: element,
-    handler: function(direction) {
-      element.classList.toggle("is-reached");
-    },
-    offset: "60%"
+    var waypoint = new Waypoint({
+      element: element,
+      handler: function(direction) {
+        element.classList.toggle("is-reached");
+      },
+      offset: "60%"
+    });
   });
-});
+}
 
 /*
  * SMOOTH SCROLLING NAVIGATION
@@ -84,58 +92,33 @@ for (let i = 0; i < links.length; i++)
     false
   );
 
-// /*
-//  * GOLDENLINES
-//  */
+/*
+ * GOLDENLINES
+ */
 
-// // Get the id of the <path> element and the length of <path>
 if (document.querySelector(".index")) {
+  // only on the index.html
   class Lines {
     constructor(name) {
       this.name = name;
-      this.name_getElement = document.getElementById(this.name);
-      this.totalLength = this.name_getElement.getTotalLength();
+      this.name_getElement = document.getElementById(this.name); // Get the id of the <path> element and the length of <path>
+      this.totalLength = this.name_getElement.getTotalLength(); // Get the total length of each lines
 
       this.name_getElement.style.strokeDasharray =
-        this.totalLength + " " + this.totalLength;
+        this.totalLength + " " + this.totalLength; // Make very long dashes (the length of the path itself)
 
-      this.name_getElement.style.strokeDashoffset = this.totalLength;
+      this.name_getElement.style.strokeDashoffset = this.totalLength; // Offset the dashes so the it appears hidden entirely
     }
     scroll_percentage(scrollPercentage) {
-      this.drawLength = this.totalLength * scrollPercentage;
+      this.drawLength = this.totalLength * scrollPercentage; // Length to offset the dashes
       this.name_getElement.style.strokeDashoffset =
-        this.totalLength - this.drawLength;
-
-      console.log(
-        (this.name_getElement.style.strokeDashoffset =
-          this.totalLength - this.drawLength)
-      );
+        this.totalLength - this.drawLength; // Draw in reverse
     }
   }
 
   let path1 = new Lines("path1");
   let path2 = new Lines("path2");
   let path3 = new Lines("path3");
-
-  ///////////////
-  // var path1 = document.getElementById("path1");
-  // var path2 = document.getElementById("path2");
-  // var path3 = document.getElementById("path3");
-
-  // // Get the total length of each lines
-  // var pathLength1 = path1.getTotalLength();
-  // var pathLength2 = path2.getTotalLength();
-  // var pathLength3 = path3.getTotalLength();
-
-  // // Make very long dashes (the length of the path itself)
-  // path1.style.strokeDasharray = pathLength1 + " " + pathLength1;
-  // path2.style.strokeDasharray = pathLength2 + " " + pathLength2;
-  // path3.style.strokeDasharray = pathLength3 + " " + pathLength3;
-
-  // // Offset the dashes so the it appears hidden entirely
-  // path1.style.strokeDashoffset = pathLength1;
-  // path2.style.strokeDashoffset = pathLength2;
-  // path3.style.strokeDashoffset = pathLength3;
 
   // When the page scrolls...
   window.addEventListener("scroll", function(e) {
@@ -148,15 +131,5 @@ if (document.querySelector(".index")) {
     path1.scroll_percentage(scrollPercentage);
     path2.scroll_percentage(scrollPercentage);
     path3.scroll_percentage(scrollPercentage);
-
-    // Length to offset the dashes
-    // var drawLength1 = pathLength1 * scrollPercentage;
-    // var drawLength2 = pathLength2 * scrollPercentage;
-    // var drawLength3 = pathLength3 * scrollPercentage;
-
-    // // Draw in reverse
-    // path1.style.strokeDashoffset = pathLength1 - drawLength1;
-    // path2.style.strokeDashoffset = pathLength2 - drawLength2;
-    // path3.style.strokeDashoffset = pathLength3 - drawLength3;
   });
 }

@@ -19,8 +19,8 @@
   },
   "homepage": "https://github.com/ArcanumLibella/FionaRx#readme",
   "devDependencies": {
-    "parcel-bundler": "^1.12.3",
+    "parcel-bundler": "^1.12.4",
     "postcss-pxtorem": "^4.0.1",
-    "sass": "^1.17.3"
+    "sass": "^1.23.7"
   }
 }

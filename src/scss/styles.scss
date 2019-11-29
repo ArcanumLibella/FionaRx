@@ -8,12 +8,12 @@
 
 @import "./config/animations.scss";
 
-@import "./global/typography.scss";
+@import "./config/typography.scss";
 
-@import "./blocs/icons.scss";
+@import "./components/icons.scss";
 
-@import "./blocs/menu.scss";
+@import "./components/menu.scss";
 
-@import "./global/homepage.scss";
+@import "./pages/project.scss";
 
-@import "./blocs/project.scss";
+@import "./pages/homepage.scss";

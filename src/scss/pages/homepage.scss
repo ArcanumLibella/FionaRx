@@ -83,7 +83,7 @@ body {
   display: inline-block;
   position: relative;
   width: 220px;
-  margin-top: -15px;
+  margin-top: 5px;
 
   font-size: 0.6rem;
   font-style: normal;
@@ -98,6 +98,7 @@ body {
 
   @include desktop {
     width: initial;
+    margin-top: 10px;
     font-weight: 300;
     font-size: 0.875rem;
 

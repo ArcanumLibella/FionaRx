@@ -1,480 +1,485 @@
 <!DOCTYPE html>
 <html lang="fr" prefix="og: http://ogp.me/ns#">
-  <head>
-    <link rel="stylesheet" href="./scss/styles.scss" />
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138719370-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
 
-      gtag('config', 'UA-138719370-1');
-    </script>
-    <meta charset="UTF-8" />
+<head>
+  <link rel="stylesheet" href="./scss/styles.scss" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138719370-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-    <!-- HTML Meta Tags -->
-    <title>Fiona Roux | Développeur Front-End & UX|UI Designer</title>
-    <meta name="description" content="Fiona Roux - Développeur Front-End & UX|UI Designer en recherche de stage dans le cadre d'un Bachelor Web à Hétic.">
+    gtag('config', 'UA-138719370-1');
+  </script>
+  <meta charset="UTF-8" />
 
-    <!-- Google / Search Engine Tags -->
-    <meta itemprop="name" content="Fiona Roux - DÉVELOPPEUR FRONT-END & UX|UI DESIGNER">
-    <meta itemprop="description" content="Fiona Roux, Développeur Front-End & UX|UI Designer en recherche de stage dans le cadre d'un Bachelor Web à Hétic.">
-    <meta itemprop="image" content="http://raw.githubusercontent.com/ArcanumLibella/FionaRx/master/src/assets/preview.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="canonical" href="https://fionarx.netlify.com/" />
+  <!-- HTML Meta Tags -->
+  <title>Fiona Roux | Développeur Front-End & UX|UI Designer</title>
+  <meta name="description"
+    content="Fiona Roux - Développeur Front-End & UX|UI Designer en recherche de stage dans le cadre d'un Bachelor Web à Hétic.">
 
-    <!-- Facebook Meta Tags -->
-    <meta
-      property="og:title"
-      content="Fiona Roux - DÉVELOPPEUR FRONT-END & UX|UI DESIGNER"
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://fionarx.netlify.com/" />
-    <meta
-      property="og:image"
-      content="https://raw.githubusercontent.com/ArcanumLibella/FionaRx/master/src/assets/preview.png"
-    />
-    <meta property="og:image:alt" content="Portfolio de Fiona Roux" />
-    <meta
-      property="og:description"
-      content="Fiona Roux | Développeur Front-End & UX|UI Designer en recherche de stage dans le cadre d'un Bachelor Web à Hétic."
-    />
+  <!-- Google / Search Engine Tags -->
+  <meta itemprop="name" content="Fiona Roux - DÉVELOPPEUR FRONT-END & UX|UI DESIGNER">
+  <meta itemprop="description"
+    content="Fiona Roux, Développeur Front-End & UX|UI Designer en recherche de stage dans le cadre d'un Bachelor Web à Hétic.">
+  <meta itemprop="image"
+    content="http://raw.githubusercontent.com/ArcanumLibella/FionaRx/master/src/assets/preview.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="canonical" href="https://fionarx.netlify.com/" />
 
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Fiona Roux - DÉVELOPPEUR FRONT-END & UX|UI DESIGNER">
-    <meta name="twitter:description" content="Fiona Roux, DÉVELOPPEUR FRONT-END & UX|UI Designer en recherche de stage dans le cadre d'un Bachelor Web à Hétic.">
-    <meta name="twitter:image" content="http://raw.githubusercontent.com/ArcanumLibella/FionaRx/master/src/assets/preview.png">
+  <!-- Facebook Meta Tags -->
+  <meta property="og:title" content="Fiona Roux - DÉVELOPPEUR FRONT-END & UX|UI DESIGNER" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://fionarx.netlify.com/" />
+  <meta property="og:image"
+    content="https://raw.githubusercontent.com/ArcanumLibella/FionaRx/master/src/assets/preview.png" />
+  <meta property="og:image:alt" content="Portfolio de Fiona Roux" />
+  <meta property="og:description"
+    content="Fiona Roux | Développeur Front-End & UX|UI Designer en recherche de stage dans le cadre d'un Bachelor Web à Hétic." />
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon/favicon.png" type="image/png">
-    <link rel="icon" href="/favicon/favicon-32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="/favicon/favicon-64.png" sizes="64x64" type="image/png">
-    <link rel="icon" href="/favicon/favicon-96.png" sizes="96x96" type="image/png">
-    <link rel="icon" href="/favicon/favicon-196.png" sizes="196x196" type="image/png">
-    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" sizes="152x152">
-    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon-60x60.png" sizes="60x60">
-    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon-76x76.png" sizes="76x76">
-    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon-114x114.png" sizes="114x114">
-    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon-120x120.png" sizes="120x120">
-    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon-144x144.png" sizes="144x144">
-    <meta name="msapplication-TileImage" content="/favicon/favicon-144.png">
-    <meta name="msapplication-TileColor" content="#FFFFFF">
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fiona Roux - DÉVELOPPEUR FRONT-END & UX|UI DESIGNER">
+  <meta name="twitter:description"
+    content="Fiona Roux, DÉVELOPPEUR FRONT-END & UX|UI Designer en recherche de stage dans le cadre d'un Bachelor Web à Hétic.">
+  <meta name="twitter:image"
+    content="http://raw.githubusercontent.com/ArcanumLibella/FionaRx/master/src/assets/preview.png">
 
-    <!-- GOOGLE VERIFICATION PROPRIETE -->
-    <meta name="google-site-verification" content="XsiUG3OyRWqgmWsQ_loD0nyksy3PDJufHmnUqfZYkag" />
-  </head>
-  <!-- GoldenLines -->
-  <svg id="goldenLines" viewBox="0 0 389 5069" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path id="path1" d="M166.531 -2.98389C166.531 -2.98389 176.031 35.5161 170.032 104.516C155.305 273.877 -27.182 371.957 6.03157 601.016C35.0316 801.016 305.373 859 258.873 1144C216.992 1400.69 -17.9683 1408.02 37.0316 1700.52C92.0314 1993.02 318.873 2010.5 300.373 2312.5C280.685 2633.9 56.2568 2647 37.0316 2982C17.0316 3330.5 273.032 3386.52 340.032 3660.02C412.486 3955.78 90.5937 4078.88 107.373 4451.5C121.873 4773.5 295.373 4803.5 340.032 5075.5" stroke="#D1B160" stroke-width="3"/>
-    <g filter="url(#filter0_f)">
-    <path id="path2" d="M180.032 -3.98388C180.032 -3.98388 199.032 -8.26041 199.032 122.516C199.032 251.016 68.2689 399.563 64.3733 511.5C56.8735 727 242.626 801.373 229.873 1019C214.872 1275 81.8731 1389.5 81.8731 1588C81.8731 1862.79 231.873 1884.5 234.873 2220.5C237.873 2556.5 90.5316 2633.02 93.5316 2977.52C96.5316 3322.02 309.531 3529.02 291.531 3772.52C273.531 4016.02 49.8733 4247 52.8733 4481.5C55.8733 4716 269.373 4819.5 295.373 5071.5" stroke="#D1B160"/>
-    </g>
-    <path id="path3" d="M147.531 -0.483887C164.031 176.516 1.02214 353.982 39.0315 627.016C69.0316 842.516 267.268 904 238.873 1133.5C205.725 1401.42 76.8732 1422 63.8732 1689.5C54.4563 1883.27 350.873 2008 333.873 2277.5C312.862 2610.6 55.2149 2527.98 4.8732 2905.5C-32.0744 3182.57 399.425 3380.69 388.373 3695.5C373.032 4132.5 25.8732 4154 25.8732 4467C25.8732 4780 333.531 4958.52 373.032 5071.02" stroke="#D1B160" stroke-width="0.75"/>
-    <defs>
-    <filter id="filter0_f" x="47.3434" y="-9.5" width="253.527" height="5086.05" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-    <feGaussianBlur stdDeviation="2.5" result="effect1_foregroundBlur"/>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon/favicon.png" type="image/png">
+  <link rel="icon" href="/favicon/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon/favicon-64.png" sizes="64x64" type="image/png">
+  <link rel="icon" href="/favicon/favicon-96.png" sizes="96x96" type="image/png">
+  <link rel="icon" href="/favicon/favicon-196.png" sizes="196x196" type="image/png">
+  <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" sizes="152x152">
+  <link rel="apple-touch-icon" href="/favicon/apple-touch-icon-60x60.png" sizes="60x60">
+  <link rel="apple-touch-icon" href="/favicon/apple-touch-icon-76x76.png" sizes="76x76">
+  <link rel="apple-touch-icon" href="/favicon/apple-touch-icon-114x114.png" sizes="114x114">
+  <link rel="apple-touch-icon" href="/favicon/apple-touch-icon-120x120.png" sizes="120x120">
+  <link rel="apple-touch-icon" href="/favicon/apple-touch-icon-144x144.png" sizes="144x144">
+  <meta name="msapplication-TileImage" content="/favicon/favicon-144.png">
+  <meta name="msapplication-TileColor" content="#FFFFFF">
+
+  <!-- GOOGLE VERIFICATION PROPRIETE -->
+  <meta name="google-site-verification" content="XsiUG3OyRWqgmWsQ_loD0nyksy3PDJufHmnUqfZYkag" />
+</head>
+<!-- GoldenLines -->
+<svg id="goldenLines" viewBox="0 0 389 5069" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path id="path1"
+    d="M166.531 -2.98389C166.531 -2.98389 176.031 35.5161 170.032 104.516C155.305 273.877 -27.182 371.957 6.03157 601.016C35.0316 801.016 305.373 859 258.873 1144C216.992 1400.69 -17.9683 1408.02 37.0316 1700.52C92.0314 1993.02 318.873 2010.5 300.373 2312.5C280.685 2633.9 56.2568 2647 37.0316 2982C17.0316 3330.5 273.032 3386.52 340.032 3660.02C412.486 3955.78 90.5937 4078.88 107.373 4451.5C121.873 4773.5 295.373 4803.5 340.032 5075.5"
+    stroke="#D1B160" stroke-width="3" />
+  <g filter="url(#filter0_f)">
+    <path id="path2"
+      d="M180.032 -3.98388C180.032 -3.98388 199.032 -8.26041 199.032 122.516C199.032 251.016 68.2689 399.563 64.3733 511.5C56.8735 727 242.626 801.373 229.873 1019C214.872 1275 81.8731 1389.5 81.8731 1588C81.8731 1862.79 231.873 1884.5 234.873 2220.5C237.873 2556.5 90.5316 2633.02 93.5316 2977.52C96.5316 3322.02 309.531 3529.02 291.531 3772.52C273.531 4016.02 49.8733 4247 52.8733 4481.5C55.8733 4716 269.373 4819.5 295.373 5071.5"
+      stroke="#D1B160" />
+  </g>
+  <path id="path3"
+    d="M147.531 -0.483887C164.031 176.516 1.02214 353.982 39.0315 627.016C69.0316 842.516 267.268 904 238.873 1133.5C205.725 1401.42 76.8732 1422 63.8732 1689.5C54.4563 1883.27 350.873 2008 333.873 2277.5C312.862 2610.6 55.2149 2527.98 4.8732 2905.5C-32.0744 3182.57 399.425 3380.69 388.373 3695.5C373.032 4132.5 25.8732 4154 25.8732 4467C25.8732 4780 333.531 4958.52 373.032 5071.02"
+    stroke="#D1B160" stroke-width="0.75" />
+  <defs>
+    <filter id="filter0_f" x="47.3434" y="-9.5" width="253.527" height="5086.05" filterUnits="userSpaceOnUse"
+      color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+      <feGaussianBlur stdDeviation="2.5" result="effect1_foregroundBlur" />
     </filter>
-    </defs>
-  </svg>      
-  <svg style='display: none'>
-    <!-- LinkedIn -->
-    <svg xmlns="http://www.w3.org/2000/svg" aria-labelledby="title"
-        aria-describedby="desc" role="img" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none;">
-      <symbol id="icon__linkedin" viewBox="0 0 64 64">
-        <path data-name="layer1"
-         d="M1.15 21.7h13V61h-13zm46.55-1.3c-5.7 0-9.1 2.1-12.7 6.7v-5.4H22V61h13.1V39.7c0-4.5 2.3-8.9 7.5-8.9s8.3 4.4 8.3 8.8V61H64V38.7c0-15.5-10.5-18.3-16.3-18.3zM7.7 2.6C3.4 2.6 0 5.7 0 9.5s3.4 6.9 7.7 6.9 7.7-3.1 7.7-6.9S12 2.6 7.7 2.6z"></path>
-      </symbol>
-    </svg>
-    <!-- GitHub -->
-    <svg xmlns="http://www.w3.org/2000/svg" aria-labelledby="title"
-    aria-describedby="desc" role="img" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none;">
-      <symbol id="icon__github" viewBox="0 0 64 64">
-        <path data-name="layer2"
-        d="M32 0a32.021 32.021 0 0 0-10.1 62.4c1.6.3 2.2-.7 2.2-1.5v-6c-8.9 1.9-10.8-3.8-10.8-3.8-1.5-3.7-3.6-4.7-3.6-4.7-2.9-2 .2-1.9.2-1.9 3.2.2 4.9 3.3 4.9 3.3 2.9 4.9 7.5 3.5 9.3 2.7a6.93 6.93 0 0 1 2-4.3c-7.1-.8-14.6-3.6-14.6-15.8a12.27 12.27 0 0 1 3.3-8.6 11.965 11.965 0 0 1 .3-8.5s2.7-.9 8.8 3.3a30.873 30.873 0 0 1 8-1.1 30.292 30.292 0 0 1 8 1.1c6.1-4.1 8.8-3.3 8.8-3.3a11.965 11.965 0 0 1 .3 8.5 12.1 12.1 0 0 1 3.3 8.6c0 12.3-7.5 15-14.6 15.8a7.746 7.746 0 0 1 2.2 5.9v8.8c0 .9.6 1.8 2.2 1.5A32.021 32.021 0 0 0 32 0z"></path>
-        <path data-name="layer1" d="M12.1 45.9c-.1.2-.3.2-.5.1s-.4-.3-.3-.5.3-.2.6-.1c.2.2.3.4.2.5zm1.3 1.5a.589.589 0 0 1-.8-.8.631.631 0 0 1 .7.1.494.494 0 0 1 .1.7zm1.3 1.8a.585.585 0 0 1-.7-.3.6.6 0 0 1 0-.8.585.585 0 0 1 .7.3c.2.3.2.7 0 .8zm1.7 1.8c-.2.2-.5.1-.8-.1-.3-.3-.4-.6-.2-.8a.619.619 0 0 1 .8.1.554.554 0 0 1 .2.8zm2.4 1c-.1.3-.4.4-.8.3s-.6-.4-.5-.7.4-.4.8-.3c.3.2.6.5.5.7zm2.6.2c0 .3-.3.5-.7.5s-.7-.2-.7-.5.3-.5.7-.5c.4.1.7.3.7.5zm2.4-.4q0 .45-.6.6a.691.691 0 0 1-.8-.3q0-.45.6-.6c.5-.1.8.1.8.3z"
+  </defs>
+</svg>
+<svg style='display: none'>
+  <!-- LinkedIn -->
+  <svg xmlns="http://www.w3.org/2000/svg" aria-labelledby="title" aria-describedby="desc" role="img"
+    xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none;">
+    <symbol id="icon__linkedin" viewBox="0 0 64 64">
+      <path data-name="layer1"
+        d="M1.15 21.7h13V61h-13zm46.55-1.3c-5.7 0-9.1 2.1-12.7 6.7v-5.4H22V61h13.1V39.7c0-4.5 2.3-8.9 7.5-8.9s8.3 4.4 8.3 8.8V61H64V38.7c0-15.5-10.5-18.3-16.3-18.3zM7.7 2.6C3.4 2.6 0 5.7 0 9.5s3.4 6.9 7.7 6.9 7.7-3.1 7.7-6.9S12 2.6 7.7 2.6z">
+      </path>
+    </symbol>
+  </svg>
+  <!-- GitHub -->
+  <svg xmlns="http://www.w3.org/2000/svg" aria-labelledby="title" aria-describedby="desc" role="img"
+    xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none;">
+    <symbol id="icon__github" viewBox="0 0 64 64">
+      <path data-name="layer2"
+        d="M32 0a32.021 32.021 0 0 0-10.1 62.4c1.6.3 2.2-.7 2.2-1.5v-6c-8.9 1.9-10.8-3.8-10.8-3.8-1.5-3.7-3.6-4.7-3.6-4.7-2.9-2 .2-1.9.2-1.9 3.2.2 4.9 3.3 4.9 3.3 2.9 4.9 7.5 3.5 9.3 2.7a6.93 6.93 0 0 1 2-4.3c-7.1-.8-14.6-3.6-14.6-15.8a12.27 12.27 0 0 1 3.3-8.6 11.965 11.965 0 0 1 .3-8.5s2.7-.9 8.8 3.3a30.873 30.873 0 0 1 8-1.1 30.292 30.292 0 0 1 8 1.1c6.1-4.1 8.8-3.3 8.8-3.3a11.965 11.965 0 0 1 .3 8.5 12.1 12.1 0 0 1 3.3 8.6c0 12.3-7.5 15-14.6 15.8a7.746 7.746 0 0 1 2.2 5.9v8.8c0 .9.6 1.8 2.2 1.5A32.021 32.021 0 0 0 32 0z">
+      </path>
+      <path data-name="layer1"
+        d="M12.1 45.9c-.1.2-.3.2-.5.1s-.4-.3-.3-.5.3-.2.6-.1c.2.2.3.4.2.5zm1.3 1.5a.589.589 0 0 1-.8-.8.631.631 0 0 1 .7.1.494.494 0 0 1 .1.7zm1.3 1.8a.585.585 0 0 1-.7-.3.6.6 0 0 1 0-.8.585.585 0 0 1 .7.3c.2.3.2.7 0 .8zm1.7 1.8c-.2.2-.5.1-.8-.1-.3-.3-.4-.6-.2-.8a.619.619 0 0 1 .8.1.554.554 0 0 1 .2.8zm2.4 1c-.1.3-.4.4-.8.3s-.6-.4-.5-.7.4-.4.8-.3c.3.2.6.5.5.7zm2.6.2c0 .3-.3.5-.7.5s-.7-.2-.7-.5.3-.5.7-.5c.4.1.7.3.7.5zm2.4-.4q0 .45-.6.6a.691.691 0 0 1-.8-.3q0-.45.6-.6c.5-.1.8.1.8.3z"
         fill="#d1b160"></path>
-      </symbol>
-    </svg>
-    <!-- Behance -->
-    <svg xmlns="http://www.w3.org/2000/svg" aria-labelledby="title"
-    aria-describedby="desc" role="img" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none;">
-      <symbol id="icon__behance" viewBox="0 0 64 64">
-        <path data-name="layer1"
-        d="M26.483 31.64c3.4-1.713 4.9-4.433 4.9-8.363C31.38 15.821 25.884 13 18.388 13H0v40h18.488c7.1 0 14.091-3.526 14.091-11.587 0-4.635-1.699-8.262-6.096-9.773zM9.194 19.851h8.095c3.1 0 6.1.806 6.1 4.635 0 3.123-2.3 4.332-5.3 4.332H9.194zm8.794 26.3H9.194V35.469h8.994c3.7 0 6.1 1.411 6.1 5.542-.003 3.828-2.902 5.138-6.299 5.138zm32.28-23.781c-9.894 0-14.591 6.65-14.591 15.315 0 9.874 5.9 15.214 14.591 15.214 6.5 0 11.193-2.62 13.392-9.37h-7.7c-.5 1.814-3 3.325-5.4 3.325-4.4 0-7.1-2.418-7.3-7.254h20.699c.5-8.968-3.597-17.23-13.691-17.23zm-6.9 12.292a6.015 6.015 0 0 1 6.4-6.045c3.8 0 5.7 2.015 6.5 6.045zm-1.694-20.05h16.09v4.03h-16.09z"></path>
-      </symbol>
-    </svg>
-    <!-- Dribbble -->
-    <svg xmlns="http://www.w3.org/2000/svg" aria-labelledby="title"
-    aria-describedby="desc" role="img" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none;">
-      <symbol id="icon__dribbble" viewBox="0 0 64 64">
-        <path data-name="layer1"
-        d="M32 0a32 32 0 1 0 32 32A31.966 31.966 0 0 0 32 0zm21 15.5a27.126 27.126 0 0 1 5.7 15.8 56.982 56.982 0 0 0-18.7-.5q-1.05-2.4-2.1-4.5A39.011 39.011 0 0 0 53 15.5zM32 5.3a26.337 26.337 0 0 1 17.3 6.4 34.21 34.21 0 0 1-13.9 9.9A137.549 137.549 0 0 0 25.7 6a25.9 25.9 0 0 1 6.3-.7zM20.5 7.9a142.785 142.785 0 0 1 9.9 15.3c-7.5 2.1-15.9 2.6-24.4 2.6A26.751 26.751 0 0 1 20.5 7.9zM5.3 32v-.9h.1c9.5 0 19-.6 27.5-3.1.6 1.3 1.3 2.6 1.9 4-11.2 3.3-18.1 10.6-22.9 17.6A26.779 26.779 0 0 1 5.3 32zM32 58.7a26.821 26.821 0 0 1-16.2-5.5c4.5-6.8 10.8-13.5 21-16.3a94.41 94.41 0 0 1 5.4 19.8 26.875 26.875 0 0 1-10.2 2zM47.1 54a103.472 103.472 0 0 0-5-18.2 51.229 51.229 0 0 1 16.3.7A27.008 27.008 0 0 1 47.1 54z"></path>
-      </symbol>
-    </svg>
-    <!-- Eye -->
-    <svg xmlns="http://www.w3.org/2000/svg" aria-labelledby="title"
-    aria-describedby="desc" role="img" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none;">
-      <symbol id="icon__eye" viewBox="0 0 64 64">
-        <path data-name="layer2"
-        d="M32 14.5C14.8 14.5 2.5 32 2.5 32S14.8 49.5 32 49.5 61.5 32 61.5 32 49.2 14.5 32 14.5z"
+    </symbol>
+  </svg>
+  <!-- Behance -->
+  <svg xmlns="http://www.w3.org/2000/svg" aria-labelledby="title" aria-describedby="desc" role="img"
+    xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none;">
+    <symbol id="icon__behance" viewBox="0 0 64 64">
+      <path data-name="layer1"
+        d="M26.483 31.64c3.4-1.713 4.9-4.433 4.9-8.363C31.38 15.821 25.884 13 18.388 13H0v40h18.488c7.1 0 14.091-3.526 14.091-11.587 0-4.635-1.699-8.262-6.096-9.773zM9.194 19.851h8.095c3.1 0 6.1.806 6.1 4.635 0 3.123-2.3 4.332-5.3 4.332H9.194zm8.794 26.3H9.194V35.469h8.994c3.7 0 6.1 1.411 6.1 5.542-.003 3.828-2.902 5.138-6.299 5.138zm32.28-23.781c-9.894 0-14.591 6.65-14.591 15.315 0 9.874 5.9 15.214 14.591 15.214 6.5 0 11.193-2.62 13.392-9.37h-7.7c-.5 1.814-3 3.325-5.4 3.325-4.4 0-7.1-2.418-7.3-7.254h20.699c.5-8.968-3.597-17.23-13.691-17.23zm-6.9 12.292a6.015 6.015 0 0 1 6.4-6.045c3.8 0 5.7 2.015 6.5 6.045zm-1.694-20.05h16.09v4.03h-16.09z">
+      </path>
+    </symbol>
+  </svg>
+  <!-- Dribbble -->
+  <svg xmlns="http://www.w3.org/2000/svg" aria-labelledby="title" aria-describedby="desc" role="img"
+    xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none;">
+    <symbol id="icon__dribbble" viewBox="0 0 64 64">
+      <path data-name="layer1"
+        d="M32 0a32 32 0 1 0 32 32A31.966 31.966 0 0 0 32 0zm21 15.5a27.126 27.126 0 0 1 5.7 15.8 56.982 56.982 0 0 0-18.7-.5q-1.05-2.4-2.1-4.5A39.011 39.011 0 0 0 53 15.5zM32 5.3a26.337 26.337 0 0 1 17.3 6.4 34.21 34.21 0 0 1-13.9 9.9A137.549 137.549 0 0 0 25.7 6a25.9 25.9 0 0 1 6.3-.7zM20.5 7.9a142.785 142.785 0 0 1 9.9 15.3c-7.5 2.1-15.9 2.6-24.4 2.6A26.751 26.751 0 0 1 20.5 7.9zM5.3 32v-.9h.1c9.5 0 19-.6 27.5-3.1.6 1.3 1.3 2.6 1.9 4-11.2 3.3-18.1 10.6-22.9 17.6A26.779 26.779 0 0 1 5.3 32zM32 58.7a26.821 26.821 0 0 1-16.2-5.5c4.5-6.8 10.8-13.5 21-16.3a94.41 94.41 0 0 1 5.4 19.8 26.875 26.875 0 0 1-10.2 2zM47.1 54a103.472 103.472 0 0 0-5-18.2 51.229 51.229 0 0 1 16.3.7A27.008 27.008 0 0 1 47.1 54z">
+      </path>
+    </symbol>
+  </svg>
+  <!-- Eye -->
+  <svg xmlns="http://www.w3.org/2000/svg" aria-labelledby="title" aria-describedby="desc" role="img"
+    xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none;">
+    <symbol id="icon__eye" viewBox="0 0 64 64">
+      <path data-name="layer2" d="M32 14.5C14.8 14.5 2.5 32 2.5 32S14.8 49.5 32 49.5 61.5 32 61.5 32 49.2 14.5 32 14.5z"
         fill="none" stroke="#d1b160" stroke-miterlimit="10" stroke-width="2" stroke-linejoin="round"
         stroke-linecap="round"></path>
-        <circle data-name="layer1" cx="32" cy="31.5" r="10" fill="none"
-        stroke="#d1b160" stroke-miterlimit="10" stroke-width="2" stroke-linejoin="round"
-        stroke-linecap="round"></circle>
-        <path data-name="layer1" d="M28.5 29.5a4 4 0 0 0 3.5 6" fill="none"
-        stroke="#d1b160" stroke-miterlimit="10" stroke-width="2" stroke-linejoin="round"
-        stroke-linecap="round"></path>
-      </symbol>
-    </svg>
-    <!-- Icon__mail -->
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none;">
-      <symbol id="icon__mail" viewBox="0 0 64 64">
-        <path data-name="layer2"
-        fill="none" stroke="#d1b160" stroke-miterlimit="10" stroke-width="2" d="M2 12l30 29 30-29M42 31.6L62 52M2 52l20-20.4"
+      <circle data-name="layer1" cx="32" cy="31.5" r="10" fill="none" stroke="#d1b160" stroke-miterlimit="10"
+        stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></circle>
+      <path data-name="layer1" d="M28.5 29.5a4 4 0 0 0 3.5 6" fill="none" stroke="#d1b160" stroke-miterlimit="10"
+        stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
+    </symbol>
+  </svg>
+  <!-- Icon__mail -->
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none;">
+    <symbol id="icon__mail" viewBox="0 0 64 64">
+      <path data-name="layer2" fill="none" stroke="#d1b160" stroke-miterlimit="10" stroke-width="2"
+        d="M2 12l30 29 30-29M42 31.6L62 52M2 52l20-20.4" stroke-linejoin="round" stroke-linecap="round"></path>
+      <path data-name="layer1" fill="none" stroke="#d1b160" stroke-miterlimit="10" stroke-width="2" d="M2 12h60v40H2z"
         stroke-linejoin="round" stroke-linecap="round"></path>
-        <path data-name="layer1" fill="none" stroke="#d1b160" stroke-miterlimit="10"
-        stroke-width="2" d="M2 12h60v40H2z" stroke-linejoin="round" stroke-linecap="round"></path>
-      </symbol>
-    </svg>
-    <!-- Icon__phone -->
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none;">
-      <symbol id="icon__phone" viewBox="0 0 64 64">
-        <path data-name="layer1"
+    </symbol>
+  </svg>
+  <!-- Icon__phone -->
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none;">
+    <symbol id="icon__phone" viewBox="0 0 64 64">
+      <path data-name="layer1"
         d="M58.9 47l-10.4-6.8a4.8 4.8 0 0 0-6.5 1.3c-2.4 2.9-5.3 7.7-16.2-3.2S19.6 24.4 22.5 22a4.8 4.8 0 0 0 1.3-6.5L17 5.1c-.9-1.3-2.1-3.4-4.9-3S2 6.6 2 15.6s7.1 20 16.8 29.7S39.5 62 48.4 62s13.2-8 13.5-10-1.7-4.1-3-5z"
         fill="none" stroke="#d1b160" stroke-miterlimit="10" stroke-width="2" stroke-linejoin="round"
         stroke-linecap="round"></path>
-      </symbol>
-    </svg>
-    <!-- Icon__design -->
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;" aria-labelledby="title"
-    aria-describedby="desc" role="img" xmlns:xlink="http://www.w3.org/1999/xlink">
+    </symbol>
+  </svg>
+  <!-- Icon__design -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;" aria-labelledby="title" aria-describedby="desc"
+    role="img" xmlns:xlink="http://www.w3.org/1999/xlink">
     <symbol id="icon__design" viewBox="0 0 64 64">
-      <path d="M33.353 22.629l-19.77-19.77-10.761 10.76L22.51 33.461"
-      stroke-width="0.75" stroke-miterlimit="10" stroke="#d1b160" fill="none" data-name="layer1"
-      stroke-linejoin="round" stroke-linecap="round"></path>
-      <path d="M18.301 53.703l36.603-36.561-8.026-8.026-36.602 36.562-6.383 14.408 14.408-6.383zm36.603-36.561l6.274-6.267-8.026-8.025-6.274 6.266"
-      stroke-width="0.75" stroke-miterlimit="10" stroke="#d1b160" fill="none" data-name="layer2"
-      stroke-linejoin="round" stroke-linecap="round"></path>
-      <path d="M30.502 41.516L49.984 61.15 60.93 50.205 41.381 30.656m2.137 23.856l5.496-5.498M15.892 26.791l6.055-6.057M37.48 48.547l4.502-4.501M9.588 20.439l4.443-4.441"
-      stroke-width="0.75" stroke-miterlimit="10" stroke="#d1b160" fill="none" data-name="layer1"
-      stroke-linejoin="round" stroke-linecap="round"></path>
-      <path d="M10.276 45.678l8.025 8.025" stroke-width="0.75" stroke-miterlimit="10"
-      stroke="#d1b160" fill="none" data-name="layer2" stroke-linejoin="round"
-      stroke-linecap="round"></path>
+      <path d="M33.353 22.629l-19.77-19.77-10.761 10.76L22.51 33.461" stroke-width="0.75" stroke-miterlimit="10"
+        stroke="#d1b160" fill="none" data-name="layer1" stroke-linejoin="round" stroke-linecap="round"></path>
+      <path
+        d="M18.301 53.703l36.603-36.561-8.026-8.026-36.602 36.562-6.383 14.408 14.408-6.383zm36.603-36.561l6.274-6.267-8.026-8.025-6.274 6.266"
+        stroke-width="0.75" stroke-miterlimit="10" stroke="#d1b160" fill="none" data-name="layer2"
+        stroke-linejoin="round" stroke-linecap="round"></path>
+      <path
+        d="M30.502 41.516L49.984 61.15 60.93 50.205 41.381 30.656m2.137 23.856l5.496-5.498M15.892 26.791l6.055-6.057M37.48 48.547l4.502-4.501M9.588 20.439l4.443-4.441"
+        stroke-width="0.75" stroke-miterlimit="10" stroke="#d1b160" fill="none" data-name="layer1"
+        stroke-linejoin="round" stroke-linecap="round"></path>
+      <path d="M10.276 45.678l8.025 8.025" stroke-width="0.75" stroke-miterlimit="10" stroke="#d1b160" fill="none"
+        data-name="layer2" stroke-linejoin="round" stroke-linecap="round"></path>
     </symbol>
-    </svg>
-    <!-- Icon__dev -->
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;" xmlns:xlink="http://www.w3.org/1999/xlink">
+  </svg>
+  <!-- Icon__dev -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;" xmlns:xlink="http://www.w3.org/1999/xlink">
     <symbol id="icon__dev" viewBox="0 0 64 64">
-      <path data-name="layer2"
-      fill="none" stroke="#d1b160" stroke-linecap="round" stroke-linejoin="round"
-      stroke-width="0.75" d="M22 60h20M32 50v10m30-20V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v34"></path>
-      <path data-name="layer1" d="M2 40v8a2 2 0 0 0 2 2h56a2 2 0 0 0 2-2v-8z"
-      fill="none" stroke="#d1b160" stroke-linecap="round" stroke-linejoin="round"
-      stroke-width="0.75"></path>
+      <path data-name="layer2" fill="none" stroke="#d1b160" stroke-linecap="round" stroke-linejoin="round"
+        stroke-width="0.75" d="M22 60h20M32 50v10m30-20V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v34"></path>
+      <path data-name="layer1" d="M2 40v8a2 2 0 0 0 2 2h56a2 2 0 0 0 2-2v-8z" fill="none" stroke="#d1b160"
+        stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75"></path>
     </symbol>
-    </svg>
-    <!-- Icon__uxui -->
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;" xmlns:xlink="http://www.w3.org/1999/xlink">
+  </svg>
+  <!-- Icon__uxui -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;" xmlns:xlink="http://www.w3.org/1999/xlink">
     <symbol id="icon__uxui" viewBox="0 0 64 64">
       <path data-name="layer2"
-      d="M61.5 3.2a1.8 1.8 0 0 0-2.3-.2h-.1C37.9 18.8 27.9 28.1 20.6 35.4l8.6 8.7c7.3-7.3 16.6-17.3 32.4-38.5h.1a1.8 1.8 0 0 0-.2-2.4z"
-      fill="none" stroke="#d1b160" stroke-miterlimit="10" stroke-width="0.75" stroke-linejoin="round"
-      stroke-linecap="round"></path>
-      <path data-name="layer2" d="M18 38a6.1 6.1 0 0 0 8.7 8.7l2.6-2.6-8.6-8.7z"
-      fill="none" stroke="#d1b160" stroke-miterlimit="10" stroke-width="0.75" stroke-linejoin="round"
-      stroke-linecap="round"></path>
+        d="M61.5 3.2a1.8 1.8 0 0 0-2.3-.2h-.1C37.9 18.8 27.9 28.1 20.6 35.4l8.6 8.7c7.3-7.3 16.6-17.3 32.4-38.5h.1a1.8 1.8 0 0 0-.2-2.4z"
+        fill="none" stroke="#d1b160" stroke-miterlimit="10" stroke-width="0.75" stroke-linejoin="round"
+        stroke-linecap="round"></path>
+      <path data-name="layer2" d="M18 38a6.1 6.1 0 0 0 8.7 8.7l2.6-2.6-8.6-8.7z" fill="none" stroke="#d1b160"
+        stroke-miterlimit="10" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"></path>
       <path data-name="layer1" d="M18.3 55.5A6 6 0 0 0 9.8 47C5.5 51.2 7 59.9 2 61.4c4.7-.3 11.5-1.1 16.3-5.9z"
-      fill="none" stroke="#d1b160" stroke-miterlimit="10" stroke-width="0.75" stroke-linejoin="round"
-      stroke-linecap="round"></path>
+        fill="none" stroke="#d1b160" stroke-miterlimit="10" stroke-width="0.75" stroke-linejoin="round"
+        stroke-linecap="round"></path>
     </symbol>
-    </svg>
-    <!-- Icon__scroll -->
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-      <symbol id="icon__scroll" viewBox="0 0 40 40">
-        <path d="M1 1C16.6 16.6 20.8333 20.8333 21 21L41 1" stroke="#DFBD64" stroke-width="0.75"/>
-        <path d="M11 6.5L21 16L30.5 6.5" stroke="#DFBD64" stroke-width="0.5"/>
-      </symbol>
-    </svg>
-    <!-- Icon__scroll--up -->
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-      <symbol id="icon__scroll--up" viewBox="0 0 22 12" fill="none">
-        <path d="M21 11.5C13.2 3.7 11.0833 1.58333 11 1.5L1 11.5" stroke="#DFBD64" stroke-width="0.75"/>
-        <path d="M16 8.75049L11 4.00049L6.25 8.75049" stroke="#DFBD64" stroke-width="0.5"/>
-      </symbol>
-    </svg>
   </svg>
+  <!-- Icon__scroll -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="icon__scroll" viewBox="0 0 40 40">
+      <path d="M1 1C16.6 16.6 20.8333 20.8333 21 21L41 1" stroke="#DFBD64" stroke-width="0.75" />
+      <path d="M11 6.5L21 16L30.5 6.5" stroke="#DFBD64" stroke-width="0.5" />
+    </symbol>
+  </svg>
+  <!-- Icon__scroll--up -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="icon__scroll--up" viewBox="0 0 22 12" fill="none">
+      <path d="M21 11.5C13.2 3.7 11.0833 1.58333 11 1.5L1 11.5" stroke="#DFBD64" stroke-width="0.75" />
+      <path d="M16 8.75049L11 4.00049L6.25 8.75049" stroke="#DFBD64" stroke-width="0.5" />
+    </symbol>
+  </svg>
+</svg>
 
-  <body class="index">
-    <section class="container">
-      <!-- HERO -->
-      <section class="background--hero">
-        <!-- NAVIGATION -->
-        <header>
-          <div id="menu__button">
-            <span>MENU</span>
+<body class="index">
+  <section class="container">
+    <!-- HERO -->
+    <section class="background--hero">
+      <!-- NAVIGATION -->
+      <header>
+        <div id="menu__button">
+          <span>MENU</span>
+        </div>
+        <nav class="menu__nav" role="navigation">
+          <div class="menu__wrapper">
+            <ul class="menu">
+              <li>Explore</li>
+              <li><a href="index.html/#home">Home</a></li>
+              <li><a href="index.html/#booking">Works</a></li>
+              <li><a href="index.html/#about">About</a></li>
+              <li><a href="index.html/#skills">Skills</a></li>
+            </ul>
           </div>
-          <nav class="menu__nav" role="navigation">
-            <div class="menu__wrapper">
-              <ul class="menu">
-                <li>Explore</li>
-                <li><a href="index.html/#home">Home</a></li>
-                <li><a href="index.html/#booking">Works</a></li>
-                <li><a href="index.html/#about">About</a></li>
-                <li><a href="index.html/#skills">Skills</a></li>
-              </ul>
-            </div>
-            <div class="burger__socials">
-              <span>Follow me</span>
-              <ul class="social">
-                <li class="social__icons"><a 
-                    href="https://www.linkedin.com/in/fionaroux" 
-                    title="Venez voir mon profil Linkedin !" 
-                    target="_blank">
+          <div class="burger__socials">
+            <span>Follow me</span>
+            <ul class="social">
+              <li class="social__icons"><a href="https://www.linkedin.com/in/fionaroux"
+                  title="Venez voir mon profil Linkedin !" target="_blank">
                   <svg class="social__icon" aria-hidden="true">
                     <use xlink:href="#icon__linkedin"></use>
                   </svg>
-                </li>
-                <li class="social__icons"><a 
-                  href="https://github.com/ArcanumLibella" title="Venez voir mon GitHub !" 
+              </li>
+              <li class="social__icons"><a href="https://github.com/ArcanumLibella" title="Venez voir mon GitHub !"
                   target="_blank">
                   <svg class="social__icon" aria-hidden="true">
                     <use xlink:href="#icon__github"></use>
-                  </svg>  
-                </li>
-                <li class="social__icons"><a 
-                  href="https://www.behance.net/fionaroux" 
-                  title="Venez voir mon compte Behance !" 
-                  target="_blank">
+                  </svg>
+              </li>
+              <li class="social__icons"><a href="https://www.behance.net/fionaroux"
+                  title="Venez voir mon compte Behance !" target="_blank">
                   <svg class="social__icon" aria-hidden="true">
                     <use xlink:href="#icon__behance"></use>
                   </svg>
-                </li>
-                <li class="social__icons"><a 
-                  href="https://dribbble.com/ArcanumLibella" 
-                  title="Venez voir mon compte Dribble !" 
-                  target="_blank">
+              </li>
+              <li class="social__icons"><a href="https://dribbble.com/ArcanumLibella"
+                  title="Venez voir mon compte Dribble !" target="_blank">
                   <svg class="social__icon" aria-hidden="true">
                     <use xlink:href="#icon__dribbble"></use>
                   </svg>
-                </li>
-              </ul>
-            </div>
-          </nav>
-            <ul class="socials">
-              <li class="social__icons"><a 
-                  href="https://www.linkedin.com/in/fionaroux" 
-                  title="Venez voir mon profil Linkedin !" 
-                  target="_blank">
-                  <svg class="social__icon" aria-hidden="true">
-                    <use xlink:href="#icon__linkedin"></use>
-                  </svg></a>
-              </li>
-              <li class="social__icons"><a 
-                href="https://github.com/ArcanumLibella" title="Venez voir mon GitHub !" 
-                target="_blank">
-                <svg class="social__icon" aria-hidden="true">
-                    <use xlink:href="#icon__github"></use>
-                </svg>  
-              </li>
-              <li class="social__icons"><a 
-                href="https://www.behance.net/fionaroux" 
-                title="Venez voir mon compte Behance !" 
-                target="_blank">
-                <svg class="social__icon" aria-hidden="true">
-                    <use xlink:href="#icon__behance"></use>
-                </svg>
-              </li>
-              <li class="social__icons"><a 
-                href="https://dribbble.com/ArcanumLibella" 
-                title="Venez voir mon compte Dribble !" 
-                target="_blank">
-                <svg class="social__icon" aria-hidden="true">
-                    <use xlink:href="#icon__dribbble"></use>
-                </svg>
               </li>
             </ul>
-        </header>
-        <!-- HERO -->
-        <article id="home" class="hero__wrapper">
-          <h1 class="hero__title">Fiona Roux</h1>
-          <hr />
-          <h2 class="hero__subtitle"><strong>DÉVELOPPEUR</strong> FRONT-END & UX|UI <strong>DESIGNER</strong></h2>
-          <p class="hero__description__title">ÉTUDIANTE EN BACHELOR WEB</p>
-          <p class="hero__description">
-            Je suis actuellement à la recherche d'un stage en <strong>développement</strong>
-            Front-end pour 3 mois à partir de Juillet 2019.
-          </p>
-          <span id="scroll" class="scroll">Scroll</span>
-          <a href="#booking" title="Découvrir les projets">
-            <svg class="icon__scroll" aria-hidden="true">
-              <use xlink:href="#icon__scroll"></use>
-            </svg>
-          </a>
-        </article>
-      </section>
-
-      <!-- PROJET 1 -->
-      <section id="booking" class="project__background--1">
-        <article class="project__wrapper project__wrapper--1">
-          <h2 class="project__nb">01</h2>
-          <h2 class="project__title project__title1">Booking</h2>
-          <h3 class="project__subtitle">REDESIGN D’UNE PAGE PRODUIT</h3>
-          <div class="project__image1">
           </div>
-          <p class="project__resume">
-              Plonger l’utilisateur dans une véritable expérience d’accompagnement dans la création de son voyage.
-          </p>
-          <p class="project__date">DÉCEMBRE 2018</p>
-          <a href="../src/pages/booking.html" title="Redesign de Booking" class="project__button button">En savoir +</a>
-        </article>
-      </section>
-
-      <!-- PROJET 2 -->
-      <section id="moschino" class="project__background--2">
-        <article class="project__wrapper project__wrapper--2">
-          <h2 class="project__nb">02</h2>
-          <h2 class="project__title project__title2">Moschino</h2>
-          <h3 class="project__subtitle">DESIGN & INTÉGRATION</h3>
-          <div class="project__image2">
-          </div>
-          <p class="project__resume">
-            Garder un site respectant les codes du luxe tout en apportant le côté excentrique et décalé propre à la marque.
-          </p>
-          <p class="project__date">NOVEMBRE 2018</p>
-          <a href="../src/pages/moschino.html" title="Redesign et intégration de Moschino" class="project__button button">En savoir +</a>
-        </article>
-      </section>
-
-      <!-- PROJET 3 -->
-      <section id="strit" class="project__background--3">
-        <article class="project__wrapper project__wrapper--1">
-          <h2 class="project__nb">03</h2>
-          <h2 class="project__title project__title3">Str'it</h2>
-          <h3 class="project__subtitle">DESIGN & GESTION DE PROJET</h3>
-          <div class="project__image3">
-          </div>
-          <p class="project__resume">
-              Création d'un concept de vêtement unique en partenariat avec des street-artistes.
-          </p>
-          <p class="project__date">FÉVRIER 2019</p>
-          <a href="../src/pages/strit.html" title="Concept et design d'un site de vêtement unique" class="project__button button">En savoir +</a>
-        </article>
-      </section>
-
-      <!-- ABOUT -->
-      <section class="background--aboutskills">
-        <article id="about" class="background--about">
-          <p class="about__subtitle">LEARN MORE</p>
-          <h2 class="about__title">About me</h2>
-          <p id="description" class="about__description">Hello ! Je m’appelle Fiona Roux et je suis étudiante en Bachelor Web à <strong>Hétic</strong>. 
-          La pluricompétence étant importante à mes yeux, j’ai choisi une formation où le <strong>développement web</strong> (front-end et back-end),  l’<strong>UX/UI Design</strong> et le <strong>Web Marketing</strong> sont au coeur de l’enseignement.</br>
-          Après 8 années dans le milieu du végétal et de la conception paysagère en bureau d'études, j'ai décidé de reprendre mes études dans un domaine qui m'a toujours passionné : le Web. Ce parcours atypique fait la force de mon profil, en effet j'ai pu acquérir de nombreuses compétences et softskills que je mets à présent au service du monde digital.</br></p>
-          <p class="about__description about__description--2">
-          Curieuse, ambitieuse et créative, je souhaite désormais développer mes compétences en développement <strong>Front-End</strong> et par la suite dans le <strong>Creative Coding</strong> (au travers de WebGL et Three.js).</br>
-          Vivant actuellement à Paris, je recherche un stage ainsi qu’une alternance où je pourrais rapidement monter en compétence, découvrir de nouvelles technos et être challenger au quotidien.</p>
-          <p class="about__description about__description--3">Votre agence Web est dynamique et l’accompagnement des entreprises dans leur transformation digitale est au coeur de vos préoccupations ? Vous recherchez une personne fiable et passionnée de  digital ?</br> Alors rencontrons nous !</p>
-          <a href="https://www.figma.com/file/MMTQegNDNAyHUlx4dglEAE1U/CV?node-id=0%3A1" class="about__description about__data" title="Venez regarder mon CV !" target="_blank">
-            <svg class="contact__icon" aria-hidden="true">
-              <use xlink:href="#icon__eye"></use>
-            </svg>
-            Regardez mon CV</a>
-          <a href="mailto:fiona.roux@hetic.net" class="about__description about__data" title="Envoyez-moi un email">
-              <svg class="contact__icon" aria-hidden="true">
-                <use xlink:href="#icon__mail"></use>
+        </nav>
+        <ul class="socials">
+          <li class="social__icons"><a href="https://www.linkedin.com/in/fionaroux"
+              title="Venez voir mon profil Linkedin !" target="_blank">
+              <svg class="social__icon" aria-hidden="true">
+                <use xlink:href="#icon__linkedin"></use>
+              </svg></a>
+          </li>
+          <li class="social__icons"><a href="https://github.com/ArcanumLibella" title="Venez voir mon GitHub !"
+              target="_blank">
+              <svg class="social__icon" aria-hidden="true">
+                <use xlink:href="#icon__github"></use>
               </svg>
-            fiona.roux@hetic.net</a>
-          <p class="about__description about__data">
-              <svg class="contact__icon" aria-hidden="true">
-                <use xlink:href="#icon__phone"></use>
+          </li>
+          <li class="social__icons"><a href="https://www.behance.net/fionaroux" title="Venez voir mon compte Behance !"
+              target="_blank">
+              <svg class="social__icon" aria-hidden="true">
+                <use xlink:href="#icon__behance"></use>
               </svg>
-            06.28.26.52.02</p>
-        </article>
-
-      <!-- SKILLS -->
-        <article id="skills">
-            <p class="skills__subtitle">WHAT I KNOW</p>
-          <h2 class="skills__title">Skills</h2>
-          <div class="skills">
-            <div class="skill">
-              <h3 class="skill__subtitle">
-                UI & UX DESIGN
-              </h3>
-              <div class="skill__description">
-                <h4>METHODOLOGY</h4>
-                <p>Benchmark</p>
-                <p>Personas</p>
-                <p>Parcours utilisateur</p>
-                <p>Design System</p>
-                <p>Wireframes | Maquettes</p>
-                <p>Prototypes</p>
-                <h4>CREATION TOOLS</h4>
-                <p>Photoshop | Illustrator</p>
-                <h4>INTERFACE TOOLS</h4>
-                <p>Figma | Sketch</p>
-                <p>Principle</p>
-              </div>
-            </div>
-            <div class="skill">
-              <h3 class="skill__subtitle">FRONT-END
-              </h3>
-              <div class="skill__description">
-                <h4>LANGUAGES</h4>
-                <p>HTML5</p>
-                <p>CSS3 | SASS</p>
-                <p>JavaScript ES6</p>
-                <p>PHP | MySQL</p>
-                <h4>CMS | FRAMEWORKS</h4>
-                <p>Wordpress</p>
-                <h4>DEVELOPMENT TOOLS</h4>
-                <p>Git | GitHub | GitLab</p>
-                <p>npm | Webpack | Parcel</p>
-                <p>Visual Studio Code</p>
-                <p>Terminal</p>
-                <h4>GOOD PRACTICES</h4>
-                <p>Responsive & Mobile First</p>
-                <p>Animations</p> 
-                <p>Creative Coding</p> 
-                <p>Accessibilité</p>
-              </div>
-            </div>
-            <div class="skill">
-              <h3 class="skill__subtitle">PROJECT & WEBMARKETING
-              </h3>
-              <div class="skill__description">
-                <h4>MARKETING</h4>
-                <p><strong>SEO</strong> | SEA</p>
-                <p>Google Analytics</p>
-                <p>Google AdWords</p>
-                <h4>PROJECT MANAGEMENT</h4>
-                <p>Méthode agile</p>
-              </div>
-            </div>
-          </div>
-        </article>
-        
-        <div class="footer">
-          <a id="top" href="#home" title="Retourner à l'accueil">
-            <svg class="icon__scroll" aria-hidden="true">
-              <use xlink:href="#icon__scroll--up"></use>
-            </svg>
-          </a>
-          <p class="backtotop">Back to top</p>
-          <p class="copyright">Made with love | Copyright ©2019 tous droits réservés</p>
-        </div>
-
-      </section>
+          </li>
+          <li class="social__icons"><a href="https://dribbble.com/ArcanumLibella"
+              title="Venez voir mon compte Dribble !" target="_blank">
+              <svg class="social__icon" aria-hidden="true">
+                <use xlink:href="#icon__dribbble"></use>
+              </svg>
+          </li>
+        </ul>
+      </header>
+      <!-- HERO -->
+      <article id="home" class="hero__wrapper">
+        <h1 class="hero__title">Fiona Roux</h1>
+        <h2 class="hero__subtitle"><strong>DÉVELOPPEUR</strong> FRONT-END & UX|UI <strong>DESIGNER</strong></h2>
+        <p class="hero__description__title">ÉTUDIANTE EN BACHELOR WEB</p>
+        <p class="hero__description">
+          Je suis actuellement à la recherche d'un stage en <strong>développement</strong>
+          Front-end pour 3 mois à partir de Juillet 2019.
+        </p>
+        <span id="scroll" class="scroll">Scroll</span>
+        <a href="#booking" title="Découvrir les projets">
+          <svg class="icon__scroll" aria-hidden="true">
+            <use xlink:href="#icon__scroll"></use>
+          </svg>
+        </a>
+      </article>
     </section>
 
-    <script src="js/waypoint.js"></script>
-    <script defer src="js/script.js"></script>
-  </body>
+    <!-- PROJET 1 -->
+    <section id="booking" class="project__background--1">
+      <article class="project__wrapper project__wrapper--1">
+        <h2 class="project__nb">01</h2>
+        <h2 class="project__title project__title1">Booking</h2>
+        <h3 class="project__subtitle">REDESIGN D’UNE PAGE PRODUIT</h3>
+        <div class="project__image1">
+        </div>
+        <p class="project__resume">
+          Plonger l’utilisateur dans une véritable expérience d’accompagnement dans la création de son voyage.
+        </p>
+        <p class="project__date">DÉCEMBRE 2018</p>
+        <a href="../src/pages/booking.html" title="Redesign de Booking" class="project__button button">En savoir +</a>
+      </article>
+    </section>
+
+    <!-- PROJET 2 -->
+    <section id="moschino" class="project__background--2">
+      <article class="project__wrapper project__wrapper--2">
+        <h2 class="project__nb">02</h2>
+        <h2 class="project__title project__title2">Moschino</h2>
+        <h3 class="project__subtitle">DESIGN & INTÉGRATION</h3>
+        <div class="project__image2">
+        </div>
+        <p class="project__resume">
+          Garder un site respectant les codes du luxe tout en apportant le côté excentrique et décalé propre à la
+          marque.
+        </p>
+        <p class="project__date">NOVEMBRE 2018</p>
+        <a href="../src/pages/moschino.html" title="Redesign et intégration de Moschino"
+          class="project__button button">En savoir +</a>
+      </article>
+    </section>
+
+    <!-- PROJET 3 -->
+    <section id="strit" class="project__background--3">
+      <article class="project__wrapper project__wrapper--1">
+        <h2 class="project__nb">03</h2>
+        <h2 class="project__title project__title3">Str'it</h2>
+        <h3 class="project__subtitle">DESIGN & GESTION DE PROJET</h3>
+        <div class="project__image3">
+        </div>
+        <p class="project__resume">
+          Création d'un concept de vêtement unique en partenariat avec des street-artistes.
+        </p>
+        <p class="project__date">FÉVRIER 2019</p>
+        <a href="../src/pages/strit.html" title="Concept et design d'un site de vêtement unique"
+          class="project__button button">En savoir +</a>
+      </article>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="background--aboutskills">
+      <article id="about" class="background--about">
+        <p class="about__subtitle">LEARN MORE</p>
+        <h2 class="about__title">About me</h2>
+        <p id="description" class="about__description">Hello ! Je m’appelle Fiona Roux et je suis étudiante en Bachelor
+          Web à <strong>Hétic</strong>.
+          La pluricompétence étant importante à mes yeux, j’ai choisi une formation où le <strong>développement
+            web</strong> (front-end et back-end), l’<strong>UX/UI Design</strong> et le <strong>Web Marketing</strong>
+          sont au coeur de l’enseignement.</br>
+          Après 8 années dans le milieu du végétal et de la conception paysagère en bureau d'études, j'ai décidé de
+          reprendre mes études dans un domaine qui m'a toujours passionné : le Web. Ce parcours atypique fait la force
+          de mon profil, en effet j'ai pu acquérir de nombreuses compétences et softskills que je mets à présent au
+          service du monde digital.</br></p>
+        <p class="about__description about__description--2">
+          Curieuse, ambitieuse et créative, je souhaite désormais développer mes compétences en développement
+          <strong>Front-End</strong> et par la suite dans le <strong>Creative Coding</strong> (au travers de WebGL et
+          Three.js).</br>
+          Vivant actuellement à Paris, je recherche un stage ainsi qu’une alternance où je pourrais rapidement monter en
+          compétence, découvrir de nouvelles technos et être challenger au quotidien.</p>
+        <p class="about__description about__description--3">Votre agence Web est dynamique et l’accompagnement des
+          entreprises dans leur transformation digitale est au coeur de vos préoccupations ? Vous recherchez une
+          personne fiable et passionnée de digital ?</br> Alors rencontrons nous !</p>
+        <a href="https://www.figma.com/file/MMTQegNDNAyHUlx4dglEAE1U/CV?node-id=0%3A1"
+          class="about__description about__data" title="Venez regarder mon CV !" target="_blank">
+          <svg class="contact__icon" aria-hidden="true">
+            <use xlink:href="#icon__eye"></use>
+          </svg>
+          Regardez mon CV</a>
+        <a href="mailto:fiona.roux@hetic.net" class="about__description about__data" title="Envoyez-moi un email">
+          <svg class="contact__icon" aria-hidden="true">
+            <use xlink:href="#icon__mail"></use>
+          </svg>
+          fiona.roux@hetic.net</a>
+        <p class="about__description about__data">
+          <svg class="contact__icon" aria-hidden="true">
+            <use xlink:href="#icon__phone"></use>
+          </svg>
+          06.28.26.52.02</p>
+      </article>
+
+      <!-- SKILLS -->
+      <article id="skills">
+        <p class="skills__subtitle">WHAT I KNOW</p>
+        <h2 class="skills__title">Skills</h2>
+        <div class="skills">
+          <div class="skill">
+            <h3 class="skill__subtitle">
+              UI & UX DESIGN
+            </h3>
+            <div class="skill__description">
+              <h4>METHODOLOGY</h4>
+              <p>Benchmark</p>
+              <p>Personas</p>
+              <p>Parcours utilisateur</p>
+              <p>Design System</p>
+              <p>Wireframes | Maquettes</p>
+              <p>Prototypes</p>
+              <h4>CREATION TOOLS</h4>
+              <p>Photoshop | Illustrator</p>
+              <h4>INTERFACE TOOLS</h4>
+              <p>Figma | Sketch</p>
+              <p>Principle</p>
+            </div>
+          </div>
+          <div class="skill">
+            <h3 class="skill__subtitle">FRONT-END
+            </h3>
+            <div class="skill__description">
+              <h4>LANGUAGES</h4>
+              <p>HTML5</p>
+              <p>CSS3 | SASS</p>
+              <p>JavaScript ES6</p>
+              <p>PHP | MySQL</p>
+              <h4>CMS | FRAMEWORKS</h4>
+              <p>Wordpress</p>
+              <h4>DEVELOPMENT TOOLS</h4>
+              <p>Git | GitHub | GitLab</p>
+              <p>npm | Webpack | Parcel</p>
+              <p>Visual Studio Code</p>
+              <p>Terminal</p>
+              <h4>GOOD PRACTICES</h4>
+              <p>Responsive & Mobile First</p>
+              <p>Animations</p>
+              <p>Creative Coding</p>
+              <p>Accessibilité</p>
+            </div>
+          </div>
+          <div class="skill">
+            <h3 class="skill__subtitle">PROJECT & WEBMARKETING
+            </h3>
+            <div class="skill__description">
+              <h4>MARKETING</h4>
+              <p><strong>SEO</strong> | SEA</p>
+              <p>Google Analytics</p>
+              <p>Google AdWords</p>
+              <h4>PROJECT MANAGEMENT</h4>
+              <p>Méthode agile</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <div class="footer">
+        <a id="top" href="#home" title="Retourner à l'accueil">
+          <svg class="icon__scroll" aria-hidden="true">
+            <use xlink:href="#icon__scroll--up"></use>
+          </svg>
+        </a>
+        <p class="backtotop">Back to top</p>
+        <p class="copyright">Made with love | Copyright ©2019 tous droits réservés</p>
+      </div>
+
+    </section>
+  </section>
+
+  <script src="js/waypoint.js"></script>
+  <script defer src="js/script.js"></script>
+</body>
+
 </html>

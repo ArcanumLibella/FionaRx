@@ -1,4 +1,5 @@
 # FionaRx
-Site in progress...
 
-Link : "https://fionarx.netlify.com/"
+MY FIRST PORTFOLIO
+
+Link : "https://fionarx.netlify.app/"

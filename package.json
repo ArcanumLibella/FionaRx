@@ -1,7 +1,7 @@
 {
   "name": "FionaRx",
   "version": "1.0.0",
-  "description": "Site in progress...",
+  "description": "Fiona Roux, first portfolio",
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html",

@@ -73,7 +73,7 @@ body {
 
   @include desktop {
     width: initial;
-    margin-top: 20%;
+    margin-top: 16%;
     font-size: 6rem;
     line-height: 5.5rem;
   }
@@ -113,18 +113,13 @@ body {
   color: $papyrus;
 
   @include desktop {
-    display: inline-block;
+    display: block;
     width: initial;
-    margin-top: 150px;
+    margin-top: 140px;
     font-weight: 300;
     font-size: 1rem;
     color: $gold;
     @include golden;
-
-    // display: inline-block;
-    // position: relative;
-    // margin-top: 25px;
-    // margin-left: 500px;
 
     animation: fadeInUp 1s both ease-out;
     animation-delay: 2s;
@@ -145,6 +140,20 @@ body {
     animation: fadeInUp 1s both ease-out;
     animation-delay: 2.5s;
   }
+}
+
+.hero__button {
+  display: block;
+  margin-bottom: 24px;
+  padding: 8px 24px;
+
+  @include h5;
+  text-align: center;
+  color: $dark;
+  background-color: $gold;
+
+  animation: fadeIn 0.8s both ease-out;
+  animation-delay: 1.5s;
 }
 
 ///////////////////////////////////////////////////////////
@@ -248,7 +257,8 @@ body {
 .project__image3,
 .about__subtitle,
 .about__title,
-.about__description {
+.about__description,
+.hero__button {
   opacity: 0;
   transform: translateY(150px) scale(0.8);
   transition: opacity 0.3s, transform 0.4s;
@@ -408,30 +418,6 @@ body {
       background-color: transparent;
     }
   }
-
-// .button {
-//   &:before {
-//     content: '';
-//     z-index: 0;
-//     position: absolute;
-//     left: 0;
-//     right: 0;
-//     top: 0;
-//     bottom: 0;
-//     background-color: green;
-//     transform: translateX(-100%);
-
-//     transition: 0.5s ease-in-out;
-//   }
-
-//   &:hover {
-//     color: yellow;
-
-//     &:before {
-//       transform: translateX(0);
-//     }
-//   }
-// }
 
   .project__image {
     display: block;

@@ -146,6 +146,7 @@ body {
   display: block;
   margin-bottom: 24px;
   padding: 8px 24px;
+  z-index: 100;
 
   @include h5;
   text-align: center;
